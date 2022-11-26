@@ -1,0 +1,22 @@
+{
+  "name": "wildcreative",
+  "version": "1.0.1",
+  "author": "Andrew Scrivens",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "4.24.3",
+    "gatsby-plugin-gatsby-cloud": "^4.4.0",
+    "gatsby-plugin-root-import": "^2.0.8",
+    "gatsby-theme-wild-child": "^1.0.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "0.121.0",
+    "vanta": "0.5.24"
+  }
+}

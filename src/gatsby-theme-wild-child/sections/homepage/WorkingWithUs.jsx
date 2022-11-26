@@ -78,7 +78,9 @@ function SeoContent() {
         </VStack>
       </Stack>
       <VStack mt={40}>
-        <Heading color="white">Are you ready to dominate the web?</Heading>
+        <Heading color="white" textAlign={["center", "center", "left"]}>
+          Are you ready to dominate the web?
+        </Heading>
         <Button>Start here</Button>
       </VStack>
     </SectionWrapper>

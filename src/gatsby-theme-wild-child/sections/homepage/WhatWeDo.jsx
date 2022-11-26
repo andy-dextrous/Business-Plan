@@ -10,6 +10,7 @@ import {
   Button,
   List,
   ListItem,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -17,6 +18,7 @@ function WhatWeDo() {
   const {
     variables: { rowSpacing, componentSpacing },
   } = useTheme()
+  const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
 
   return (
     <SectionWrapper containerStyles={{ py: 0 }} id="what_we_do">
@@ -44,10 +46,6 @@ function WhatWeDo() {
             A lot of people have been burned by SEO that doesn’t work. Rest
             assured, when you work with us, you’ll get the results you deserve.
           </Text>
-          <VStack pt={8}>
-            <Text as="em">Want results like these? </Text>
-            <Button variant="dark">Get in touch.</Button>
-          </VStack>
         </VStack>
         <VStack
           flex="1"
@@ -56,9 +54,9 @@ function WhatWeDo() {
           data-speed="1.1"
           _after={{
             content: '""',
-            display: "block",
-            width: "450px",
-            height: "450px",
+            display: ["none", "none", "block"],
+            width: ["90vw", "90vw", "450px"],
+            height: ["90vw", "90vw", "450px"],
             bg: "dark.default",
             borderRadius: "50%",
             position: "absolute",
@@ -73,6 +71,12 @@ function WhatWeDo() {
           />
         </VStack>
       </Stack>
+      <VStack pt={[20, 20, 8]} w={["full", "full", "auto"]} align="center">
+        <Text as="em">Want results like these? </Text>
+        <Button variant="dark" size={buttonSize}>
+          Get in touch.
+        </Button>
+      </VStack>
     </SectionWrapper>
   )
 }

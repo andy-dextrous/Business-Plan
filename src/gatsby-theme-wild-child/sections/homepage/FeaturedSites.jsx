@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import SectionWrapper from "wildChildComponents/SectionWrapper"
-import { Box, HStack, Center, Image } from "@chakra-ui/react"
-import { gsap, ScrollTrigger } from "wildChildGsap"
+import { HStack, Center, Image } from "@chakra-ui/react"
+import { gsap } from "wildChildGsap"
 
 const images1 = [
   "https://res.cloudinary.com/wild-creative/image/upload/c_scale,q_auto,w_800/v1669200240/WILD%20Creative/Screen_Shot_2022-11-23_at_8.43.32_pm_jigosq.png",
@@ -64,7 +64,12 @@ function FeaturedSites() {
 
   return (
     <SectionWrapper>
-      <HStack minW="250vw" ref={row1} mb={12} spacing={12}>
+      <HStack
+        minW={`calc(${images1.length} * 600px)`}
+        ref={row1}
+        mb={12}
+        spacing={[4, 4, 12]}
+      >
         {images1.map((image, i) => {
           return (
             <Center w="600px" h="400px" key={`row1-${i}`} p={8}>
@@ -73,7 +78,12 @@ function FeaturedSites() {
           )
         })}
       </HStack>
-      <HStack width="240vw" ref={row2} mb={12} spacing={12}>
+      <HStack
+        minW={`calc(${images2.length} * 600px)`}
+        ref={row2}
+        mb={12}
+        spacing={12}
+      >
         {images2.map((image, i) => {
           return (
             <Center w="600px" h="400px" key={`row2-${i}`} p={8}>

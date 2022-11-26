@@ -128,19 +128,13 @@ const testimonials = [
   },
 ]
 
-// const breakpoints = {
-//   320: { slidesPerView: 1 },
-//   480: { slidesPerView: 2 },
-//   1000: { slidesPerView: 3 },
-// }
-
 function Testimonials() {
   const showControls = useBreakpointValue([true, true, false])
   const [activeSlide, setActiveSlide] = React.useState(0)
 
   return (
     <SectionWrapper
-      px="0"
+      px={[5, 5, 0]}
       containerSize="xl"
       _after={{
         content: '""',
@@ -166,7 +160,7 @@ function Testimonials() {
         <HStack
           py={4}
           className={showControls ? "" : "hidden"}
-          alignSelf="flex-end"
+          alignSelf={["center", "center", "flex-end"]}
         >
           <IconButton
             icon={<FaChevronLeft />}

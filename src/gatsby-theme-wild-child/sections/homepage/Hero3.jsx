@@ -5,7 +5,7 @@ import React from "react"
 import SectionWrapper from "wildChildComponents/SectionWrapper"
 import * as THREE from "three"
 import FOG from "vanta/dist/vanta.fog.min"
-import { gsap, ScrollTrigger, SplitText } from "wildChildGsap"
+import { gsap, SplitText } from "wildChildGsap"
 import {
   Box,
   VStack,
@@ -13,6 +13,7 @@ import {
   Text,
   ButtonGroup,
   Button,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 
 function Hero3() {
@@ -20,8 +21,8 @@ function Hero3() {
   const titleRef = React.useRef(null)
   const subtitleRef = React.useRef(null)
   const buttonRef = React.useRef(null)
-  const [vantaEffect, setVantaEffect] = React.useState(0)
   const heroTimeline = React.useRef(null)
+  const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
 
   React.useLayoutEffect(() => {
     const q = gsap.utils.selector(titleRef.current)
@@ -75,9 +76,9 @@ function Hero3() {
       gyroControls: !1,
       minHeight: 200.0,
       minWidth: 200.0,
-      highlightColor: 0xf40114,
-      midtoneColor: 0x07d5db,
-      lowlightColor: 0xffffff,
+      highlightColor: 0xffeedd,
+      midtoneColor: 0x0a9396,
+      lowlightColor: 0x4a5be1,
       baseColor: 0xffffff,
       blurFactor: 0.83,
       speed: 2.0,
@@ -86,22 +87,7 @@ function Hero3() {
   }, [])
 
   return (
-    <SectionWrapper
-      w="100vw"
-      h="100vh"
-      position="relative"
-      // _before={{
-      //   content: '""',
-      //   position: "absolute",
-      //   top: 0,
-      //   left: 0,
-      //   right: 0,
-      //   height: "100%",
-      //   background:
-      //     "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%,rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%)",
-      //   zIndex: "0",
-      // }}
-    >
+    <SectionWrapper w="100vw" h={["80vh", "80vh", "100vh"]} position="relative">
       <Box
         ref={vantaRef}
         width="100%"
@@ -122,7 +108,7 @@ function Hero3() {
         <Heading
           as="h1"
           lineHeight="1"
-          fontSize={["24px", "24px", "130px"]}
+          fontSize={["4xl", "4xl", "130px"]}
           fontWeight="700"
           textAlign={["center", "center", "left"]}
           ref={titleRef}
@@ -156,36 +142,18 @@ function Hero3() {
           <Button
             variant="dark"
             onClick={() => fullPage.fullpageApi.moveTo(5)}
-            size={"xl"}
+            size={buttonSize}
           >
             Say hi
           </Button>
           <Button
             variant="white"
             onClick={() => fullPage.fullpageApi.moveTo(2)}
-            size={"xl"}
+            size={buttonSize}
           >
             See our work
           </Button>
         </ButtonGroup>
-        {/* <Box
-              as="video"
-              autoPlay
-              muted
-              loop
-              position={["relative", "relative", "absolute"]}
-              pt={8}
-              height={["auto", "auto", "110%"]}
-              width={["230px", "230px", "auto"]}
-              objectFit="cover"
-              ref={videoRef}
-              display={["block", "block", "none"]}
-            >
-              <source
-                src="https://res.cloudinary.com/wild-creative/video/upload/v1668733344/WILD1_1_alefay.mp4"
-                type="video/mp4"
-              />
-            </Box> */}
       </VStack>
     </SectionWrapper>
   )

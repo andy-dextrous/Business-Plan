@@ -48,15 +48,29 @@ function Introduction() {
 
   return (
     <SectionWrapper>
-      <Stack direction="row" spacing={20} pb={20}>
-        <Box flex="2">
-          <Heading as="h4" fontWeight="400" fontSize="5xl" ref={titleRef}>
+      <Stack
+        direction={["column", "column", "row"]}
+        spacing={[8, 8, 20]}
+        pb={[12, 12, 20]}
+      >
+        <Box flex={[1, 1, 2]}>
+          <Heading
+            as="h4"
+            fontWeight="400"
+            fontSize={["3xl", "3xl", "5xl"]}
+            ref={titleRef}
+          >
             We build and grow websites using an advanced set of marketing
             strategies that keep both your visitors and the search engine gods
             happy.
           </Heading>
         </Box>
-        <VStack flex="1" align="flex-start" spacing={20} maxW="250px">
+        <VStack
+          flex="1"
+          align="flex-start"
+          spacing={20}
+          maxW={["100%", "100%", "250px"]}
+        >
           <Text>
             Our experience as SEO experts, designers and web developers puts us
             in a unique position to get organic results that last.
@@ -64,7 +78,11 @@ function Introduction() {
           {/* <CircleLink data-speed="1.1" zIndex="2" /> */}
         </VStack>
       </Stack>
-      <Box width="container.lg" height="1px" bg="rgba(28, 29, 32, 0.175)"></Box>
+      <Box
+        width={["100%", "100%", "container.lg"]}
+        height="1px"
+        bg="rgba(28, 29, 32, 0.175)"
+      ></Box>
     </SectionWrapper>
   )
 }

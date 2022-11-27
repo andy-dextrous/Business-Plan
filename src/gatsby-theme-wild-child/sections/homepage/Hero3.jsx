@@ -90,7 +90,22 @@ function Hero3({ disclosure }) {
   }, [])
 
   return (
-    <SectionWrapper w="100vw" h={["80vh", "80vh", "100vh"]} position="relative">
+    <SectionWrapper
+      w="100vw"
+      h={["80vh", "80vh", "100vh"]}
+      position="relative"
+      _after={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        w: "100%",
+        h: "100%",
+        zIndex: -1,
+        bgGradient:
+          "linear(to-b, rgba(255,255,255,0) 0, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%)",
+      }}
+    >
       <Box
         ref={vantaRef}
         width="100%"
@@ -99,7 +114,9 @@ function Hero3({ disclosure }) {
         top="0"
         position="absolute"
         zIndex="-1"
-      ></Box>
+      >
+        {" "}
+      </Box>
       <VStack
         height={["full", "full", "full"]}
         justifyContent="center"

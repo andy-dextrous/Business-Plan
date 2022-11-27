@@ -65,7 +65,11 @@ function TopMenu({ menu }) {
             }}
           >
             <GatsbyLink to="/">
-              <Logo height={variables.logoHeight} width="160px" />
+              <Logo
+                height={variables.logoHeight}
+                width="160px"
+                color="dark.default"
+              />
             </GatsbyLink>
           </GridItem>
 
@@ -125,7 +129,7 @@ function TopMenu({ menu }) {
               </HStack>
             )}
           </GridItem>
-          <GridItem
+          {/* <GridItem
             gridRow={["1/2", "1/2", "1/2"]}
             gridColumn={["3/4", "3/4", "3/4"]}
             display="flex"
@@ -148,7 +152,7 @@ function TopMenu({ menu }) {
                 Get Started
               </Button>
             </Link>
-          </GridItem>
+          </GridItem> */}
         </Grid>
       </Flex>
     </>

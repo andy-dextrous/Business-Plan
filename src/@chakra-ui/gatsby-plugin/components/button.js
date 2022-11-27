@@ -19,7 +19,7 @@ export const Button = {
       color: "white",
     },
     dark: {
-      bg: "#1C222E",
+      bg: "dark.default",
       color: "white",
     },
   },

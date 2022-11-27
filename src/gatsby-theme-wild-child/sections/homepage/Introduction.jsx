@@ -62,7 +62,7 @@ function Introduction() {
           >
             We build and grow websites using an advanced set of marketing
             strategies that keep both your visitors and the search engine gods
-            happy.
+            extremely happy.
           </Heading>
         </Box>
         <VStack
@@ -75,7 +75,6 @@ function Introduction() {
             Our experience as SEO experts, designers and web developers puts us
             in a unique position to get organic results that last.
           </Text>
-          {/* <CircleLink data-speed="1.1" zIndex="2" /> */}
         </VStack>
       </Stack>
       <Box

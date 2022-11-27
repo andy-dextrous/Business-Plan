@@ -16,7 +16,7 @@ function Logo({
   //   gsap.to("#logo", {
   //     duration: 0.4,
   //     delay: 0.3,
-  //     fill: colorMode === "light" ? "white" : "#1C222E",
+  //     fill: colorMode === "light" ? "white" : "dark.default",
   //     ease: "power2.out",
   //   })
   // }, [colorMode])

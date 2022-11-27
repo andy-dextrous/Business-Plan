@@ -75,7 +75,7 @@ function WhatWeDo({ disclosure }) {
       </Stack>
       <VStack py={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
         <Text as="em">Want results like these? </Text>
-        <Button variant="dark" size={buttonSize} onClick={onOpen}>
+        <Button size={buttonSize} onClick={onOpen}>
           Get in touch.
         </Button>
       </VStack>

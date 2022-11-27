@@ -14,11 +14,12 @@ import {
 } from "@chakra-ui/react"
 import { StaticImage } from "gatsby-plugin-image"
 
-function WhatWeDo() {
+function WhatWeDo({ disclosure }) {
   const {
     variables: { rowSpacing, componentSpacing },
   } = useTheme()
   const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
+  const { onOpen } = disclosure
 
   return (
     <SectionWrapper containerStyles={{ py: 0 }} id="what_we_do">
@@ -74,7 +75,7 @@ function WhatWeDo() {
       </Stack>
       <VStack py={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
         <Text as="em">Want results like these? </Text>
-        <Button variant="dark" size={buttonSize}>
+        <Button variant="dark" size={buttonSize} onClick={onOpen}>
           Get in touch.
         </Button>
       </VStack>

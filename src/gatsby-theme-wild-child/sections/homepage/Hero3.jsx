@@ -6,6 +6,7 @@ import SectionWrapper from "wildChildComponents/SectionWrapper"
 import * as THREE from "three"
 import FOG from "vanta/dist/vanta.fog.min"
 import { gsap, SplitText } from "wildChildGsap"
+import { SmoothContext } from "wildChildComponents/SmoothWrapper"
 import {
   Box,
   VStack,
@@ -16,13 +17,15 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react"
 
-function Hero3() {
+function Hero3({ disclosure }) {
   const vantaRef = React.useRef(null)
   const titleRef = React.useRef(null)
   const subtitleRef = React.useRef(null)
   const buttonRef = React.useRef(null)
   const heroTimeline = React.useRef(null)
   const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
+  const { isOpen, onOpen, onClose } = disclosure
+  const smootherInstance = React.useContext(SmoothContext)
 
   React.useLayoutEffect(() => {
     const q = gsap.utils.selector(titleRef.current)
@@ -139,19 +142,17 @@ function Hero3() {
           width={["full", "full", "auto"]}
           ref={buttonRef}
         >
-          <Button
-            variant="dark"
-            onClick={() => fullPage.fullpageApi.moveTo(5)}
-            size={buttonSize}
-          >
-            Say hi
+          <Button variant="dark" size={buttonSize} onClick={onOpen}>
+            Get in touch
           </Button>
           <Button
             variant="white"
-            onClick={() => fullPage.fullpageApi.moveTo(2)}
             size={buttonSize}
+            onClick={() => {
+              smootherInstance.scrollTo("#what_we_do", true)
+            }}
           >
-            See our work
+            What we do
           </Button>
         </ButtonGroup>
       </VStack>

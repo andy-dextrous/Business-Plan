@@ -11,18 +11,23 @@ import Testimonials from "../../sections/homepage/Testimonials"
 import Main from "wildChildComponents/Main"
 import FeaturedSites from "../../sections/homepage/FeaturedSites"
 import { Box } from "@chakra-ui/react"
+import ContactModal from "../ContactModal"
+import { useDisclosure } from "@chakra-ui/react"
 
 function HomepagePage() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <Main>
-      <Hero3 />
+      <ContactModal disclosure={{ isOpen, onOpen, onClose }} />
+      <Hero3 disclosure={{ isOpen, onOpen, onClose }} />
       <Introduction />
-      <WhatWeDo />
+      <WhatWeDo disclosure={{ isOpen, onOpen, onClose }} />
       <Box bgGradient="linear(to-b, white, #F4F4F4)">
         <Testimonials />
         <FeaturedSites />
         <TrackRecord />
-        <WorkingWithUs />
+        <WorkingWithUs disclosure={{ isOpen, onOpen, onClose }} />
       </Box>
     </Main>
   )

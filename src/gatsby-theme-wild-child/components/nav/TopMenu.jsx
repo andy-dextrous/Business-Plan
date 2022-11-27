@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import Logo from "../../assets/logos/Logo"
-import { ScrollTrigger, gsap } from "wildChildGsap"
+import Button from "wildChildComponents/Button"
+import { SmoothContext } from "wildChildComponents/SmoothWrapper"
 import {
-  Box,
   Center,
   Flex,
   Grid,
@@ -13,39 +13,20 @@ import {
   Text,
   useBreakpointValue,
   useTheme,
-  VStack,
 } from "@chakra-ui/react"
-import TopBar from "./TopBar"
-import Button from "wildChildComponents/Button"
 
 function TopMenu({ menu }) {
   const navRef = useRef()
   const { variables } = useTheme()
   const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
+  const smootherInstance = React.useContext(SmoothContext)
 
-  // useEffect(() => {
-  //   if (!!navRef.current) {
-  //     ScrollTrigger.create({
-  //       trigger: navRef.current,
-  //       start: "bottom top",
-  //       onEnter: () => {
-  //         gsap.fromTo(
-  //           navRef.current,
-  //           { top: -80 },
-  //           {
-  //             position: "absolute",
-  //             top: 0,
-  //             duration: 0.3,
-  //             ease: "power2.out",
-  //           }
-  //         )
-  //       },
-  //       onLeaveBack: () => {
-  //         gsap.to(navRef.current, { position: "relative", top: 0 })
-  //       },
-  //     })
-  //   }
-  // }, [])
+  function routeChange(path) {
+    if (!document) return
+    console.log(path)
+    const target = document.querySelector(path)
+    target && smootherInstance.scrollTo(path, true)
+  }
 
   return (
     <>
@@ -53,11 +34,8 @@ function TopMenu({ menu }) {
       <Flex
         as="header"
         alignItems="center"
-        // borderBottom="1px solid"
-        // borderColor="grayBackground.default"
         position="absolute"
         flexDirection="column"
-        // boxShadow="sm"
         justifyContent="center"
         left="0"
         right="0"
@@ -66,7 +44,6 @@ function TopMenu({ menu }) {
         bg="transaprent"
         zIndex="sticky"
         h="90px"
-        // px={variables.sectionPaddingX}
         ref={navRef}
       >
         <Grid
@@ -107,11 +84,11 @@ function TopMenu({ menu }) {
                     return !item.parentId
                   })
                   .map(item => {
-                    return !item.childItems.nodes.length ? (
+                    return (
                       <Center
-                        as={GatsbyLink}
                         key={`nav-link-${item.id}`}
                         to={item.path}
+                        cursor="pointer"
                         sx={{
                           h: "100%",
                           paddingX: 4,
@@ -138,113 +115,10 @@ function TopMenu({ menu }) {
                             "&.menu-item-text": { mb: "0 !important" },
                           }}
                           className="menu-item-text"
+                          onClick={() => routeChange(item.path)}
                         >
                           {item.label}
                         </Text>
-                      </Center>
-                    ) : (
-                      <Center
-                        key={`nav-link-${item.id}`}
-                        position="relative"
-                        h="full"
-                        _hover={{
-                          ".dropdown-menu": {
-                            visibility: "visible",
-                          },
-                        }}
-                      >
-                        <Center
-                          as={GatsbyLink}
-                          to={item.path}
-                          sx={{
-                            h: "100%",
-                            paddingX: 4,
-                            display: "flex",
-                            align: "center",
-                            justify: "center",
-                            transition: "all 0.2s ease-in-out",
-                            "&[aria-current]": {
-                              borderBottom: `3px solid`,
-                            },
-                          }}
-                        >
-                          <Text
-                            sx={{
-                              py: 2,
-                              fontSize: "15px",
-                              fontWeight: "semibold",
-                              color: "dark.default",
-                              "&.menu-item-text": { mb: "0 !important" },
-                              _hover: {
-                                color: "primary.default",
-                              },
-                            }}
-                            className="menu-item-text"
-                          >
-                            {item.label}
-                          </Text>
-                        </Center>
-                        <Box
-                          sx={{
-                            position: "absolute",
-                            bgGradient:
-                              "linear(67.1deg,dark.default 7.3%, #090909 89.3%)",
-                            borderColor: "dark.700",
-                            visibility: "hidden",
-                            roundedBottom: "md",
-                            borderTop: "1px solid",
-                            top: "100%",
-                            left: 0,
-                            boxShadow: "sm",
-                          }}
-                          className="dropdown-menu"
-                        >
-                          <VStack
-                            as="nav"
-                            sx={{
-                              minW: "300px",
-                              alignItems: "flex-start",
-                              py: 6,
-                              px: 4,
-                            }}
-                          >
-                            {item.childItems.nodes.map(child => {
-                              return (
-                                <Link
-                                  as={GatsbyLink}
-                                  key={`nav-link-${child.id}`}
-                                  paddingX={4}
-                                  to={child.path}
-                                  position="relative"
-                                  _hover={{
-                                    ".dropdown-menu": {
-                                      visibility: "visible",
-                                    },
-                                  }}
-                                >
-                                  <Text
-                                    sx={{
-                                      py: 2,
-                                      fontSize: "15px",
-                                      fontWeight: "semibold",
-                                      color: "white",
-                                      _hover: {
-                                        bgGradient:
-                                          "linear(to-r,secondary.default 0%,lightRed.600 50%, primary.600)",
-                                        bgClip: "text",
-                                      },
-                                      "&.menu-item-text": {
-                                        mb: "0 !important",
-                                      },
-                                    }}
-                                  >
-                                    {child.label}
-                                  </Text>
-                                </Link>
-                              )
-                            })}
-                          </VStack>
-                        </Box>
                       </Center>
                     )
                   })}

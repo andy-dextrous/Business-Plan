@@ -12,14 +12,14 @@ function Logo({
 }) {
   const logo = useRef()
 
-  useEffect(() => {
-    gsap.to("#logo", {
-      duration: 0.4,
-      delay: 0.3,
-      fill: colorMode === "light" ? "white" : "#1C222E",
-      ease: "power2.out",
-    })
-  }, [colorMode])
+  // useEffect(() => {
+  //   gsap.to("#logo", {
+  //     duration: 0.4,
+  //     delay: 0.3,
+  //     fill: colorMode === "light" ? "white" : "#1C222E",
+  //     ease: "power2.out",
+  //   })
+  // }, [colorMode])
 
   return (
     <Box

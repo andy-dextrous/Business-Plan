@@ -17,7 +17,7 @@ function Websites() {
   } = useTheme()
 
   return (
-    <SectionWrapper containerSize="lg">
+    <SectionWrapper containerSize="lg" id="case-studies">
       <Stack
         direction={["column", "column", "row"]}
         spacing={rowSpacing}

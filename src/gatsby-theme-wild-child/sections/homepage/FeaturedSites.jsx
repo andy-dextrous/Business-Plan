@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import SectionWrapper from "wildChildComponents/SectionWrapper"
-import { HStack, Center, Image } from "@chakra-ui/react"
+import { HStack, Center, Image, Box } from "@chakra-ui/react"
 import { gsap } from "wildChildGsap"
 
 const images1 = [
@@ -92,6 +92,12 @@ function FeaturedSites() {
           )
         })}
       </HStack>
+      <Box
+        width={["100%", "100%"]}
+        height="1px"
+        bg="rgba(28, 29, 32, 0.175)"
+        margin="auto"
+      ></Box>
     </SectionWrapper>
   )
 }

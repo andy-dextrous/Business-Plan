@@ -10,6 +10,7 @@ import {
   IconButton,
   useBreakpointValue,
   Center,
+  Box,
 } from "@chakra-ui/react"
 import Testimonial from "../../components/Testimonial"
 
@@ -77,6 +78,7 @@ function Testimonials() {
     <SectionWrapper
       px={[5, 5, 0]}
       containerSize="xl"
+      id="testimonials"
       _after={{
         content: '""',
         position: "absolute",
@@ -144,6 +146,12 @@ function Testimonials() {
           })}
         </Swiper>
       </Center>
+      <Box
+        width={["100%", "100%"]}
+        height="1px"
+        bg="rgba(28, 29, 32, 0.175)"
+        margin="auto"
+      ></Box>
     </SectionWrapper>
   )
 }

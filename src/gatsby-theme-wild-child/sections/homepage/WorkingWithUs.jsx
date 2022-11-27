@@ -4,21 +4,20 @@ import {
   Heading,
   useTheme,
   Stack,
-  Box,
   VStack,
   Text,
   Image,
   Button,
 } from "@chakra-ui/react"
-import CircleLink from "../../components/CircleLink"
 
-function SeoContent() {
+function SeoContent({ disclosure }) {
   const {
     variables: { rowSpacing, componentSpacing },
   } = useTheme()
+  const { onOpen } = disclosure
 
   return (
-    <SectionWrapper bg="dark.default">
+    <SectionWrapper bg="dark.default" id="services">
       <Heading mb={20} w="full" textAlign="center" color="white">
         Working with us means...
       </Heading>
@@ -91,7 +90,7 @@ function SeoContent() {
         <Heading color="white" textAlign={["center", "center", "left"]}>
           Are you ready to dominate the web?
         </Heading>
-        <Button>Start here</Button>
+        <Button onClick={onOpen}>Start here</Button>
       </VStack>
     </SectionWrapper>
   )

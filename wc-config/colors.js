@@ -3,7 +3,7 @@ const colors = {
   primary: "#4A5BE1",
   // primary: "#0A9396",
   yellow: "#F2D389",
-  dark: "dark.default",
+  dark: "#1C222E",
   grayBackground: "#FCF7ED",
 }
 

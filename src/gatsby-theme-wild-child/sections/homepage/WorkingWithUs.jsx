@@ -25,7 +25,7 @@ function SeoContent() {
       <Stack
         direction={["column", "column", "row"]}
         spacing={rowSpacing}
-        align="center"
+        align="flex-start"
         h="full"
       >
         <VStack flex="1" spacing={componentSpacing}>
@@ -34,14 +34,17 @@ function SeoContent() {
             width="80px"
             height="80px"
           />
-          <Heading as="h3" fontSize="2xl" textAlign="center" color="white">
-            Websites
+          <Heading
+            as="h3"
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+            color="white"
+          >
+            INCREASED ORGANIC TRAFFIC & BETTER SEARCH RANKINGS
           </Heading>
           <Text textAlign="center" color="white">
-            The good news is that, for anyone willing to aspire to a bit more
-            than average, there has never been a better time to embrace the
-            online dimension of your business. Honestly, abundance and
-            opportunity is absolutely everywhere.
+            Increase your organic traffic and search positions with our proven
+            strategies for content that the Google gods absolutely love…
           </Text>
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
@@ -50,14 +53,17 @@ function SeoContent() {
             width="80px"
             height="80px"
           />
-          <Heading as="h3" fontSize="2xl" textAlign="center" color="white">
-            Websites
+          <Heading
+            as="h3"
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+            color="white"
+          >
+            NEXT-LEVEL BRAND AWARENESS & VISIBILITY
           </Heading>
           <Text textAlign="center" color="white">
-            The good news is that, for anyone willing to aspire to a bit more
-            than average, there has never been a better time to embrace the
-            online dimension of your business. Honestly, abundance and
-            opportunity is absolutely everywhere.
+            Gain more authority for your brand and domain through our
+            link-building process.
           </Text>
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
@@ -66,14 +72,18 @@ function SeoContent() {
             width="80px"
             height="80px"
           />
-          <Heading as="h3" fontSize="2xl" textAlign="center" color="white">
-            Websites
+          <Heading
+            as="h3"
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+            color="white"
+          >
+            DEDICATED PARTNER ON YOUR TEAM WHO ACTUALLY GETS IT
           </Heading>
           <Text textAlign="center" color="white">
-            The good news is that, for anyone willing to aspire to a bit more
-            than average, there has never been a better time to embrace the
-            online dimension of your business. Honestly, abundance and
-            opportunity is absolutely everywhere.
+            We can be your contracted “go-to” for all things SEO, content and
+            websites. Plus, we commit to our clients for the long haul because,
+            let’s face it, growing a business online takes time.
           </Text>
         </VStack>
       </Stack>

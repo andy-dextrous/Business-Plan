@@ -79,9 +79,10 @@ function Introduction() {
         </VStack>
       </Stack>
       <Box
-        width={["100%", "100%", "container.lg"]}
+        width={["100%", "100%"]}
         height="1px"
         bg="rgba(28, 29, 32, 0.175)"
+        margin="auto"
       ></Box>
     </SectionWrapper>
   )

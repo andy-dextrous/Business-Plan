@@ -4,13 +4,13 @@ import {
   Heading,
   useTheme,
   Stack,
-  Box,
   VStack,
   Text,
   Button,
   List,
   ListItem,
   useBreakpointValue,
+  Box,
 } from "@chakra-ui/react"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -31,11 +31,12 @@ function WhatWeDo() {
         <VStack flex="1" align="flex-start" spacing={componentSpacing}>
           <Heading>SEO, Content, Link-building, Design & Development </Heading>
           <Text>
-            We specialise in getting graphs like the one on the right to happen.
-            For this particular client, we helped:
+            We specialise in getting graphs like this one to happen the only way
+            that actually works - by creating websites that both humans and
+            search engines love. For this particular client, we helped:
           </Text>
           <List>
-            <ListItem>Grow their site traffic by 300% and</ListItem>
+            <ListItem>Grow their site traffic by 300%</ListItem>
             <ListItem>Build over 10k backlinks</ListItem>
             <ListItem>Grow from 2000 to 14,000 keywords, leading to:</ListItem>
             <ListItem>A 500% growth in sales and</ListItem>
@@ -71,12 +72,18 @@ function WhatWeDo() {
           />
         </VStack>
       </Stack>
-      <VStack pt={[20, 20, 8]} w={["full", "full", "auto"]} align="center">
+      <VStack py={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
         <Text as="em">Want results like these? </Text>
         <Button variant="dark" size={buttonSize}>
           Get in touch.
         </Button>
       </VStack>
+      <Box
+        width={["100%", "100%"]}
+        height="1px"
+        bg="rgba(28, 29, 32, 0.175)"
+        margin="auto"
+      ></Box>
     </SectionWrapper>
   )
 }

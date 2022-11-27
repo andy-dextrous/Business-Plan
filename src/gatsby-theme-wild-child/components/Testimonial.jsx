@@ -2,7 +2,7 @@ import React from "react"
 import { Box, Heading, Text, VStack, HStack, Avatar } from "@chakra-ui/react"
 
 function Testimonial({ data }) {
-  const { testimonial, author, company, position } = data
+  const { testimonial, author, company, position, avatar } = data
 
   return (
     <Box width="auto" position="relative" rounded="2xl" overflow="hidden">
@@ -24,11 +24,7 @@ function Testimonial({ data }) {
           {testimonial}
         </Text>
         <HStack pl={4} spacing={4} align="center" alignSelf="flex-end">
-          <Avatar
-            src="https://damobrennan.com/wp-content/uploads/2022/10/damo.jpg"
-            name={author}
-            size="xl"
-          />
+          <Avatar src={avatar} name={author} size="xl" bg="white" />
           <Box>
             <Heading as="h4" fontSize="22px" color="white">
               {author}

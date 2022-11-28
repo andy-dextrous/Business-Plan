@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import { HStack, Center, Image, Box } from "@chakra-ui/react"
-import { gsap } from "wildChildGsap"
+import { gsap } from "wildGsap"
 
 const images1 = [
   "https://res.cloudinary.com/wild-creative/image/upload/c_scale,q_auto,w_800/v1669200240/WILD%20Creative/Screen_Shot_2022-11-23_at_8.43.32_pm_jigosq.png",

@@ -2,11 +2,11 @@
 
 import React from "react"
 
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import * as THREE from "three"
 import FOG from "vanta/dist/vanta.fog.min"
-import { gsap, SplitText } from "wildChildGsap"
-import { SmoothContext } from "wildChildComponents/SmoothWrapper"
+import { gsap, SplitText } from "wildGsap"
+import { SmoothContext } from "wildComponents/SmoothWrapper"
 import {
   Box,
   VStack,

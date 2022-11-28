@@ -1,5 +1,5 @@
 import React from "react"
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import {
   Heading,
   useTheme,

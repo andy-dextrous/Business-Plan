@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2020",
+    "module": "esnext",
+    "jsx": "react",
+    "checkJs": true,
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true, // force import
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "wild": ["gatsby-theme-wild-child"],
+      "wildSrc": ["gatsby-theme-wild-child/src"],
+      "wildUtils": ["gatsby-theme-wild-child/utils"],
+      "wildComponents": ["gatsby-theme-wild-child/components"],
+      "wildTemplates": ["gatsby-theme-wild-child/templates"],
+      "wildSections": ["gatsby-theme-wild-child/sections"],
+      "wildHooks": ["gatsby-theme-wild-child/hooks"],
+      "wildGsap": ["gatsby-theme-wild-child/src/gsap"]
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": ["./src/**/*", "./src/*", "gatsby-theme-wild-child/**/*"]
+}

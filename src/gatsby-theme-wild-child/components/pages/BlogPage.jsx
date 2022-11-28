@@ -1,6 +1,6 @@
 import React from "react"
-import PostGrid from "wildChildSections/Post_Grid"
-import Main from "wildChildComponents/Main"
+import PostGrid from "wildSections/Post_Grid"
+import Main from "wildComponents/Main"
 
 function BlogPage(props) {
   const { allWpPost } = props.data

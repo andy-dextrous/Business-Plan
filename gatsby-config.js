@@ -14,14 +14,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-root-import",
       options: {
-        wildChildRoot: "gatsby-theme-wild-child",
-        wildChildSrc: "gatsby-theme-wild-child/src",
-        wildChildUtils: "gatsby-theme-wild-child/src/utils",
-        wildChildComponents: "gatsby-theme-wild-child/src/components",
-        wildChildTemplates: "gatsby-theme-wild-child/src/templates",
-        wildChildSections: "gatsby-theme-wild-child/src/sections",
-        wildChildHooks: "gatsby-theme-wild-child/src/hooks",
-        wildChildGsap: "gatsby-theme-wild-child/src/gsap",
+        wildRoot: "gatsby-theme-wild-child",
+        wildSrc: "gatsby-theme-wild-child/src",
+        wildUtils: "gatsby-theme-wild-child/src/utils",
+        wildComponents: "gatsby-theme-wild-child/src/components",
+        wildTemplates: "gatsby-theme-wild-child/src/templates",
+        wildSections: "gatsby-theme-wild-child/src/sections",
+        wildHooks: "gatsby-theme-wild-child/src/hooks",
+        wildGsap: "gatsby-theme-wild-child/src/gsap",
       },
     },
     {

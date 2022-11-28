@@ -1,7 +1,7 @@
 import React from "react"
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import { Stack, Text, Box, VStack, Heading, Divider } from "@chakra-ui/react"
-import { gsap, ScrollTrigger, SplitText } from "wildChildGsap"
+import { gsap, ScrollTrigger, SplitText } from "wildGsap"
 
 function Introduction() {
   const titleRef = React.useRef(null)

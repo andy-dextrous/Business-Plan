@@ -1,6 +1,6 @@
 /*** Remove imports if you want to override all defaults ***/
 
-import { Button as defaultButton } from "wildChildSrc/@chakra-ui/gatsby-plugin/components/button.js"
+import { Button as defaultButton } from "wildSrc/@chakra-ui/gatsby-plugin/components/button.js"
 
 export const Button = {
   ...defaultButton,

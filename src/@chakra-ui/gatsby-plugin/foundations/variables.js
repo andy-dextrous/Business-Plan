@@ -1,4 +1,4 @@
-import { variables as defaults } from "wildChildSrc/@chakra-ui/gatsby-plugin/foundations/variables.js"
+import { variables as defaults } from "wildSrc/@chakra-ui/gatsby-plugin/foundations/variables.js"
 
 export const variables = {
   ...defaults,

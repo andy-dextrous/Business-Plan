@@ -1,5 +1,5 @@
 import React from "react"
-import { gsap, ScrollTrigger } from "wildChildGsap"
+import { gsap, ScrollTrigger } from "wildGsap"
 import { useEffect } from "react"
 import { VStack, Heading, Text, Image, Stack } from "@chakra-ui/react"
 

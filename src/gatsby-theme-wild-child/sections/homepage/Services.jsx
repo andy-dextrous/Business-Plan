@@ -1,5 +1,5 @@
 import React from "react"
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import { VStack, Heading, Stack, Text, Box } from "@chakra-ui/react"
 
 function Services() {

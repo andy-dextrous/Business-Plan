@@ -1,7 +1,7 @@
 import React from "react"
-import Content from "wildChildSections/Content"
-import HeroLayout1 from "wildChildSections/hero/HeroLayout1"
-import Main from "wildChildComponents/Main"
+import Content from "wildSections/Content"
+import HeroLayout1 from "wildSections/hero/HeroLayout1"
+import Main from "wildComponents/Main"
 
 function DefaultPage(props) {
   return (

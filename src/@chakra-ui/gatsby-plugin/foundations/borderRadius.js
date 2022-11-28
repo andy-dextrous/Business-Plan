@@ -1,4 +1,4 @@
-import { borderRadius as defaultBorderRadius } from "wildChildSrc/@chakra-ui/gatsby-plugin/foundations/borderRadius.js"
+import { borderRadius as defaultBorderRadius } from "wildSrc/@chakra-ui/gatsby-plugin/foundations/borderRadius.js"
 
 export const borderRadius = {
   ...defaultBorderRadius,

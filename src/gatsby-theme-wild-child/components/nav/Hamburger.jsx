@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react"
-import { MenuContext } from "wildChildComponents/Layout"
-import { ScrollTrigger } from "wildChildGsap"
+import { MenuContext } from "wildComponents/Layout"
+import { ScrollTrigger } from "wildGsap"
 
 import ToggleIcon from "../../assets/icons/MenuToggleIcon"
 import { IoMdClose } from "react-icons/io"

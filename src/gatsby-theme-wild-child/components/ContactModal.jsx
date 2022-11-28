@@ -1,6 +1,7 @@
 import React from "react"
-import GetForm from "wildChildComponents/forms/getForm/GetForm"
-import ContactPageElements from "wildChildComponents/forms/getForm/ContactPageElements"
+import GetForm from "wildComponents/forms/getForm/GetForm"
+import ContactPageElements from "gatsby-theme-wild-child/src/components/forms/getForm/ContactPageElements"
+import Logo from "../assets/logos/Logo"
 import {
   Heading,
   Modal,
@@ -12,10 +13,8 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
-import Logo from "../assets/logos/Logo"
-// import Agent from "./Agent"
 
-function ContactModal({ data, disclosure }) {
+function ContactModal({ data = {}, disclosure }) {
   const { isOpen, onClose } = disclosure
   // const oneAgent = data?.propertyListing?.agents?.length === 1 || false
   const formSize = useBreakpointValue({ base: "lg", md: "full" })
@@ -88,7 +87,7 @@ function ContactModal({ data, disclosure }) {
               <Heading>Enquire now</Heading>
               <GetForm
                 onSubmitCallback={onClose}
-                formElements={<ContactPageElements data={data} />}
+                formElements={<ContactPageElements />}
               />
             </VStack>
           </Stack>

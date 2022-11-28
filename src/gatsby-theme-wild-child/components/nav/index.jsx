@@ -1,5 +1,5 @@
 import React from "react"
-import { useMenuQuery } from "wildChildHooks/useMenuQuery"
+import { useMenuQuery } from "wildHooks/useMenuQuery"
 
 import Hamburger from "./Hamburger"
 import Modal from "./Modal"

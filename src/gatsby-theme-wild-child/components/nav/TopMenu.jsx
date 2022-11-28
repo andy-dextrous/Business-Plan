@@ -1,8 +1,8 @@
 import React, { useRef } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import Logo from "../../assets/logos/Logo"
-import Button from "wildChildComponents/Button"
-import { SmoothContext } from "wildChildComponents/SmoothWrapper"
+import Button from "wildComponents/Button"
+import { SmoothContext } from "wildComponents/SmoothWrapper"
 import {
   Center,
   Flex,

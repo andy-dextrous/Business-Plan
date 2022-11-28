@@ -1,6 +1,6 @@
 import React from "react"
-import PostContent2 from "wildChildSections/Post_Content2"
-import Main from "wildChildComponents/Main"
+import PostContent2 from "wildSections/Post_Content2"
+import Main from "wildComponents/Main"
 
 function PostPage(props) {
   return (

@@ -1,4 +1,4 @@
-import { layerStyles as defaultLayerStyles } from "wildChildSrc/@chakra-ui/gatsby-plugin/layerStyles.js"
+import { layerStyles as defaultLayerStyles } from "wildSrc/@chakra-ui/gatsby-plugin/layerStyles.js"
 
 export const layerStyles = {
   ...defaultLayerStyles,

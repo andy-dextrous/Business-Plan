@@ -1,5 +1,5 @@
 import React from "react"
-import Main from "wildChildComponents/Main"
+import Main from "wildComponents/Main"
 
 function TagPage() {
   return (

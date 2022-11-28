@@ -1,5 +1,5 @@
 import React from "react"
-import SectionWrapper from "wildChildComponents/SectionWrapper"
+import SectionWrapper from "wildComponents/SectionWrapper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Navigation } from "swiper"
 import "swiper/css"

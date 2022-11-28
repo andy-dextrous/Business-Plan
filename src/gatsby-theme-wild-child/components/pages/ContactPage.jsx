@@ -1,7 +1,7 @@
 import React from "react"
-import HeroLayout1 from "wildChildSections/hero/HeroLayout1"
-import ContactForm from "wildChildSections/ContactForm"
-import Main from "wildChildComponents/Main"
+import HeroLayout1 from "wildSections/hero/HeroLayout1"
+import ContactForm from "wildSections/ContactForm"
+import Main from "wildComponents/Main"
 
 function ContactPage() {
   return (

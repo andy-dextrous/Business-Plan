@@ -1,4 +1,4 @@
-import { HeroLayout1 as defaultStyles } from "wildChildSrc/@chakra-ui/gatsby-plugin/sections/heroLayout1.js"
+import { HeroLayout1 as defaultStyles } from "wildSrc/@chakra-ui/gatsby-plugin/sections/heroLayout1.js"
 
 export const HeroLayout1 = {
   parts: [...defaultStyles.parts],

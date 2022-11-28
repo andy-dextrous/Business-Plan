@@ -1,6 +1,6 @@
 import { Flex, Text, Button } from "@chakra-ui/react"
 import React from "react"
-import { SocialFollows } from "wildChildComponents/social/SocialFollows"
+import { SocialFollows } from "wildComponents/social/SocialFollows"
 
 function TopBar() {
   return (

@@ -1,25 +1,16 @@
 import { Box } from "@chakra-ui/react"
 import React, { useRef } from "react"
 import { useEffect } from "react"
-import { gsap } from "wildChildGsap"
+import { gsap } from "wildGsap"
 
 function Logo({
   color = "white",
   width = "100%",
   height = "100%",
-  logoProps,
-  colorMode,
+  logoProps = {},
+  colorMode = "light",
 }) {
   const logo = useRef()
-
-  // useEffect(() => {
-  //   gsap.to("#logo", {
-  //     duration: 0.4,
-  //     delay: 0.3,
-  //     fill: colorMode === "light" ? "white" : "dark.default",
-  //     ease: "power2.out",
-  //   })
-  // }, [colorMode])
 
   return (
     <Box

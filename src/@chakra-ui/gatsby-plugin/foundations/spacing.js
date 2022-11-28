@@ -1,4 +1,4 @@
-import { spacing as defaultSpacing } from "wildChildSrc/@chakra-ui/gatsby-plugin/foundations/spacing.js"
+import { spacing as defaultSpacing } from "wildSrc/@chakra-ui/gatsby-plugin/foundations/spacing.js"
 
 export const spacing = {
   ...defaultSpacing,

@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import { SearchForm } from "wildChildComponents/search/SearchForm"
+import { SearchForm } from "wildComponents/search/SearchForm"
 
 import {
   Modal,

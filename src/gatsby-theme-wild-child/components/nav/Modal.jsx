@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import { gsap, ScrollTrigger } from "wildChildGsap"
+import { gsap, ScrollTrigger } from "wildGsap"
 
-import { MenuContext } from "wildChildComponents/Layout"
-import { SocialFollows } from "wildChildComponents/social/SocialFollows"
+import { MenuContext } from "wildComponents/Layout"
+import { SocialFollows } from "wildComponents/social/SocialFollows"
 import Logo from "../../assets/logos/Logo"
 import {
   Accordion,

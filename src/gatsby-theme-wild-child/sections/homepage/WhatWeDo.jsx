@@ -40,7 +40,7 @@ function WhatWeDo({ disclosure }) {
             <ListItem>Grow their site traffic by 300%</ListItem>
             <ListItem>Build over 10k backlinks</ListItem>
             <ListItem>Grow from 2000 to 14,000 keywords, leading to:</ListItem>
-            <ListItem>A 500% growth in sales and</ListItem>
+            <ListItem>A 500% growth in revenue and</ListItem>
             <ListItem>An added 1 million dollars in revenue per year</ListItem>
           </List>
           <Text>…And just in 12 months.</Text>
@@ -79,12 +79,12 @@ function WhatWeDo({ disclosure }) {
           Get in touch.
         </Button>
       </VStack>
-      <Box
+      {/* <Box
         width={["100%", "100%"]}
         height="1px"
         bg="rgba(28, 29, 32, 0.175)"
         margin="auto"
-      ></Box>
+      ></Box> */}
     </SectionWrapper>
   )
 }

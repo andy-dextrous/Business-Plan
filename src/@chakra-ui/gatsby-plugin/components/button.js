@@ -17,8 +17,8 @@ export const Button = {
     primary: {
       ...defaultButton.variants.primary,
       color: "white",
-      border: "2px solid",
-      borderColor: "primary.600",
+      // border: "2px solid",
+      // borderColor: "primary.600",
     },
     dark: {
       bg: "dark.default",

@@ -4,7 +4,7 @@ const colors = {
   primary: "#0A9396",
   yellow: "#F2D389",
   dark: "#060D0F",
-  grayBackground: "#FCF7ED",
+  grayBackground: "#F7F5F3",
 }
 
 module.exports = colors

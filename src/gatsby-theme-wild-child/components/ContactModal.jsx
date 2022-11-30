@@ -34,14 +34,11 @@ function ContactModal({ data = {}, disclosure }) {
       <ModalOverlay bg={["rgba(0,0,0,0.6)"]} />
       <ModalContent
         maxW={["96vw", "96vw", "96vw", "1020px"]}
-        maxH={["100vh", "100vh", "100vh", "800px"]}
+        maxH={["100vh", "100vh", "100vh", "70vh"]}
         rounded={["xl", "xl", "2xl"]}
         overflow="hidden"
         boxShadow="none"
-        sx={{
-          minH: ["auto"],
-          height: ["auto "],
-        }}
+        my={12}
       >
         <ModalCloseButton
           bg="primary.default"

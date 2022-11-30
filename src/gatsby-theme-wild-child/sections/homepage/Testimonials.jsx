@@ -23,7 +23,7 @@ const testimonials = [
     content. The result was massive keyword cannibalisation and a
     50% YoY drop in organic traffic. Since Andrew's team took
     over, we have witnessed a 300% YoY growth in organic traffic
-    and over 500% growth in sales over $10,000 each from organic
+    and over 500% growth in revenue over $10,000 each from organic
     leads. We are now scaling our SEO and have increased our
     number of ranked keywords from 2,000 to 14,000 in just under a
     year. Our ROAS is over 10x and SEO has now added over a
@@ -99,6 +99,7 @@ function Testimonials() {
           },
         }}
         flexDir="column"
+        mb={[10, 10, 20]}
       >
         <HStack
           py={4}
@@ -150,7 +151,7 @@ function Testimonials() {
         width={["100%", "100%"]}
         height="1px"
         bg="rgba(28, 29, 32, 0.175)"
-        margin="auto"
+        mx="auto"
       ></Box>
     </SectionWrapper>
   )

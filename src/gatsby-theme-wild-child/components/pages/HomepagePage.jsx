@@ -23,7 +23,7 @@ function HomepagePage() {
       <Hero3 disclosure={{ isOpen, onOpen, onClose }} />
       <Introduction />
       <WhatWeDo disclosure={{ isOpen, onOpen, onClose }} />
-      <Box bgGradient="linear(to-b, white, #F4F4F4)">
+      <Box bgGradient="linear(to-b, grayBackground.default, grayBackground.default)">
         <Testimonials />
         <FeaturedSites />
         <TrackRecord />

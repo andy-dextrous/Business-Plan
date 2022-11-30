@@ -79,7 +79,7 @@ function Hero3({ disclosure }) {
       gyroControls: !1,
       minHeight: 200.0,
       minWidth: 200.0,
-      highlightColor: 0xffeedd,
+      highlightColor: 0xf7f5f3,
       midtoneColor: 0x0a9396,
       lowlightColor: 0x4a5be1,
       baseColor: 0xffffff,
@@ -114,7 +114,6 @@ function Hero3({ disclosure }) {
         top="0"
         position="absolute"
         zIndex="-1"
-        backgroundImage={`url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`}
       ></Box>
       <VStack
         height={["full", "full", "full"]}
@@ -158,11 +157,11 @@ function Hero3({ disclosure }) {
           width={["full", "full", "auto"]}
           ref={buttonRef}
         >
-          <Button variant="dark" size={buttonSize} onClick={onOpen}>
+          <Button size={buttonSize} onClick={onOpen}>
             Get in touch
           </Button>
           <Button
-            variant="white"
+            variant="dark"
             size={buttonSize}
             onClick={() => {
               smootherInstance.scrollTo("#what_we_do", true)

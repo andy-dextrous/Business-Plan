@@ -28,9 +28,9 @@ function Websites() {
           <Heading w="full" textAlign="center">
             Our success is no fluke
           </Heading>
-          <Counter end={500} details="growth in sales" value="%">
+          <Counter end={500} details="growth in revenue" value="%">
             <VStack align="flex-start">
-              <Heading color="gray.500" fontSize="xl">
+              <Heading color="primary.default" fontSize="xl">
                 Client: Virtuzone
               </Heading>
               <List>
@@ -41,7 +41,7 @@ function Websites() {
                 <ListItem>
                   Total Monthly clicks grown from 8.49K to 26.3K
                 </ListItem>
-                <ListItem>500% growth in sales</ListItem>
+                <ListItem>500% growth in revenue</ListItem>
                 <ListItem>
                   Total ranking keywords grown from 2630 to 15k+
                 </ListItem>
@@ -55,7 +55,7 @@ function Websites() {
             logo="https://res.cloudinary.com/wild-creative/image/upload/c_scale,w_200/v1669512493/Screen_Shot_2022-11-27_at_11.27.56_am_ak6bl2.png"
           >
             <VStack align="flex-start">
-              <Heading color="gray.500" fontSize="xl">
+              <Heading color="primary.default" fontSize="xl">
                 Client: The Nut Market
               </Heading>
               <List>
@@ -74,12 +74,12 @@ function Websites() {
 
           <Counter
             end={630}
-            details="growth in sales"
+            details="growth in revenue"
             value="%"
             logo="https://res.cloudinary.com/wild-creative/image/upload/c_scale,q_auto,w_400/v1669515885/Screen_Shot_2022-11-27_at_12.24.38_pm_xc6kzz.png"
           >
             <VStack align="flex-start">
-              <Heading color="gray.500" fontSize="xl">
+              <Heading color="primary.default" fontSize="xl">
                 Client: Aromas Tea & Coffee
               </Heading>
               <List>
@@ -88,7 +88,7 @@ function Websites() {
                 <ListItem>
                   Total Monthly clicks grown from 1.2K to 11.2K
                 </ListItem>
-                <ListItem>630% growth in sales</ListItem>
+                <ListItem>630% growth in revenue</ListItem>
               </List>
             </VStack>
           </Counter>

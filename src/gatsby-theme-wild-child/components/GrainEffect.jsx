@@ -29,7 +29,7 @@ function GrainEffect() {
         willChange: "auto",
         animation: "grain 8s steps(10) infinite",
       }}
-    />
+    ></Box>
   )
 }
 

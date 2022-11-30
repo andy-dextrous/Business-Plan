@@ -5,7 +5,6 @@
     "module": "esnext",
     "jsx": "react",
     "checkJs": true,
-    "moduleResolution": "node",
     "lib": ["esnext", "dom"],
     "esModuleInterop": true, // force import
     "moduleResolution": "node",
@@ -21,6 +20,8 @@
       "wildGsap": ["gatsby-theme-wild-child/src/gsap"]
     }
   },
-  "exclude": ["node_modules", "**/node_modules/*"],
-  "include": ["./src/**/*", "./src/*", "gatsby-theme-wild-child/**/*"]
+  "typeAcquisition": {
+    "include": ["@chakra-ui/react"]
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
 }

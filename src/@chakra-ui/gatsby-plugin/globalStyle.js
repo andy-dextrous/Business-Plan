@@ -10,6 +10,11 @@ const globalCSS = {
   "#fp-nav": {
     display: ["none", "none", "flex"],
   },
+
+  "::selection": {
+    backgroundColor: "primary.default",
+    color: "white",
+  },
 }
 
 const globalStyle = {

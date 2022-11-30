@@ -34,7 +34,7 @@ function ContactModal({ data = {}, disclosure }) {
       <ModalOverlay bg={["rgba(0,0,0,0.6)"]} />
       <ModalContent
         maxW={["96vw", "96vw", "96vw", "1020px"]}
-        maxH={["100vh", "100vh", "100vh", "unset"]}
+        maxH={["100vh", "100vh", "100vh", "800px"]}
         rounded={["xl", "xl", "2xl"]}
         overflow="hidden"
         boxShadow="none"
@@ -44,9 +44,9 @@ function ContactModal({ data = {}, disclosure }) {
         }}
       >
         <ModalCloseButton
-          bg="secondary.default"
+          bg="primary.default"
           color="white"
-          _hover={{ bg: "secondary.800" }}
+          _hover={{ bg: "primary.800" }}
           rounded="50%"
           size={buttonSize}
         />
@@ -68,7 +68,7 @@ function ContactModal({ data = {}, disclosure }) {
               spacing={[2, 2, 8]}
               py={[4, 4, 8, 10, 16]}
               px={[4, 4, 6, 6, 8, 20]}
-              bg={["unset", "unset", "secondary.default"]}
+              bg={["unset", "unset", "primary.default"]}
               display={["none", "none", "flex"]}
             >
               <Logo width="200px" height="auto" colorMode="white" />

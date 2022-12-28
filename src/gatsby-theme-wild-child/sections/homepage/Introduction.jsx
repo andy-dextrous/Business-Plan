@@ -44,16 +44,6 @@ function Introduction() {
         timelineRef.current.reverse()
       },
     })
-
-    var p = "https://www.semrush.com/leadgen/static/js/widget.min.js"
-    var d = document,
-      s = d.createElement("script")
-    s.src = p + "?v=" + Math.random()(d.head || d.body).appendChild(s)
-    s.onload = function () {
-      new SEMRUSH.SiteauditWidget({
-        widgetApiKey: "614c20019fcfc86fac8775cb",
-      })
-    }
   }, [])
 
   return (
@@ -81,7 +71,10 @@ function Introduction() {
           spacing={20}
           maxW={["100%", "100%", "250px"]}
         >
-          <div id="ssa-widget" />
+          <Text>
+            Our experience as SEO experts, designers and web developers puts us
+            in a unique position to get organic results that last.
+          </Text>
         </VStack>
       </Stack>
       <Box

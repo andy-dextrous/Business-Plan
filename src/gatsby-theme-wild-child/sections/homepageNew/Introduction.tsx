@@ -36,10 +36,10 @@ function Introduction() {
         h: "60%",
       }}
     >
-      <Heading color="white" textAlign="center" mb={8}>
+      <Heading color="white" textAlign="center" mb={8} zIndex="2">
         Virtuzone Customer’s Special Offer
       </Heading>
-      <Text textAlign="center" color="white" maxW="700px" mb={16}>
+      <Text textAlign="center" color="white" maxW="700px" mb={16} zIndex="2">
         All plans include First month includes a free SEO Audit, content map,
         page-speed assessment and technical SEO/site health assessment worth AED
         15,000.

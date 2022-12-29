@@ -1,6 +1,6 @@
+import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 import React from "react"
-import SectionWrapper from "wildComponents/SectionWrapper"
-import { Stack, Text, Box, VStack, Heading, Divider } from "@chakra-ui/react"
+import Section from "wildComponents/Section"
 import { gsap, ScrollTrigger, SplitText } from "wildGsap"
 
 function Introduction() {
@@ -47,7 +47,7 @@ function Introduction() {
   }, [])
 
   return (
-    <SectionWrapper>
+    <Section>
       <Stack
         direction={["column", "column", "row"]}
         spacing={[8, 8, 20]}
@@ -83,7 +83,7 @@ function Introduction() {
         bg="rgba(28, 29, 32, 0.175)"
         margin="auto"
       ></Box>
-    </SectionWrapper>
+    </Section>
   )
 }
 

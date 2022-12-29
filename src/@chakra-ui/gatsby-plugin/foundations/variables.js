@@ -4,14 +4,14 @@ export const variables = {
   ...defaults,
 
   // NAV
-  navHeight: ["70px", "70px", "85px"],
+  navHeight: ["70px", "70px", "70px"],
   siteMarginTop: 0,
-  sideMenuWidth: "80px",
+  sideMenuWidth: "0",
   logoHeight: "100%",
   logoWidth: "170px",
 
   /*** SECTIONS ***/
-  contentMaxWidth: "1260px",
+  contentMaxWidth: "1200px",
   sectionPaddingY: [0],
   sectionPaddingX: [5, 5, 12, 20, 24, 40],
   containerPaddingY: [20, 20, 20],

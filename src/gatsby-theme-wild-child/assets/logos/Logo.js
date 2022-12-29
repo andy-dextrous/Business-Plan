@@ -1,7 +1,5 @@
 import { Box } from "@chakra-ui/react"
 import React, { useRef } from "react"
-import { useEffect } from "react"
-import { gsap } from "wildGsap"
 
 function Logo({
   color = "white",

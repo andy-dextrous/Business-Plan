@@ -1,11 +1,11 @@
 import React from "react"
-import Main from "wildComponents/Main"
+import Layout from "wildComponents/Layout"
 
 function TagPage() {
   return (
-    <Main>
+    <Layout>
       <div>Tag Page</div>
-    </Main>
+    </Layout>
   )
 }
 

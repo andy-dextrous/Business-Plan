@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import SectionWrapper from "wildComponents/SectionWrapper"
+import Section from "wildComponents/Section"
 import { HStack, Center, Image, Box } from "@chakra-ui/react"
 import { gsap } from "wildGsap"
 
@@ -63,7 +63,7 @@ function FeaturedSites() {
   }, [])
 
   return (
-    <SectionWrapper>
+    <Section>
       <HStack
         minW={`calc(${images1.length} * 600px)`}
         ref={row1}
@@ -98,7 +98,7 @@ function FeaturedSites() {
         bg="rgba(28, 29, 32, 0.175)"
         margin="auto"
       ></Box>
-    </SectionWrapper>
+    </Section>
   )
 }
 

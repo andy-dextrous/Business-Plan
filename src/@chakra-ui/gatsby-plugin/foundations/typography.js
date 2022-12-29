@@ -7,12 +7,12 @@ export const fontSizes = {
   sm: rem(14),
   md: rem(16),
   lg: rem(18),
-  xl: rem(20),
-  "2xl": rem(28),
+  xl: rem(22),
+  "2xl": rem(26),
   "3xl": rem(30),
   "4xl": rem(40),
   "5xl": rem(45),
-  "6xl": rem(60),
+  "6xl": rem(54),
   "7xl": rem(78),
   "8xl": rem(96),
   "9xl": rem(110),
@@ -50,7 +50,7 @@ export const a = {
 
 export const h1 = {
   ...heading,
-  fontSize: ["3xl", "4xl", "6xl", "6xl", "7xl"],
+  fontSize: ["3xl", "4xl", "5xl", "6xl", "6xl"],
   lineHeight: ["1.2", "1.1", "1.1", "1", "1", "1", "1"],
   letterSpacing: "-2px",
 }
@@ -70,8 +70,8 @@ export const h3 = {
 
 export const h4 = {
   ...heading,
-  fontSize: ["xl", "2xl", "2xl"],
-  lineHeight: "110%",
+  fontSize: ["xl", "xl", "xl"],
+  lineHeight: "140%",
 }
 
 export const h5 = {
@@ -142,5 +142,18 @@ export const base = {
   ul,
   ol,
   br,
+  "h1.chakra-heading": {
+    ...h1,
+  },
+  "h2.chakra-heading": {
+    ...h2,
+  },
+  "h3.chakra-heading": {
+    ...h3,
+  },
+  "h4.chakra-heading": {
+    ...h4,
+  },
+
   ...globalTextStyles,
 }

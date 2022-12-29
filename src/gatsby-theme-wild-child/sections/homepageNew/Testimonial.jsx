@@ -12,24 +12,23 @@ function Testimonial({ data, bg = "dark.default" }) {
         bg={bg}
         rounded="2xl"
         overflow="hidden"
-        py={12}
+        py={20}
         px={[8, 8, 20]}
       >
         <Text
-          fontSize={["18px", "18px", "16px", "16px", "20px", "22px"]}
+          fontSize={["18px", "18px", "16px", "16px", "22px", "24px"]}
           lineHeight={["30px", "30px", "26px", "22px", "28px", "30px"]}
-          fontStyle="italic"
-          color="white"
+          fontWeight="600"
         >
           {testimonial}
         </Text>
         <HStack pl={4} spacing={4} align="center" alignSelf="flex-end">
-          <Avatar src={avatar} name={author} size="xl" bg="white" />
-          <Box>
-            <Heading as="h4" fontSize="22px" color="white">
+          {/* <Avatar src={avatar} name={author} size="xl" bg="white" /> */}
+          <Box pt={12}>
+            <Heading as="h4" fontSize="22px">
               {author}
             </Heading>
-            <Heading fontWeight="300" as="h5" fontSize="18px" color="white">
+            <Heading fontWeight="300" as="h5" fontSize="18px">
               {`${company}, ${position}`}
             </Heading>
           </Box>

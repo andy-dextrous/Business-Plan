@@ -7,9 +7,9 @@ export const Button = {
 
   baseStyle: {
     ...defaultButton.baseStyle,
-    rounded: "full",
     textTransform: "none",
     letterSpacing: 0,
+    rounded: "md",
   },
 
   variants: {
@@ -17,8 +17,10 @@ export const Button = {
     primary: {
       ...defaultButton.variants.primary,
       color: "white",
-      // border: "2px solid",
-      // borderColor: "primary.600",
+    },
+    secondary: {
+      ...defaultButton.variants.secondary,
+      color: "white",
     },
     dark: {
       bg: "dark.default",

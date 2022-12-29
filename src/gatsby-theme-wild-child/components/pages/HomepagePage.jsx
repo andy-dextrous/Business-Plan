@@ -1,35 +1,30 @@
 /*** Dependencies ***/
+import { Box } from "@chakra-ui/react"
 import React from "react"
 
 /*** Components ***/
-import Hero3 from "../../sections/homepage/Hero3"
-import WhatWeDo from "../../sections/homepage/WhatWeDo"
-import WorkingWithUs from "../../sections/homepage/WorkingWithUs"
-import TrackRecord from "../../sections/homepage/TrackRecord"
-import Introduction from "../../sections/homepage/Introduction"
-import Testimonials from "../../sections/homepage/Testimonials"
-import Main from "wildComponents/Main"
-import FeaturedSites from "../../sections/homepage/FeaturedSites"
-import { Box } from "@chakra-ui/react"
-import ContactModal from "../ContactModal"
-import { useDisclosure } from "@chakra-ui/react"
+import Layout from "wildComponents/Layout"
+import Hero from "../../sections/homepageNew/Hero"
+import Introduction from "../../sections/homepageNew/Introduction"
+import Quote from "../../sections/homepageNew/Quote"
+import Testimonials from "../../sections/homepageNew/Testimonials"
+import WhatWeDo from "../../sections/homepageNew/WhatWeDo"
+import WorkingWithUs from "../../sections/homepageNew/WorkingWithUs"
+import TrackRecord from "../../sections/homepageNew/TrackRecord"
+import CTA from "../../sections/homepageNew/CTA"
 
 function HomepagePage() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
   return (
-    <Main>
-      <ContactModal disclosure={{ isOpen, onOpen, onClose }} />
-      <Hero3 disclosure={{ isOpen, onOpen, onClose }} />
+    <Layout>
+      <Hero />
       <Introduction />
-      <WhatWeDo disclosure={{ isOpen, onOpen, onClose }} />
-      <Box bgGradient="linear(to-b, grayBackground.default, grayBackground.default)">
-        <Testimonials />
-        <FeaturedSites />
-        <TrackRecord />
-        <WorkingWithUs disclosure={{ isOpen, onOpen, onClose }} />
-      </Box>
-    </Main>
+      <Quote />
+      <WhatWeDo />
+      <WorkingWithUs />
+      <Testimonials />
+      <TrackRecord />
+      <CTA />
+    </Layout>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from "react"
-import Main from "wildComponents/Main"
+import Layout from "wildComponents/Layout"
 
 function AuthorPage() {
   return (
-    <Main>
+    <Layout>
       <div>Author Page</div>
-    </Main>
+    </Layout>
   )
 }
 

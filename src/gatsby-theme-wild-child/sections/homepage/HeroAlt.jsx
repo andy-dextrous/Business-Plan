@@ -1,5 +1,5 @@
 import React from "react"
-import SectionWrapper from "wildComponents/SectionWrapper"
+import Section from "wildComponents/Section"
 import {
   Stack,
   Text,
@@ -21,7 +21,7 @@ function HeroAlt() {
   }, [])
 
   return (
-    <SectionWrapper
+    <Section
       height="100vh"
       px="0"
       withContainer={false}
@@ -107,7 +107,7 @@ function HeroAlt() {
           </Box>
         </Box>
       </Stack>
-    </SectionWrapper>
+    </Section>
   )
 }
 

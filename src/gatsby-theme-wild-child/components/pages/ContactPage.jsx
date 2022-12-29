@@ -1,14 +1,14 @@
 import React from "react"
 import HeroLayout1 from "wildSections/hero/HeroLayout1"
 import ContactForm from "wildSections/ContactForm"
-import Main from "wildComponents/Main"
+import Layout from "wildComponents/Layout"
 
 function ContactPage() {
   return (
-    <Main>
+    <Layout>
       <HeroLayout1 size="sm" />
       <ContactForm />
-    </Main>
+    </Layout>
   )
 }
 

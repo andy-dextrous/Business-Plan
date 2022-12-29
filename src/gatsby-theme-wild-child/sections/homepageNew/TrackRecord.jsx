@@ -1,5 +1,6 @@
 import {
   Heading,
+  Image,
   List,
   ListItem,
   Stack,
@@ -8,7 +9,7 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 import Section from "wildComponents/Section"
-import Counter from "../../components/Counter"
+import Counter from "./Counter"
 
 function Websites() {
   const {
@@ -16,20 +17,33 @@ function Websites() {
   } = useTheme()
 
   return (
-    <Section containerSize="lg" id="case-studies">
+    <Section
+      containerSize="lg"
+      id="case-studies"
+      bg="primary.default"
+      zIndex="1"
+    >
       <Stack
-        direction={["column", "column", "row"]}
+        direction={["column", "column"]}
         spacing={rowSpacing}
         align="center"
         h="full"
+        sx={{
+          li: { color: "white" },
+        }}
       >
         <VStack flex="1" align="flex-start" spacing={18}>
-          <Heading w="full" textAlign="center">
+          <Heading w="full" textAlign="center" color="white">
             Our success is no fluke
           </Heading>
-          <Counter end={500} details="growth in revenue" value="%">
+          <Counter
+            end={500}
+            details="growth in revenue"
+            value="%"
+            logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/VZ_duwczd.svg"
+          >
             <VStack align="flex-start">
-              <Heading color="primary.default" fontSize="xl">
+              <Heading color="white" as="h4">
                 Client: Virtuzone
               </Heading>
               <List>
@@ -51,10 +65,10 @@ function Websites() {
             end={1170}
             details="growth in revenue"
             value="%"
-            logo="https://res.cloudinary.com/wild-creative/image/upload/c_scale,w_200/v1669512493/Screen_Shot_2022-11-27_at_11.27.56_am_ak6bl2.png"
+            logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/TNM_mhtbb0.svg"
           >
             <VStack align="flex-start">
-              <Heading color="primary.default" fontSize="xl">
+              <Heading color="white" as="h4" fontSize="xl">
                 Client: The Nut Market
               </Heading>
               <List>
@@ -75,10 +89,10 @@ function Websites() {
             end={630}
             details="growth in revenue"
             value="%"
-            logo="https://res.cloudinary.com/wild-creative/image/upload/c_scale,q_auto,w_400/v1669515885/Screen_Shot_2022-11-27_at_12.24.38_pm_xc6kzz.png"
+            logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282534/Aromas_Logo_gjxtgf.svg"
           >
             <VStack align="flex-start">
-              <Heading color="primary.default" fontSize="xl">
+              <Heading color="white" as="h4" fontSize="xl">
                 Client: Aromas Tea & Coffee
               </Heading>
               <List>
@@ -93,6 +107,22 @@ function Websites() {
           </Counter>
         </VStack>
       </Stack>
+      <Image
+        position="absolute"
+        top="100px"
+        width="900px"
+        right="-500px"
+        zIndex="0"
+        src="https://www.semrush.com/static/images/shape_top.d442ba0d2be9d61ed937084319a21b3a.svg"
+      />
+      <Image
+        position="absolute"
+        bottom="-250px"
+        width="900px"
+        left="-600px"
+        zIndex="0"
+        src="https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg"
+      />
     </Section>
   )
 }

@@ -61,7 +61,7 @@ function Introduction() {
               Bronze
             </Heading>
             <Heading pb={6} color="red.500">
-              AED 1,500
+              $1,500
             </Heading>
             <Text pb={2} w="full" fontWeight="700">
               Monthly basis:
@@ -100,7 +100,7 @@ function Introduction() {
               Silver
             </Heading>
             <Heading pb={6} color="red.500">
-              AED 2,500
+              $2,500
             </Heading>
             <Text pb={2} w="full" fontWeight="700">
               Monthly basis:
@@ -140,7 +140,7 @@ function Introduction() {
               Gold
             </Heading>
             <Heading pb={6} color="red.500">
-              AED 4,500
+              $4,500
             </Heading>
             <Text pb={2} w="full" fontWeight="700">
               Monthly basis:

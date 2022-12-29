@@ -1,17 +1,16 @@
 /*** Dependencies ***/
-import { Box } from "@chakra-ui/react"
 import React from "react"
 
 /*** Components ***/
 import Layout from "wildComponents/Layout"
+import CTA from "../../sections/homepageNew/CTA"
 import Hero from "../../sections/homepageNew/Hero"
 import Introduction from "../../sections/homepageNew/Introduction"
 import Quote from "../../sections/homepageNew/Quote"
 import Testimonials from "../../sections/homepageNew/Testimonials"
+import TrackRecord from "../../sections/homepageNew/TrackRecord"
 import WhatWeDo from "../../sections/homepageNew/WhatWeDo"
 import WorkingWithUs from "../../sections/homepageNew/WorkingWithUs"
-import TrackRecord from "../../sections/homepageNew/TrackRecord"
-import CTA from "../../sections/homepageNew/CTA"
 
 function HomepagePage() {
   return (

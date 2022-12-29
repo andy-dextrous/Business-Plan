@@ -106,15 +106,17 @@ function Hero() {
       <Image
         position="absolute"
         top="-200px"
-        right="-290px"
+        right={["-260px", "-260px", "-460px", "-450px", "-360px", "-220px"]}
+        width="800px"
         zIndex="0"
         src="https://www.semrush.com/static/images/shape_top.d442ba0d2be9d61ed937084319a21b3a.svg"
       />
       <Image
         position="absolute"
-        bottom="-250px"
-        left="-200px"
+        bottom={["-250px", "-250px", "-250px", "-250px", "-400px", "-400px"]}
+        left={["-400px", "-400px", "-400px", "-350px", "-270px", "-280px"]}
         zIndex="0"
+        w="750px"
         src="https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg"
       />
     </Section>

@@ -5,7 +5,7 @@ import React from "react"
 import Layout from "wildComponents/Layout"
 import CTA from "../../sections/homepageNew/CTA"
 import Hero from "../../sections/homepageNew/Hero"
-import Introduction from "../../sections/homepageNew/Introduction"
+import Packages from "../../sections/homepageNew/Packages"
 import Quote from "../../sections/homepageNew/Quote"
 import Testimonials from "../../sections/homepageNew/Testimonials"
 import TrackRecord from "../../sections/homepageNew/TrackRecord"
@@ -16,7 +16,7 @@ function HomepagePage() {
   return (
     <Layout>
       <Hero />
-      <Introduction />
+      <Packages />
       <Quote />
       <WhatWeDo />
       <WorkingWithUs />

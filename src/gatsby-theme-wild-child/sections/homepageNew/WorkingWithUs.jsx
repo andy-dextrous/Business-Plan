@@ -33,7 +33,7 @@ function SeoContent() {
             height="80px"
           />
           <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
-            INCREASED ORGANIC TRAFFIC & BETTER SEARCH RANKINGS
+            Increased organic traffic and better search rankings
           </Heading>
           <Text textAlign="center">
             Increase your organic traffic and search positions with our proven
@@ -47,7 +47,7 @@ function SeoContent() {
             height="80px"
           />
           <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
-            NEXT-LEVEL BRAND AWARENESS & VISIBILITY
+            Next-level brand awareness & visibility
           </Heading>
           <Text textAlign="center">
             Gain more authority for your brand and domain through our
@@ -61,7 +61,7 @@ function SeoContent() {
             height="80px"
           />
           <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
-            DEDICATED PARTNER ON YOUR TEAM WHO ACTUALLY GETS IT
+            Dedicated partner on your team who actually gets it
           </Heading>
           <Text textAlign="center">
             We can be your contracted “go-to” for all things SEO, content and

@@ -7,22 +7,14 @@ import {
   Text,
   useTheme,
 } from "@chakra-ui/react"
-import { Link as GatsbyLink } from "gatsby"
+import { Link } from "gatsby-theme-wild-child/src/components/Link"
 import React, { useRef } from "react"
-import { SmoothContext } from "wildComponents/SmoothWrapper"
+import Button from "wildComponents/Button"
 import Logo from "../../assets/logos/Logo"
 
 function TopMenu({ menu }) {
   const navRef = useRef()
   const { variables } = useTheme()
-  const smootherInstance = React.useContext(SmoothContext)
-
-  function routeChange(path) {
-    if (!document) return
-    console.log(path)
-    const target = document.querySelector(path)
-    target && smootherInstance.scrollTo(path, true)
-  }
 
   return (
     <>
@@ -52,16 +44,14 @@ function TopMenu({ menu }) {
           maxH={variables.navHeight}
         >
           <GridItem
-            sx={{
-              gridRow: ["1/2", "1/2", "1/2"],
-              gridColumn: ["2/3", "2/3", "1/2"],
-              py: 0,
-              px: [2, 2, 0],
-            }}
+            gridRow={["1/2", "1/2", "1/2"]}
+            gridColumn={["2/3", "2/3", "1/2"]}
+            py={0}
+            px={[2, 2, 0]}
           >
-            <GatsbyLink to="/">
+            <Link to="/">
               <Logo height={variables.logoHeight} width="160px" color="white" />
-            </GatsbyLink>
+            </Link>
           </GridItem>
 
           <GridItem sx={{ display: ["none", "none", "flex"] }}>
@@ -84,32 +74,21 @@ function TopMenu({ menu }) {
                         key={`nav-link-${item.id}`}
                         to={item.path}
                         cursor="pointer"
-                        sx={{
-                          h: "100%",
-                          paddingX: 4,
-                          display: "flex",
-                          align: "center",
-                          justify: "center",
-                          transition: "all 0.2s ease-in-out",
-
-                          "&[aria-current]": {
-                            borderBottom: `3px solid`,
-                          },
-                        }}
+                        as={Link}
+                        h="100%"
+                        display="flex"
+                        align="center"
+                        justify="center"
+                        transition="all 0.2s ease-in-out"
                       >
                         <Text
-                          sx={{
-                            py: 2,
-                            fontSize: "15px",
-                            fontWeight: "600",
-                            color: "white",
-                            _hover: {
-                              color: "primary.default",
-                            },
-                            "&.menu-item-text": { mb: "0 !important" },
-                          }}
+                          py={2}
+                          paddingX={4}
+                          fontSize="15px"
+                          fontWeight="600"
+                          color="white"
+                          _hover={{ color: "primary.default" }}
                           className="menu-item-text"
-                          onClick={() => routeChange(item.path)}
                         >
                           {item.label}
                         </Text>
@@ -118,6 +97,11 @@ function TopMenu({ menu }) {
                   })}
               </HStack>
             )}
+          </GridItem>
+          <GridItem display="flex" alignItems="center">
+            <Button variant="teal" size="md">
+              Get in touch
+            </Button>
           </GridItem>
         </Grid>
       </Flex>

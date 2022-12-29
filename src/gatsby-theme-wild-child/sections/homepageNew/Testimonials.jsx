@@ -112,7 +112,7 @@ function Testimonials() {
           <IconButton
             icon={<FaChevronLeft />}
             className="swiper-button-prev"
-            bg="secondary.default"
+            bg="primary.default"
             _hover={{ opacity: 0.8 }}
             opacity="0.9"
             color="white"
@@ -123,7 +123,7 @@ function Testimonials() {
             icon={<FaChevronRight />}
             className="swiper-button-next"
             opacity="0.8"
-            bg="secondary.default"
+            bg="primary.default"
             _hover={{ opacity: "0.9" }}
             color="white"
             size="md"

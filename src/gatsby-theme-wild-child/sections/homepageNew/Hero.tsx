@@ -51,7 +51,7 @@ function Hero() {
       <VStack w="full" spacing={6} zIndex="1" mt={24}>
         <Heading
           as="h6"
-          color="gray.300"
+          color="gray.500"
           textAlign="center"
           fontSize="18px"
           textTransform="uppercase"

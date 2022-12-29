@@ -22,6 +22,11 @@ export const Button = {
       ...defaultButton.variants.secondary,
       color: "white",
     },
+    teal: {
+      ...defaultButton.variants.primary,
+      color: "white",
+      bg: "teal.default",
+    },
     dark: {
       bg: "dark.default",
       color: "white",

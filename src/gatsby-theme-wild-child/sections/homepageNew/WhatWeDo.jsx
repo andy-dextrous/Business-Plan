@@ -1,25 +1,23 @@
 import {
-  Button,
   Heading,
   List,
   ListIcon,
   ListItem,
   Stack,
   Text,
-  useBreakpointValue,
   useTheme,
   VStack,
 } from "@chakra-ui/react"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import Section from "wildComponents/Section"
 import { MdCheckCircle } from "react-icons/md"
+import Section from "wildComponents/Section"
+import Button from "gatsby-theme-wild-child/src/components/Button"
 
 function WhatWeDo() {
   const {
     variables: { rowSpacing, componentSpacing },
   } = useTheme()
-  const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
 
   return (
     <Section containerStyles={{ py: 0 }} id="what_we_do">
@@ -30,7 +28,9 @@ function WhatWeDo() {
         h="full"
       >
         <VStack flex="1" align="flex-start" spacing={componentSpacing}>
-          <Heading>SEO, Content, Link-building, Design & Development </Heading>
+          <Heading textAlign={["center", "center", "left"]}>
+            SEO, Content, Link-building, Design & Development{" "}
+          </Heading>
           <Text>
             We specialise in getting graphs like this one to happen the only way
             that actually works - by creating websites that both humans and
@@ -96,7 +96,7 @@ function WhatWeDo() {
       </Stack>
       <VStack py={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
         <Text as="em">Want results like these? </Text>
-        <Button variant="secondary" size={buttonSize}>
+        <Button to="#hero" variant="secondary">
           Get in touch.
         </Button>
       </VStack>

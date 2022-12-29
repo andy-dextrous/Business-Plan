@@ -21,6 +21,7 @@ function Hero() {
         alignItems: "center",
       }}
       zIndex="2"
+      id="hero"
     >
       <VStack maxW="700px" pt={24} spacing={8} zIndex="1">
         <Heading as="h1" color="white" textAlign="center">
@@ -36,11 +37,18 @@ function Hero() {
           content creation, link building and affiliate marketing. We work with
           clients worldwide to build, grow and scale their businesses online.
         </Heading>
-        <Stack direction="row" align="stretch" w="full" spacing={3} pt={4}>
+        <Stack
+          direction={["column", "column", "row"]}
+          align="stretch"
+          w="full"
+          spacing={3}
+          pt={4}
+        >
           <Input
             flex="3"
             placeholder="Enter your domain"
             h="60px"
+            minH="60px"
             rounded="md"
           />
           <Button flex="1" variant="secondary" h="60px">
@@ -61,45 +69,45 @@ function Hero() {
         <HStack
           w="full"
           flexWrap="wrap"
-          spacing={12}
+          spacing={[0, 0, 10]}
           justifyContent="center"
           align="center"
         >
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/VZ_duwczd.svg"
-            width="120px"
+            width="140px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/DUQE_ozrd85.svg"
             width="100px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/Tactic_lefnet.svg"
             width="100px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282534/Aromas_Logo_gjxtgf.svg"
             width="100px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/Logo_frr3oz.png"
             width="100px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/TNM_mhtbb0.svg"
             width="100px"
             opacity="0.9"
-            pb={8}
+            p={[4, 4, 0]}
           />
         </HStack>
       </VStack>
@@ -114,7 +122,7 @@ function Hero() {
       <Image
         position="absolute"
         bottom={["-250px", "-250px", "-250px", "-250px", "-400px", "-400px"]}
-        left={["-400px", "-400px", "-400px", "-350px", "-270px", "-280px"]}
+        left={["-400px", "-390px", "-400px", "-350px", "-270px", "-280px"]}
         zIndex="0"
         w="750px"
         src="https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg"

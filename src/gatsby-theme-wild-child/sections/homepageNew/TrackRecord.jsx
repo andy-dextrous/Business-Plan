@@ -32,7 +32,7 @@ function Websites() {
           li: { color: "white" },
         }}
       >
-        <VStack flex="1" align="flex-start" spacing={18}>
+        <VStack flex="1" align="flex-start" spacing={[4, 4, 18]}>
           <Heading w="full" textAlign="center" color="white">
             Our success is no fluke
           </Heading>
@@ -43,9 +43,6 @@ function Websites() {
             logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/VZ_duwczd.svg"
           >
             <VStack align="flex-start">
-              <Heading color="white" as="h4">
-                Client: Virtuzone
-              </Heading>
               <List>
                 <ListItem>Started: November 2021</ListItem>
                 <ListItem>
@@ -68,9 +65,6 @@ function Websites() {
             logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/TNM_mhtbb0.svg"
           >
             <VStack align="flex-start">
-              <Heading color="white" as="h4" fontSize="xl">
-                Client: The Nut Market
-              </Heading>
               <List>
                 <ListItem>Started: January 2020</ListItem>
                 <ListItem>Monthly impressions grown from 121K to 341K</ListItem>
@@ -92,9 +86,6 @@ function Websites() {
             logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282534/Aromas_Logo_gjxtgf.svg"
           >
             <VStack align="flex-start">
-              <Heading color="white" as="h4" fontSize="xl">
-                Client: Aromas Tea & Coffee
-              </Heading>
               <List>
                 <ListItem>Started: August 2019</ListItem>
                 <ListItem>Monthly impressions grown from 20K to 341K</ListItem>

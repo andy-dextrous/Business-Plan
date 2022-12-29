@@ -23,7 +23,6 @@ function Testimonial({ data, bg = "dark.default" }) {
           {testimonial}
         </Text>
         <HStack pl={4} spacing={4} align="center" alignSelf="flex-end">
-          {/* <Avatar src={avatar} name={author} size="xl" bg="white" /> */}
           <Box pt={12}>
             <Heading as="h4" fontSize="22px">
               {author}

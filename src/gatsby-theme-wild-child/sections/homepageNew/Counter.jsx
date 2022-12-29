@@ -1,10 +1,11 @@
 import { Heading, Image, Stack, Text, VStack } from "@chakra-ui/react"
 import React, { useEffect } from "react"
-import { gsap } from "wildGsap"
+import { gsap, ScrollTrigger } from "wildGsap"
 
 function Counter({
   logo = "https://res.cloudinary.com/wild-creative/image/upload/c_scale,w_400/v1669512804/Screen_Shot_2022-11-27_at_11.33.11_am_p6wo4v.png",
   end = 100000,
+  duration = 5,
   details = "impressions",
   children,
   value = "",
@@ -13,14 +14,14 @@ function Counter({
   const counter = React.useRef(0)
 
   useEffect(() => {
-    let tl = gsap.timeline()
-    let num = counter.current.innerText.replace(/\,/g, "")
+    let tl = gsap.timeline({ paused: true })
+    let num = counter.current.innerText.replace(/\,/g, "") // remove commas
     counter.current.innerText = num
 
     tl.to(
       counter.current,
       {
-        duration: 10,
+        duration: duration,
         innerText: end,
         modifiers: {
           innerText: function (innerText) {
@@ -31,45 +32,48 @@ function Counter({
           },
         },
         ease: "Power2.easeOut",
-        scrollTrigger: {
-          trigger: counter.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
       },
       0
     )
+
+    ScrollTrigger.create({
+      trigger: counter.current,
+      start: "top bottom",
+      toggleActions: "play none none none",
+      onEnter() {
+        tl.play()
+      },
+      onLeaveBack() {
+        tl.restart()
+        tl.pause()
+        counter.current.innerText = 0
+      },
+    })
   }, [])
 
   return (
     <Stack
-      spacing={40}
+      spacing={[4, 4, 40]}
       borderBottom="1px dotted"
       borderColor="gray.300"
       py={12}
       w="full"
       justify="space-between"
       align="center"
-      direction={["column", "column", "row"]}
+      direction={["column-reverse", "column-reverse", "row"]}
     >
       <Stack
         direction={["column", "column", "row"]}
         align={["center", "center"]}
         spacing={8}
       >
-        <Image
-          src={logo}
-          alt="Google"
-          width="150px"
-          height="150px"
-          rounded="full"
-        />
+        <Image src={logo} alt="Google" width="200px" />
         {children}
       </Stack>
 
       <VStack
         align={["center", "center"]}
-        bg="#c9edff"
+        bg={["teal.default", "teal.default", "#c9edff"]}
         width="200px"
         h="200px"
         justify="center"

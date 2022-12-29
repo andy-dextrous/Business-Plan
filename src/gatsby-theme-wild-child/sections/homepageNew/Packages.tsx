@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Heading,
   List,
   ListIcon,
@@ -12,6 +11,7 @@ import {
 import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 import { MdCheckCircle } from "react-icons/md"
+import Button from "gatsby-theme-wild-child/src/components/Button"
 
 function Introduction() {
   return (
@@ -43,9 +43,16 @@ function Introduction() {
         page-speed assessment and technical SEO/site health assessment worth AED
         15,000.
       </Text>
-      <Box w="full" bg="white" boxShadow="lg" zIndex="2" rounded="3xl" p={12}>
+      <Box
+        w="full"
+        bg="white"
+        boxShadow="lg"
+        zIndex="2"
+        rounded="3xl"
+        p={[6, 6, 12]}
+      >
         <Stack
-          spacing={4}
+          spacing={[6, 6, 4]}
           direction={["column", "column", "column", "row"]}
           align="stretch"
         >
@@ -84,7 +91,9 @@ function Introduction() {
                 Internal linking and site structure optimisation
               </ListItem>
             </List>
-            <Button justifySelf="flex-end">Start Now</Button>
+            <Button justifySelf="flex-end" to="#hero">
+              Start Now
+            </Button>
           </VStack>
           <VStack flex="1.1" bg="red.50" p={6} rounded="xl">
             <Heading as="h4" mb={12}>
@@ -122,7 +131,9 @@ function Introduction() {
                 Internal linking and site structure optimisation
               </ListItem>
             </List>
-            <Button justifySelf="flex-end">Start Now</Button>
+            <Button justifySelf="flex-end" to="#hero">
+              Start Now
+            </Button>
           </VStack>
           <VStack flex="1" bg="red.50" p={6} rounded="xl">
             <Heading as="h4" mb={12}>
@@ -168,7 +179,9 @@ function Introduction() {
                 Monthly Reporting
               </ListItem>
             </List>
-            <Button justifySelf="flex-end">Start Now</Button>
+            <Button justifySelf="flex-end" to="#hero">
+              Start Now
+            </Button>
           </VStack>
         </Stack>
       </Box>

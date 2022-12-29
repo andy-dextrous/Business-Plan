@@ -15,6 +15,10 @@ const globalCSS = {
     backgroundColor: "primary.default",
     color: "white",
   },
+
+  html: {
+    scrollBehavior: "smooth",
+  },
 }
 
 const globalStyle = {

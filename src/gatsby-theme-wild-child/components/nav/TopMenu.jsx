@@ -89,6 +89,7 @@ function TopMenu({ menu }) {
                           color="white"
                           _hover={{ color: "primary.default" }}
                           className="menu-item-text"
+                          mb={"0 !important"}
                         >
                           {item.label}
                         </Text>
@@ -98,7 +99,7 @@ function TopMenu({ menu }) {
               </HStack>
             )}
           </GridItem>
-          <GridItem display="flex" alignItems="center">
+          <GridItem display={["none", "none", "flex"]} alignItems="center">
             <Button variant="teal" size="md">
               Get in touch
             </Button>

@@ -1,11 +1,12 @@
-import { Button, Heading, VStack } from "@chakra-ui/react"
+import { Heading, VStack } from "@chakra-ui/react"
 import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
+import Button from "gatsby-theme-wild-child/src/components/Button"
 
 function CTA() {
   return (
     <Section bg="primary.default">
-      <VStack>
+      <VStack spacing={6}>
         <Heading color="white" textAlign="center">
           Are you ready to dominate the web?
         </Heading>
@@ -18,7 +19,9 @@ function CTA() {
           Claim your free SEO audit today and see how we can help you grow your
           business online.
         </Heading>
-        <Button variant="secondary">Start here</Button>
+        <Button to="#hero" variant="secondary">
+          Start here
+        </Button>
       </VStack>
     </Section>
   )

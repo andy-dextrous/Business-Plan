@@ -99,7 +99,7 @@ function Testimonials() {
           },
         }}
         flexDir="column"
-        mb={[10, 10, 20]}
+        // mb={[10, 10, 20]}
       >
         <Heading mb={8} w="full" textAlign="center">
           Here's why our clients love us

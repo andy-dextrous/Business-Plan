@@ -25,10 +25,10 @@ function Quote() {
       <Image
         src="https://www.semrush.com/static/images/bubble.1793638c40709caea7b32a8f93e4ca07.svg"
         position="absolute"
-        right="10%"
-        top="-650px"
+        left="47vw"
+        top={["-2 50px", "-250px", "-650px"]}
         zIndex="-1"
-        height="900px"
+        width="750px"
       />
     </Section>
   )

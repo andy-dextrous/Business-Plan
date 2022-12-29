@@ -1,11 +1,11 @@
 import React from "react"
-import Main from "wildComponents/Main"
+import Layout from "wildComponents/Layout"
 
 function AboutPage() {
   return (
-    <Main>
+    <Layout>
       <div>About Page Biatch</div>
-    </Main>
+    </Layout>
   )
 }
 

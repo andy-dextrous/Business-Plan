@@ -10,7 +10,7 @@ const SITE_CONFIG = {
   /**** THEME OPTIONS ****/
   cssVarPrefix: "wild",
   shouldShowBreakpoints: false,
-  smoothScroll: true,
+  smoothScroll: false,
   usePageTransitions: false,
   useTransitionModal: false,
   menuPlacement: "top",

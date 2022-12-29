@@ -1,24 +1,20 @@
-import React, { useRef } from "react"
-import { Link as GatsbyLink } from "gatsby"
-import Logo from "../../assets/logos/Logo"
-import Button from "wildComponents/Button"
-import { SmoothContext } from "wildComponents/SmoothWrapper"
 import {
   Center,
   Flex,
   Grid,
   GridItem,
   HStack,
-  Link,
   Text,
-  useBreakpointValue,
   useTheme,
 } from "@chakra-ui/react"
+import { Link as GatsbyLink } from "gatsby"
+import React, { useRef } from "react"
+import { SmoothContext } from "wildComponents/SmoothWrapper"
+import Logo from "../../assets/logos/Logo"
 
 function TopMenu({ menu }) {
   const navRef = useRef()
   const { variables } = useTheme()
-  const buttonSize = useBreakpointValue(["sm", "sm", "xl"])
   const smootherInstance = React.useContext(SmoothContext)
 
   function routeChange(path) {
@@ -30,7 +26,6 @@ function TopMenu({ menu }) {
 
   return (
     <>
-      {/* <TopBar /> */}
       <Flex
         as="header"
         alignItems="center"
@@ -41,9 +36,9 @@ function TopMenu({ menu }) {
         right="0"
         top="0px"
         w="100%"
-        bg="transaprent"
+        bg="dark.default"
         zIndex="sticky"
-        h="90px"
+        h="70px"
         ref={navRef}
       >
         <Grid
@@ -65,11 +60,7 @@ function TopMenu({ menu }) {
             }}
           >
             <GatsbyLink to="/">
-              <Logo
-                height={variables.logoHeight}
-                width="160px"
-                color="dark.default"
-              />
+              <Logo height={variables.logoHeight} width="160px" color="white" />
             </GatsbyLink>
           </GridItem>
 
@@ -110,9 +101,8 @@ function TopMenu({ menu }) {
                           sx={{
                             py: 2,
                             fontSize: "15px",
-                            fontWeight: "semibold",
                             fontWeight: "600",
-                            color: "dark.default",
+                            color: "white",
                             _hover: {
                               color: "primary.default",
                             },
@@ -129,30 +119,6 @@ function TopMenu({ menu }) {
               </HStack>
             )}
           </GridItem>
-          {/* <GridItem
-            gridRow={["1/2", "1/2", "1/2"]}
-            gridColumn={["3/4", "3/4", "3/4"]}
-            display="flex"
-            justifyContent={["flex-end", "flex-end"]}
-            alignItems={["center", "center"]}
-            py={0}
-            px={[2, 2, 0]}
-            h="full"
-            gap={6}
-          >
-            <Link
-              as={GatsbyLink}
-              to=""
-              display={["none", "none", "block"]}
-              _hover={{
-                textDecoration: "none",
-              }}
-            >
-              <Button to="/contact" size={buttonSize} variant="dark">
-                Get Started
-              </Button>
-            </Link>
-          </GridItem> */}
         </Grid>
       </Flex>
     </>

@@ -2,7 +2,7 @@
 
 import React from "react"
 
-import SectionWrapper from "wildComponents/SectionWrapper"
+import Section from "wildComponents/Section"
 import * as THREE from "three"
 import FOG from "vanta/dist/vanta.fog.min"
 import { gsap, SplitText } from "wildGsap"
@@ -90,7 +90,7 @@ function Hero3({ disclosure }) {
   }, [])
 
   return (
-    <SectionWrapper
+    <Section
       w="100vw"
       h={["80vh", "80vh", "100vh"]}
       position="relative"
@@ -171,7 +171,7 @@ function Hero3({ disclosure }) {
           </Button>
         </ButtonGroup>
       </VStack>
-    </SectionWrapper>
+    </Section>
   )
 }
 

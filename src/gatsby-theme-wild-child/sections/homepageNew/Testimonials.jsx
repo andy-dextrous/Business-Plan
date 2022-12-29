@@ -1,18 +1,18 @@
 import React from "react"
-import Section from "wildComponents/Section"
-import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Navigation } from "swiper"
 import "swiper/css"
+import { Swiper, SwiperSlide } from "swiper/react"
+import Section from "wildComponents/Section"
 
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa"
 import {
+  Center,
+  Heading,
   HStack,
   IconButton,
   useBreakpointValue,
-  Center,
-  Box,
 } from "@chakra-ui/react"
-import Testimonial from "../../components/Testimonial"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import Testimonial from "./Testimonial"
 
 SwiperCore.use([Navigation])
 
@@ -49,7 +49,7 @@ const testimonials = [
       "https://res.cloudinary.com/wild-creative/image/upload/c_scale,w_200/v1669511646/DUQE/Screen_Shot_2022-11-27_at_11.13.37_am_cm8fzt.png",
   },
   {
-    testimonial: `“After 3 years of trying different web partners, we hired Andrew in 2020 to help us grow our eCommerce store and he has been an absolute game-changer. In short, he built us an incredible new website and got our products and categories ranking really high in Google. He also added a blog and has been growing our website’s traffic constantly. Even though we started small, revenue-wise, we are up by over 1170% since he started!”
+    testimonial: `“After 3 years of trying different web partners, we hired WILD Creative in 2020 to help us grow our eCommerce store and he has been an absolute game-changer. In short, Andrew and the team built us an incredible new website and got our products and categories ranking really high in Google. He also added a blog and has been growing our website’s traffic constantly. Even though we started small, revenue-wise, we are up by over 1170% since he started!”
     `,
     author: "Clinton Osbourne",
     company: "The Nut Market",
@@ -59,7 +59,7 @@ const testimonials = [
   },
   {
     testimonial: `“We were looking to build out our office leasing website and WILD Creative delivered our vision and exceeded all our expectations! 
-    We had an idea of how we wanted the website to look and the basic functions but Andrew took the time to understand our company and challenged us to expand the vision with no limitations. The process was seamless and the best experience we have had developing a website. The framework Andrew uses really has no limitations giving us the flexibility to grow the website as our business grows which was a breath of fresh air. 100% recommend WILD Creative to anyone looking for web development work.”
+    We had an idea of how we wanted the website to look and the basic functions but Andrew took the time to understand our company and challenged us to expand the vision with no limitations. The process was seamless and the best experience we have had developing a website. The framework they use really has no limitations giving us the flexibility to grow the website as our business grows which was a breath of fresh air. 100% recommend WILD Creative to anyone looking for web development work.”
     
     `,
     author: "David Nickson",
@@ -101,28 +101,33 @@ function Testimonials() {
         flexDir="column"
         mb={[10, 10, 20]}
       >
+        <Heading mb={8} w="full" textAlign="center">
+          Here's why our clients love us
+        </Heading>
         <HStack
           py={4}
           className={showControls ? "" : "hidden"}
-          alignSelf={["center", "center", "flex-end"]}
+          alignSelf={["center", "center"]}
         >
           <IconButton
             icon={<FaChevronLeft />}
             className="swiper-button-prev"
-            bg="primary.default"
+            bg="secondary.default"
             _hover={{ opacity: 0.8 }}
             opacity="0.9"
             color="white"
             size="md"
+            rounded="full"
           />
           <IconButton
             icon={<FaChevronRight />}
             className="swiper-button-next"
             opacity="0.8"
-            bg="primary.default"
+            bg="secondary.default"
             _hover={{ opacity: "0.9" }}
             color="white"
             size="md"
+            rounded="full"
           />
         </HStack>
         <Swiper
@@ -141,18 +146,16 @@ function Testimonials() {
           {testimonials.map((t, i) => {
             return (
               <SwiperSlide key={i}>
-                <Testimonial data={t} show={activeSlide + 1 === i} />
+                <Testimonial
+                  data={t}
+                  show={activeSlide + 1 === i}
+                  bg="#C9EDFF"
+                />
               </SwiperSlide>
             )
           })}
         </Swiper>
       </Center>
-      <Box
-        width={["100%", "100%"]}
-        height="1px"
-        bg="rgba(28, 29, 32, 0.175)"
-        mx="auto"
-      ></Box>
     </Section>
   )
 }

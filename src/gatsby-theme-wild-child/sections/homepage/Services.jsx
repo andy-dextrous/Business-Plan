@@ -1,10 +1,10 @@
 import React from "react"
-import SectionWrapper from "wildComponents/SectionWrapper"
+import Section from "wildComponents/Section"
 import { VStack, Heading, Stack, Text, Box } from "@chakra-ui/react"
 
 function Services() {
   return (
-    <SectionWrapper>
+    <Section>
       <VStack align="flex-start" spacing={12}>
         <Heading>We can help you with</Heading>
         <Stack direction={["column", "column", "row"]} spacing={20}>
@@ -46,7 +46,7 @@ function Services() {
           </VStack>
         </Stack>
       </VStack>
-    </SectionWrapper>
+    </Section>
   )
 }
 

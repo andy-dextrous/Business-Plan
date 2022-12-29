@@ -1,11 +1,11 @@
 import React from "react"
-import Main from "wildComponents/Main"
+import Layout from "wildComponents/Layout"
 
 function CategoryPage() {
   return (
-    <Main>
+    <Layout>
       <div>Category Page</div>
-    </Main>
+    </Layout>
   )
 }
 

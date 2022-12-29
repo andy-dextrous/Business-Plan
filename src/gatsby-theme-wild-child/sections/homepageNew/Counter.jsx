@@ -67,7 +67,14 @@ function Counter({
         {children}
       </Stack>
 
-      <VStack align={["center", "center"]}>
+      <VStack
+        align={["center", "center"]}
+        bg="#c9edff"
+        width="200px"
+        h="200px"
+        justify="center"
+        rounded="full"
+      >
         <Heading color="dark.default" fontSize="6xl">
           + <span ref={counter}>0</span>
           {value}

@@ -87,7 +87,7 @@ function TopMenu({ menu }) {
                           fontSize="15px"
                           fontWeight="600"
                           color="white"
-                          _hover={{ color: "primary.default" }}
+                          _hover={{ color: "teal.400" }}
                           className="menu-item-text"
                           mb={"0 !important"}
                         >

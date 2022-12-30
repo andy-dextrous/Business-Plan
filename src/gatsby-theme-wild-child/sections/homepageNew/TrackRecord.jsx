@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 import Section from "wildComponents/Section"
+import Gear from "../../assets/icons/Gear"
+import Pie from "../../assets/icons/Pie"
 import Counter from "./Counter"
 
 function Websites() {
@@ -98,21 +100,24 @@ function Websites() {
           </Counter>
         </VStack>
       </Stack>
-      <Image
+
+      <Gear
         position="absolute"
         top="100px"
-        width="900px"
-        right="-500px"
-        zIndex="0"
-        src="https://www.semrush.com/static/images/shape_top.d442ba0d2be9d61ed937084319a21b3a.svg"
+        width={["500px", "500px", "700px", "700px", "700px"]}
+        right={["-400px", "-400px", "-500px", "-500px", "-500px"]}
+        zIndex="-1"
+        color="primary.200"
+        // transform="rotate(100deg)"
       />
-      <Image
+      <Pie
         position="absolute"
-        bottom="-250px"
-        width="900px"
-        left="-600px"
-        zIndex="0"
-        src="https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg"
+        bottom="-150px"
+        width={["500px", "500px", "700px", "700px", "700px"]}
+        left={["-400px", "-400px", "-500px", "-500px", "-500px"]}
+        zIndex="-1"
+        transform="rotate(30deg)"
+        color="teal.400"
       />
     </Section>
   )

@@ -23,12 +23,15 @@ function Quote() {
         </VStack>
       </VStack>
       <Image
-        src="https://www.semrush.com/static/images/bubble.1793638c40709caea7b32a8f93e4ca07.svg"
+        src="https://res.cloudinary.com/wild-creative/image/upload/v1672372364/Speech_buble_d6uluk.svg"
         position="absolute"
         left="47vw"
-        top={["-2 50px", "-250px", "-650px"]}
+        top={["-2 50px", "-250px", "-520px"]}
         zIndex="-1"
-        width="750px"
+        width="700px"
+        height="1000px"
+        opacity="0.7"
+        display={["none", "none", "block"]}
       />
     </Section>
   )

@@ -57,7 +57,7 @@ export const h1 = {
 
 export const h2 = {
   ...heading,
-  fontSize: ["3xl", "4xl", "4xl"],
+  fontSize: ["3xl", "3xl", "4xl"],
   lineHeight: "1.1",
   letterSpacing: "-1px",
 }
@@ -65,7 +65,7 @@ export const h2 = {
 export const h3 = {
   ...heading,
   letterSpacing: "-1px",
-  fontSize: ["2xl", "3xl", "3xl"],
+  fontSize: ["2xl", "2xl", "3xl"],
 }
 
 export const h4 = {

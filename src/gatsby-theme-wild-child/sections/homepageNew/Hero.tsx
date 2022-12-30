@@ -9,8 +9,21 @@ import {
 } from "@chakra-ui/react"
 import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
+import Gear from "../../assets/icons/Gear"
+import Pie from "../../assets/icons/Pie"
+import LogoSmall from "../../assets/icons/LogoSmall"
+// import { gsap } from "gatsby-theme-wild-child/src/gsap"
 
 function Hero() {
+  const pie = React.useRef(null)
+
+  // React.useEffect(() => {
+  //   gsap.to(pie.current, {
+  //     rotate: 360,
+  //     ease: "none",
+  //   })
+  // }, [])
+
   return (
     <Section
       bg="primary.default"
@@ -111,21 +124,25 @@ function Hero() {
           />
         </HStack>
       </VStack>
-      <Image
+
+      <Gear
         position="absolute"
-        top="-200px"
-        right={["-260px", "-260px", "-460px", "-450px", "-360px", "-220px"]}
-        width="800px"
+        top={["-270px", "-270px", "-200px", "-200px", "-200px", "-200px"]}
+        right={["-550px", "-550px", "-460px", "-450px", "-360px", "-280px"]}
+        width="700px"
         zIndex="0"
-        src="https://www.semrush.com/static/images/shape_top.d442ba0d2be9d61ed937084319a21b3a.svg"
+        color="primary.200"
       />
-      <Image
+      <Pie
         position="absolute"
-        bottom={["-250px", "-250px", "-250px", "-250px", "-400px", "-400px"]}
-        left={["-400px", "-390px", "-400px", "-350px", "-270px", "-280px"]}
+        bottom={["-100px", "-100px", "-250px", "-250px", "-400px", "-400px"]}
+        left={["-400px", "-390px", "-400px", "-350px", "-390px", "-300px"]}
         zIndex="0"
-        w="750px"
-        src="https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg"
+        w={["500px", "500px", "500px", "700px", "700px", "700px"]}
+        color="teal.400"
+        id="pie"
+        transform="rotate(120deg)"
+        ref={pie}
       />
     </Section>
   )

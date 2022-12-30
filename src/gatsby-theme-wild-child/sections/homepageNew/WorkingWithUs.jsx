@@ -22,17 +22,18 @@ function SeoContent() {
       </Heading>
       <Stack
         direction={["column", "column", "row"]}
-        spacing={rowSpacing}
+        spacing={[20, 20, 12]}
         align="flex-start"
         h="full"
+        px={[8, 8, 0]}
       >
         <VStack flex="1" spacing={componentSpacing}>
           <Image
-            src="https://www.semrush.com/static/images/heart.6e0968f39befa7d22627669dbe30ca2d.svg"
-            width="80px"
-            height="80px"
+            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372616/Bar_nep6xm.svg"
+            width="60px"
+            height="60px"
           />
-          <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
+          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Increased organic traffic and better search rankings
           </Heading>
           <Text textAlign="center">
@@ -42,11 +43,11 @@ function SeoContent() {
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
           <Image
-            src="https://www.semrush.com/static/images/star.a549a5922da2063e08b7cdb942349fd9.svg"
-            width="80px"
-            height="80px"
+            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372615/Asset_9_rtaeun.svg"
+            width="60px"
+            height="60px"
           />
-          <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
+          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Next-level brand awareness & visibility
           </Heading>
           <Text textAlign="center">
@@ -56,11 +57,11 @@ function SeoContent() {
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
           <Image
-            src="https://www.semrush.com/static/images/diamond.4699339fa7ac96d7fa266b427502e8e6.svg"
-            width="80px"
-            height="80px"
+            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372616/Cloud_jxxu7z.svg"
+            width="60px"
+            height="60px"
           />
-          <Heading as="h3" fontSize={["xl", "xl", "xl"]} textAlign="center">
+          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Dedicated partner on your team who actually gets it
           </Heading>
           <Text textAlign="center">

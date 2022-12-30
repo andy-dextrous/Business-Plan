@@ -24,8 +24,8 @@ export const Button = {
     },
     teal: {
       ...defaultButton.variants.primary,
-      color: "white",
-      bg: "teal.default",
+      color: "primary.default",
+      bg: "teal.400",
     },
     dark: {
       bg: "dark.default",

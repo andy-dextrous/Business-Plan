@@ -73,7 +73,7 @@ function Counter({
 
       <VStack
         align={["center", "center"]}
-        bg={["teal.default", "teal.default", "#c9edff"]}
+        bg="lightblue.default"
         width="200px"
         h="200px"
         justify="center"

@@ -42,23 +42,23 @@ function WhatWeDo() {
             }}
           >
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="#44e0a8" />
+              <ListIcon as={MdCheckCircle} color="teal.400" />
               Grow their site traffic by 300%
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="#44e0a8" />
+              <ListIcon as={MdCheckCircle} color="teal.400" />
               Build over 10k backlinks
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="#44e0a8" />
+              <ListIcon as={MdCheckCircle} color="teal.400" />
               Grow from 2000 to 14,000 keywords, leading to:
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="#44e0a8" />A 500% growth in
+              <ListIcon as={MdCheckCircle} color="teal.400" />A 500% growth in
               revenue and
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="#44e0a8" />
+              <ListIcon as={MdCheckCircle} color="teal.400" />
               An added 1 million dollars in revenue per year
             </ListItem>
           </List>
@@ -79,9 +79,11 @@ function WhatWeDo() {
             width: ["90vw", "90vw", "450px"],
             height: ["90vw", "90vw", "450px"],
             bgImage:
-              "https://www.semrush.com/static/images/shape_left.76ab6e7ff801732bf052030f19491afb.svg",
-            bgSize: "cover",
-            borderRadius: "50%",
+              "https://res.cloudinary.com/wild-creative/image/upload/v1672373552/Asset_10_j30eq9.svg",
+            bgPosition: "center",
+            bgRepeat: "no-repeat",
+            bgSize: "contain",
+            // borderRadius: "50%",
             position: "absolute",
             top: 0,
             left: "calc(50% - 225px)",
@@ -95,9 +97,9 @@ function WhatWeDo() {
         </VStack>
       </Stack>
       <VStack py={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
-        <Text as="em">Want results like these? </Text>
+        <Text as="em">Want results like these?</Text>
         <Button to="#hero" variant="secondary">
-          Get in touch.
+          Get your free SEO audit.
         </Button>
       </VStack>
     </Section>

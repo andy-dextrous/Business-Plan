@@ -14,7 +14,7 @@ export const variables = {
   contentMaxWidth: "1200px",
   sectionPaddingY: [0],
   sectionPaddingX: [5, 5, 12, 20, 24, 40],
-  containerPaddingY: [20, 20, 20],
+  containerPaddingY: [16, 16, 20],
   containerPaddingX: [0],
   componentSpacing: [4, 4, 4, 4, 4],
   rowSpacing: [8, 8, 12, 12, 16, 20, 20],

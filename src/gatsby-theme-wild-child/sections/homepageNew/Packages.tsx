@@ -74,20 +74,20 @@ function Introduction() {
               }}
             >
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Keyword research and competitor analysis
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Core Web Vitals management.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 On-page optimisation of up to 4 articles a month provided by the
                 client.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Internal linking and site structure optimisation
               </ListItem>
             </List>
@@ -113,21 +113,21 @@ function Introduction() {
               }}
             >
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Keyword research and competitor analysis
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Core Web Vitals management.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />4 expert articles
-                created by our in-house content team. All articles are written
-                for maximum SEO impact using our proprietary SEO content writing
-                process.
+                <ListIcon as={MdCheckCircle} color="teal.400" />4 expert
+                articles created by our in-house content team. All articles are
+                written for maximum SEO impact using our proprietary SEO content
+                writing process.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Internal linking and site structure optimisation
               </ListItem>
             </List>
@@ -153,29 +153,29 @@ function Introduction() {
               }}
             >
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Keyword research and competitor analysis
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Core Web Vitals management.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />8 expert articles
-                created by our in-house content team. All articles are written
-                for maximum SEO impact using our proprietary SEO content writing
-                process.
+                <ListIcon as={MdCheckCircle} color="teal.400" />8 expert
+                articles created by our in-house content team. All articles are
+                written for maximum SEO impact using our proprietary SEO content
+                writing process.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Internal linking and site structure optimisation
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />4 high-DR
+                <ListIcon as={MdCheckCircle} color="teal.400" />4 high-DR
                 backlinks per month.
               </ListItem>
               <ListItem>
-                <ListIcon as={MdCheckCircle} color="#44E0A8" />
+                <ListIcon as={MdCheckCircle} color="teal.400" />
                 Monthly Reporting
               </ListItem>
             </List>

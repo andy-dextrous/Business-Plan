@@ -9,10 +9,13 @@ import {
   Heading,
   HStack,
   IconButton,
+  Text,
   useBreakpointValue,
+  VStack,
 } from "@chakra-ui/react"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import Testimonial from "./Testimonial"
+import Button from "gatsby-theme-wild-child/src/components/Button"
 
 SwiperCore.use([Navigation])
 
@@ -107,12 +110,12 @@ function Testimonials() {
         <HStack
           py={4}
           className={showControls ? "" : "hidden"}
-          alignSelf={["center", "center"]}
+          alignSelf={["center", "center", "flex-end"]}
         >
           <IconButton
             icon={<FaChevronLeft />}
             className="swiper-button-prev"
-            bg="primary.default"
+            bg="secondary.default"
             _hover={{ opacity: 0.8 }}
             opacity="0.9"
             color="white"
@@ -123,7 +126,7 @@ function Testimonials() {
             icon={<FaChevronRight />}
             className="swiper-button-next"
             opacity="0.8"
-            bg="primary.default"
+            bg="secondary.default"
             _hover={{ opacity: "0.9" }}
             color="white"
             size="md"
@@ -149,13 +152,19 @@ function Testimonials() {
                 <Testimonial
                   data={t}
                   show={activeSlide + 1 === i}
-                  bg="#C9EDFF"
+                  bg="lightblue.default"
                 />
               </SwiperSlide>
             )
           })}
         </Swiper>
       </Center>
+      <VStack pt={[20, 20, 20]} w={["full", "full", "auto"]} align="center">
+        <Text as="em">Want results like these?</Text>
+        <Button to="#hero" variant="secondary">
+          Get your free SEO audit.
+        </Button>
+      </VStack>
     </Section>
   )
 }

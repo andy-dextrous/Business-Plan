@@ -47,6 +47,7 @@ function Hamburger() {
         aria-label="Toggle menu"
         bg="primary.default"
         ref={toggleMenu}
+        rounded="full"
       >
         {!isMenuOpen ? (
           <ToggleIcon color="white" />

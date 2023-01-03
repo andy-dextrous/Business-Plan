@@ -10,6 +10,7 @@ function Counter({
   children,
   value = "",
   increment = 1,
+  borderTop = false,
 }) {
   const counter = React.useRef(0)
 
@@ -55,7 +56,9 @@ function Counter({
     <Stack
       spacing={[4, 4, 40]}
       borderBottom="1px dotted"
-      borderColor="gray.300"
+      borderBottomColor="gray.300"
+      borderTop={borderTop ? "1px dotted" : "none"}
+      borderTopColor={borderTop ? "gray.300" : "transparent"}
       py={12}
       w="full"
       justify="space-between"
@@ -73,17 +76,17 @@ function Counter({
 
       <VStack
         align={["center", "center"]}
-        bg="lightblue.default"
+        bg="secondary.default"
         width="200px"
         h="200px"
         justify="center"
         rounded="full"
       >
-        <Heading color="dark.default" fontSize="6xl">
+        <Heading color="white" fontSize="6xl">
           + <span ref={counter}>0</span>
           {value}
         </Heading>
-        <Text color="dark.default">{details}</Text>
+        <Text color="white">{details}</Text>
       </VStack>
     </Stack>
   )

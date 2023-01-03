@@ -12,9 +12,24 @@ import React, { useRef } from "react"
 import Button from "wildComponents/Button"
 import Logo from "../../assets/logos/Logo"
 
-function TopMenu({ menu }) {
+function TopMenu() {
   const navRef = useRef()
   const { variables } = useTheme()
+
+  function createRandomId() {
+    return Math.ceil(Math.random() * 10000000)
+  }
+
+  const menu = [
+    { path: "#audit", id: () => createRandomId(), label: "What's Included" },
+    { path: "#what_we_do", id: () => createRandomId(), label: "Case Study" },
+    {
+      path: "#testimonials",
+      id: () => createRandomId(),
+      label: "Testimonials",
+    },
+    { path: "#pricing", id: () => createRandomId(), label: "Pricing" },
+  ]
 
   return (
     <>
@@ -64,38 +79,34 @@ function TopMenu({ menu }) {
                   spacing: 0,
                 }}
               >
-                {menu?.menuItems?.nodes
-                  .filter(item => {
-                    return !item.parentId
-                  })
-                  .map(item => {
-                    return (
-                      <Center
-                        key={`nav-link-${item.id}`}
-                        to={item.path}
-                        cursor="pointer"
-                        as={Link}
-                        h="100%"
-                        display="flex"
-                        align="center"
-                        justify="center"
-                        transition="all 0.2s ease-in-out"
+                {menu.map(item => {
+                  return (
+                    <Center
+                      key={`nav-link-${item.id}`}
+                      to={item.path}
+                      cursor="pointer"
+                      as={Link}
+                      h="100%"
+                      display="flex"
+                      align="center"
+                      justify="center"
+                      transition="all 0.2s ease-in-out"
+                    >
+                      <Text
+                        py={2}
+                        paddingX={4}
+                        fontSize="15px"
+                        fontWeight="600"
+                        color="white"
+                        _hover={{ color: "teal.400" }}
+                        className="menu-item-text"
+                        mb={"0 !important"}
                       >
-                        <Text
-                          py={2}
-                          paddingX={4}
-                          fontSize="15px"
-                          fontWeight="600"
-                          color="white"
-                          _hover={{ color: "teal.400" }}
-                          className="menu-item-text"
-                          mb={"0 !important"}
-                        >
-                          {item.label}
-                        </Text>
-                      </Center>
-                    )
-                  })}
+                        {item.label}
+                      </Text>
+                    </Center>
+                  )
+                })}
               </HStack>
             )}
           </GridItem>

@@ -22,18 +22,8 @@ function Introduction() {
         flexDirection: "column",
         alignItems: "center",
       }}
-      _after={{
-        content: '""',
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        bg: "primary.default",
-        zIndex: -1,
-        w: "100%",
-        h: "60%",
-      }}
+      bg="primary.default"
+      id="pricing"
     >
       <Heading color="white" textAlign="center" mb={8} zIndex="2">
         Virtuzone Customer’s Special Offer

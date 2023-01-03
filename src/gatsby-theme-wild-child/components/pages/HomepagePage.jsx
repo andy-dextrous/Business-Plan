@@ -11,17 +11,19 @@ import Testimonials from "../../sections/homepageNew/Testimonials"
 import TrackRecord from "../../sections/homepageNew/TrackRecord"
 import WhatWeDo from "../../sections/homepageNew/WhatWeDo"
 import WorkingWithUs from "../../sections/homepageNew/WorkingWithUs"
+import Included from "../../sections/homepageNew/Included"
 
 function HomepagePage() {
   return (
     <Layout>
       <Hero />
-      <Packages />
+      <Included />
       <Quote />
       <WhatWeDo />
       <WorkingWithUs />
       <Testimonials />
       <TrackRecord />
+      <Packages />
       <CTA />
     </Layout>
   )

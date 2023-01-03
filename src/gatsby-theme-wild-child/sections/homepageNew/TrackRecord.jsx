@@ -4,6 +4,7 @@ import {
   List,
   ListItem,
   Stack,
+  Text,
   useTheme,
   VStack,
 } from "@chakra-ui/react"
@@ -34,15 +35,27 @@ function Websites() {
           li: { color: "white" },
         }}
       >
-        <VStack flex="1" align="flex-start" spacing={[4, 4, 18]}>
-          <Heading w="full" textAlign="center" color="white">
-            Our success is no fluke
+        <VStack flex="1" align="center" spacing={[4, 4, 18]}>
+          <Heading w="full" textAlign="center" color="white" maxW="780px">
+            Results like these come from a process.
           </Heading>
+
+          <Text color="white" maxW="700px" textAlign="center" pb={12}>
+            A lot of people have been burned by simplified SEO tactics that
+            don't move really the needle. Rest assured that Search Engine
+            Optimization (SEO), when done right, is still{" "}
+            <em>
+              the most cost-effective advertising tool you can possibly invest
+              in for your startup.
+            </em>
+          </Text>
+
           <Counter
             end={500}
             details="growth in revenue"
             value="%"
             logo="https://res.cloudinary.com/wild-creative/image/upload/v1672282266/VZ_duwczd.svg"
+            borderTop
           >
             <VStack align="flex-start">
               <List>

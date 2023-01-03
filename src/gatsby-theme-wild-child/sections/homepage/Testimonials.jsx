@@ -21,7 +21,7 @@ const testimonials = [
     testimonial: `Before Wild Creative took over our SEO, we had been working
     with an agency that managed to generate over 900 pages of
     content. The result was massive keyword cannibalisation and a
-    50% YoY drop in organic traffic. Since Andrew's team took
+    50% YoY drop in organic traffic. Since Wild Creative took
     over, we have witnessed a 300% YoY growth in organic traffic
     and over 500% growth in revenue over $10,000 each from organic
     leads. We are now scaling our SEO and have increased our

@@ -1,14 +1,28 @@
-import { Avatar, Heading, Image, Text, VStack } from "@chakra-ui/react"
+import {
+  Avatar,
+  Heading,
+  Image,
+  Text,
+  useTheme,
+  VStack,
+} from "@chakra-ui/react"
 import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 
 function Quote() {
+  const { variables } = useTheme()
+
   return (
-    <Section>
+    <Section containerStyles={{ py: "0", pt: variables.containerPaddingY }}>
       <VStack spacing={12} pb={12}>
         <Heading maxW="700px" textAlign="center">
-          “Any business owner who wants to grow their web presence would be
-          lucky to work with these guys. Top shelf.”
+          “Since Wild Creative took over, we have witnessed a 300% YoY growth in
+          organic traffic and over
+          <Text as="span" color="secondary.default">
+            {" "}
+            500% growth in revenue
+          </Text>{" "}
+          over $10,000 each from organic leads.”
         </Heading>
         <VStack spacing={2}>
           <Avatar
@@ -22,7 +36,7 @@ function Quote() {
           <Text color="gray.600">Director of Marketing | Virtuzone</Text>
         </VStack>
       </VStack>
-      <Image
+      {/* <Image
         src="https://res.cloudinary.com/wild-creative/image/upload/v1672372364/Speech_buble_d6uluk.svg"
         position="absolute"
         left="47vw"
@@ -32,7 +46,7 @@ function Quote() {
         height="1000px"
         opacity="0.7"
         display={["none", "none", "block"]}
-      />
+      /> */}
     </Section>
   )
 }

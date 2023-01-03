@@ -11,7 +11,6 @@ import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 import Gear from "../../assets/icons/Gear"
 import Pie from "../../assets/icons/Pie"
-import LogoSmall from "../../assets/icons/LogoSmall"
 // import { gsap } from "gatsby-theme-wild-child/src/gsap"
 
 function Hero() {
@@ -36,19 +35,21 @@ function Hero() {
       zIndex="2"
       id="hero"
     >
-      <VStack maxW="700px" pt={24} spacing={8} zIndex="1">
+      <VStack maxW="750px" pt={24} spacing={8} zIndex="1">
         <Heading as="h1" color="white" textAlign="center">
-          SEO and Content That Generates Real ROI
+          SEO & Content That Generates Traffic, Leads & Sales.
         </Heading>
         <Heading
           as="h4"
           color="white"
           textAlign="center"
           fontWeight="500 !important"
+          maxW="700px"
         >
-          We are experts in website growth, offering SEO that really works,
-          content creation, link building and affiliate marketing. We work with
-          clients worldwide to build, grow and scale their businesses online.
+          Virtuzone has partnered with one of the world’s best SEO & Content
+          experts, Wild Creative, to offer an exclusive deal for all Virtuzone
+          customers. If you want a detailed report on your current website's
+          performance, take advantage of this free SEO audit today.
         </Heading>
         <Stack
           direction={["column", "column", "row"]}
@@ -56,6 +57,7 @@ function Hero() {
           w="full"
           spacing={3}
           pt={4}
+          maxW="600px"
         >
           <Input
             flex="3"
@@ -65,7 +67,7 @@ function Hero() {
             rounded="md"
           />
           <Button flex="1" variant="secondary" h="60px">
-            Get a Free SEO Audit
+            Get Your Free SEO Audit
           </Button>
         </Stack>
       </VStack>

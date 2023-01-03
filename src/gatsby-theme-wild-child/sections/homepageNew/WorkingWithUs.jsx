@@ -1,14 +1,9 @@
+import { Heading, Image, Stack, Text, useTheme, VStack } from "@chakra-ui/react"
 import React from "react"
 import Section from "wildComponents/Section"
-import {
-  Heading,
-  useTheme,
-  Stack,
-  VStack,
-  Text,
-  Image,
-  Button,
-} from "@chakra-ui/react"
+import CloudGraph from "../../assets/icons/CloudGraph"
+import SimpleGraph from "../../assets/icons/SimpleGraph"
+import ScreenHeart from "../../assets/icons/ScreenHeart"
 
 function SeoContent() {
   const {
@@ -28,11 +23,7 @@ function SeoContent() {
         px={[8, 8, 0]}
       >
         <VStack flex="1" spacing={componentSpacing}>
-          <Image
-            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372616/Bar_nep6xm.svg"
-            width="60px"
-            height="60px"
-          />
+          <CloudGraph width="60px" height="60px" />
           <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Increased organic traffic and better search rankings
           </Heading>
@@ -42,11 +33,7 @@ function SeoContent() {
           </Text>
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
-          <Image
-            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372615/Asset_9_rtaeun.svg"
-            width="60px"
-            height="60px"
-          />
+          <SimpleGraph width="60px" height="60px" />
           <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Next-level brand awareness & visibility
           </Heading>
@@ -56,11 +43,7 @@ function SeoContent() {
           </Text>
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
-          <Image
-            src="https://res.cloudinary.com/wild-creative/image/upload/v1672372616/Cloud_jxxu7z.svg"
-            width="60px"
-            height="60px"
-          />
+          <ScreenHeart width="60px" height="60px" />
           <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
             Dedicated partner on your team who actually gets it
           </Heading>

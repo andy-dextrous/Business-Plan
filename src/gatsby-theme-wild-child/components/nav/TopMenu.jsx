@@ -82,7 +82,7 @@ function TopMenu() {
                 {menu.map(item => {
                   return (
                     <Center
-                      key={`nav-link-${item.id}`}
+                      key={`nav-link-${item.id()}`}
                       to={item.path}
                       cursor="pointer"
                       as={Link}
@@ -111,7 +111,11 @@ function TopMenu() {
             )}
           </GridItem>
           <GridItem display={["none", "none", "flex"]} alignItems="center">
-            <Button variant="teal" size="md">
+            <Button
+              variant="teal"
+              size="md"
+              to="mailto:andrew@wildcreative.com.au"
+            >
               Get in touch
             </Button>
           </GridItem>

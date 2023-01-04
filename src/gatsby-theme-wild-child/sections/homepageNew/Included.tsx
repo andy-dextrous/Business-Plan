@@ -66,7 +66,14 @@ function Introduction() {
       >
         <Stack spacing={[6, 6, 4]} direction={"column"}>
           <ChakraTabs isFitted variant="enclosed">
-            <TabList border="unset" gap="20px">
+            <TabList
+              border="unset"
+              gap={[0, 0, "20px"]}
+              flexWrap="nowrap"
+              w={["auto", "auto"]}
+              overflowX="scroll"
+              overflowY="hidden"
+            >
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
@@ -100,8 +107,8 @@ function Introduction() {
                 {/* <CloudGraph width="80px" height="80px" /> */}
                 <Image
                   src="https://res.cloudinary.com/wild-creative/image/upload/v1672792403/On-page_ft5htr.svg"
-                  w="60px"
-                  h="60px"
+                  w={["30px", "30px", "60px"]}
+                  h={["30px", "30px", "60px"]}
                 />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   On-page optimization
@@ -140,8 +147,8 @@ function Introduction() {
                 {/* <CloudGraph width="80px" height="80px" /> */}
                 <Image
                   src="https://res.cloudinary.com/wild-creative/image/upload/v1672792403/Links_j9ek6y.svg"
-                  w="60px"
-                  h="60px"
+                  w={["30px", "30px", "60px"]}
+                  h={["30px", "30px", "60px"]}
                 />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Backlinks
@@ -180,8 +187,8 @@ function Introduction() {
                 {/* <CloudGraph width="80px" height="80px" /> */}
                 <Image
                   src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/Social_twq1dr.svg"
-                  w="60px"
-                  h="60px"
+                  w={["30px", "30px", "60px"]}
+                  h={["30px", "30px", "60px"]}
                 />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   User Experience
@@ -220,8 +227,8 @@ function Introduction() {
                 {/* <CloudGraph width="80px" height="80px" /> */}
                 <Image
                   src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/Speed_rd8nfy.svg"
-                  w="60px"
-                  h="60px"
+                  w={["30px", "30px", "60px"]}
+                  h={["30px", "30px", "60px"]}
                 />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Technical Performance
@@ -260,8 +267,8 @@ function Introduction() {
                 {/* <CloudGraph width="80px" height="80px" /> */}
                 <Image
                   src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/UX_wvd1fo.svg"
-                  w="60px"
-                  h="60px"
+                  w={["30px", "30px", "60px"]}
+                  h={["30px", "30px", "60px"]}
                 />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Social
@@ -270,7 +277,7 @@ function Introduction() {
             </TabList>
 
             <TabPanels>
-              <TabPanel py={20}>
+              <TabPanel py={[8, 8, 20]}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -303,7 +310,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={20}>
+              <TabPanel py={[8, 8, 20]}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -337,7 +344,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={20}>
+              <TabPanel py={[8, 8, 20]}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -372,7 +379,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={20}>
+              <TabPanel py={[8, 8, 20]}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -403,7 +410,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={20}>
+              <TabPanel py={[8, 8, 20]}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}

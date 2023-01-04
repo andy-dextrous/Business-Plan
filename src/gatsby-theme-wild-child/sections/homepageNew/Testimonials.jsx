@@ -24,7 +24,7 @@ const testimonials = [
     testimonial: `Before Wild Creative took over our SEO, we had been working
     with an agency that managed to generate over 900 pages of
     content. The result was massive keyword cannibalisation and a
-    50% YoY drop in organic traffic. Since Andrew's team took
+    50% YoY drop in organic traffic. Since their team took
     over, we have witnessed a 300% YoY growth in organic traffic
     and over 500% growth in revenue over $10,000 each from organic
     leads. We are now scaling our SEO and have increased our
@@ -41,9 +41,9 @@ const testimonials = [
   },
 
   {
-    testimonial: `“Creating an incredible website from scratch is no easy task, but Andrew made it seem easy. From day one, he got the vision of the team and executed it effortlessly. As a result, we developed an innovative website, which is also an effective lead-generation machine. Our website is not only highly functional, but also extremely visually appealing, and we receive dozens of compliments on it regularly.
+    testimonial: `“Creating an incredible website from scratch is no easy task, but Andrew from Wild Creative made it seem so easy. From day one, he got the vision of the team and executed it effortlessly. As a result, we developed an innovative website, which is also an effective lead-generation machine. Our website is not only highly functional, but also extremely visually appealing, and we receive dozens of compliments on it regularly.
 
-    A huge thanks to Andrew and the team for developing a website that is a perfect blend of contemporary design and performance. If  you want an experience like mine, I highly recommend WILD Creative!”
+    A huge thanks to Wild Creative for developing a website that is a perfect blend of contemporary design and performance. If you want an experience like mine, I highly recommend these guys!”
     `,
     author: "Ambia Hoque",
     company: "DUQE Free Zone",
@@ -52,7 +52,7 @@ const testimonials = [
       "https://res.cloudinary.com/wild-creative/image/upload/c_scale,w_200/v1669511646/DUQE/Screen_Shot_2022-11-27_at_11.13.37_am_cm8fzt.png",
   },
   {
-    testimonial: `“After 3 years of trying different web partners, we hired WILD Creative in 2020 to help us grow our eCommerce store and he has been an absolute game-changer. In short, Andrew and the team built us an incredible new website and got our products and categories ranking really high in Google. He also added a blog and has been growing our website’s traffic constantly. Even though we started small, revenue-wise, we are up by over 1170% since he started!”
+    testimonial: `“After 3 years of trying different web partners, we hired Wild Creative in 2020 to help us grow our eCommerce store and they have been an absolute game-changer. In short, Andrew and the team built us an incredible new website and got our products and categories ranking really high in Google. He also added a blog and has been growing our website’s traffic constantly. Even though we started small, revenue-wise, we are up by over 1170% since he started!”
     `,
     author: "Clinton Osbourne",
     company: "The Nut Market",

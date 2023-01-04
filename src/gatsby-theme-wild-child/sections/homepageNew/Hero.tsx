@@ -37,7 +37,7 @@ function Hero() {
     >
       <VStack maxW="750px" pt={24} spacing={8} zIndex="1">
         <Heading as="h1" color="white" textAlign="center">
-          SEO & Content That Generates Traffic, Leads & Sales.
+          How much better could your SEO be?
         </Heading>
         <Heading
           as="h4"
@@ -48,8 +48,8 @@ function Hero() {
         >
           Virtuzone has partnered with one of the world’s best SEO & Content
           experts, Wild Creative, to offer an exclusive deal for all Virtuzone
-          customers. If you want a detailed report on your current website's
-          performance, take advantage of this free SEO audit today.
+          customers. If you want an action plan to take your website to the
+          front page of Google, take advantage of our free Website SEO report.
         </Heading>
         <Stack
           direction={["column", "column", "row"]}

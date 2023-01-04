@@ -37,7 +37,7 @@ function Websites() {
       >
         <VStack flex="1" align="center" spacing={[4, 4, 18]}>
           <Heading w="full" textAlign="center" color="white" maxW="780px">
-            Results like these come from a process.
+            Our recent client results
           </Heading>
 
           <Text color="white" maxW="700px" textAlign="center" pb={12}>

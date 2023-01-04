@@ -29,9 +29,14 @@ function Introduction() {
         Virtuzone Customer’s Special Offer
       </Heading>
       <Text textAlign="center" color="white" maxW="700px" mb={16} zIndex="2">
-        All plans include First month includes a free SEO Audit, content map,
-        page-speed assessment and technical SEO/site health assessment worth AED
-        15,000.
+        While some business owners want to undertake the rigorous work of doing
+        their own SEO, most prefer to leave it to the pros. If your SEO report
+        leaves you scratching your head, we are offering these special packages,
+        only for Virtuzone customers!
+      </Text>
+      <Text color="white" maxW="700px" mb={16} zIndex="2" textAlign="center">
+        All plans include a free SEO Audit, content map, page-speed assessment
+        and technical SEO/site health assessment worth AED 15,000.
       </Text>
       <Box
         w="full"

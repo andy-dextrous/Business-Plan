@@ -1,13 +1,13 @@
-import { Heading, Image, Stack, Text, useTheme, VStack } from "@chakra-ui/react"
+import { Heading, Stack, Text, useTheme, VStack } from "@chakra-ui/react"
 import React from "react"
 import Section from "wildComponents/Section"
 import CloudGraph from "../../assets/icons/CloudGraph"
-import SimpleGraph from "../../assets/icons/SimpleGraph"
 import ScreenHeart from "../../assets/icons/ScreenHeart"
+import SimpleGraph from "../../assets/icons/SimpleGraph"
 
 function SeoContent() {
   const {
-    variables: { rowSpacing, componentSpacing },
+    variables: { componentSpacing },
   } = useTheme()
 
   return (
@@ -24,7 +24,12 @@ function SeoContent() {
       >
         <VStack flex="1" spacing={componentSpacing}>
           <CloudGraph width="60px" height="60px" />
-          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
+          <Heading
+            as="h4"
+            px={[2, 2, 8]}
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+          >
             Increased organic traffic and better search rankings
           </Heading>
           <Text textAlign="center">
@@ -34,8 +39,13 @@ function SeoContent() {
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
           <SimpleGraph width="60px" height="60px" />
-          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
-            Next-level brand awareness & visibility
+          <Heading
+            as="h4"
+            px={[2, 2, 8]}
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+          >
+            Next-level brand awareness and authority
           </Heading>
           <Text textAlign="center">
             Gain more authority for your brand and domain through our
@@ -44,7 +54,12 @@ function SeoContent() {
         </VStack>
         <VStack flex="1" spacing={componentSpacing}>
           <ScreenHeart width="60px" height="60px" />
-          <Heading as="h4" fontSize={["xl", "xl", "xl"]} textAlign="center">
+          <Heading
+            as="h4"
+            px={[2, 2, 8]}
+            fontSize={["xl", "xl", "xl"]}
+            textAlign="center"
+          >
             Dedicated partner on your team who actually gets it
           </Heading>
           <Text textAlign="center">

@@ -67,7 +67,7 @@ function Hero() {
             rounded="md"
           />
           <Button flex="1" variant="secondary" h="60px">
-            Get Your Free SEO Audit
+            Get Your Free Report
           </Button>
         </Stack>
       </VStack>

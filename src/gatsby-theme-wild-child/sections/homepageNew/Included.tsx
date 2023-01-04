@@ -1,6 +1,7 @@
 import {
   Box,
   Heading,
+  Image,
   Stack,
   Tab,
   TabList,
@@ -69,13 +70,13 @@ function Introduction() {
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
                 }}
                 _hover={{
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
@@ -85,7 +86,7 @@ function Introduction() {
                 borderBottomColor="gray.100"
                 flexDirection="column"
                 sx={{
-                  svg: {
+                  img: {
                     filter: "grayscale(100%)",
                     transition: "all 0.2s ease-out",
                     opacity: 0.6,
@@ -96,7 +97,12 @@ function Introduction() {
                   boxShadow: "none !important",
                 }}
               >
-                <CloudGraph width="80px" height="80px" />
+                {/* <CloudGraph width="80px" height="80px" /> */}
+                <Image
+                  src="https://res.cloudinary.com/wild-creative/image/upload/v1672792403/On-page_ft5htr.svg"
+                  w="60px"
+                  h="60px"
+                />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   On-page optimization
                 </Heading>
@@ -104,13 +110,13 @@ function Introduction() {
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
                 }}
                 _hover={{
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
@@ -120,7 +126,7 @@ function Introduction() {
                 borderBottomColor="gray.100"
                 flexDirection="column"
                 sx={{
-                  svg: {
+                  img: {
                     filter: "grayscale(100%)",
                     transition: "all 0.2s ease-out",
                     opacity: 0.6,
@@ -131,7 +137,12 @@ function Introduction() {
                   boxShadow: "none !important",
                 }}
               >
-                <CloudGraph width="80px" height="80px" />
+                {/* <CloudGraph width="80px" height="80px" /> */}
+                <Image
+                  src="https://res.cloudinary.com/wild-creative/image/upload/v1672792403/Links_j9ek6y.svg"
+                  w="60px"
+                  h="60px"
+                />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Backlinks
                 </Heading>
@@ -139,13 +150,13 @@ function Introduction() {
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
                 }}
                 _hover={{
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
@@ -155,7 +166,7 @@ function Introduction() {
                 borderBottomColor="gray.100"
                 flexDirection="column"
                 sx={{
-                  svg: {
+                  img: {
                     filter: "grayscale(100%)",
                     transition: "all 0.2s ease-out",
                     opacity: 0.6,
@@ -166,7 +177,12 @@ function Introduction() {
                   boxShadow: "none !important",
                 }}
               >
-                <CloudGraph width="80px" height="80px" />
+                {/* <CloudGraph width="80px" height="80px" /> */}
+                <Image
+                  src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/Social_twq1dr.svg"
+                  w="60px"
+                  h="60px"
+                />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   User Experience
                 </Heading>
@@ -174,13 +190,13 @@ function Introduction() {
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
                 }}
                 _hover={{
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
@@ -190,7 +206,7 @@ function Introduction() {
                 borderBottomColor="gray.100"
                 flexDirection="column"
                 sx={{
-                  svg: {
+                  img: {
                     filter: "grayscale(100%)",
                     transition: "all 0.2s ease-out",
                     opacity: 0.6,
@@ -201,7 +217,12 @@ function Introduction() {
                   boxShadow: "none !important",
                 }}
               >
-                <CloudGraph width="80px" height="80px" />
+                {/* <CloudGraph width="80px" height="80px" /> */}
+                <Image
+                  src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/Speed_rd8nfy.svg"
+                  w="60px"
+                  h="60px"
+                />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Technical Performance
                 </Heading>
@@ -209,13 +230,13 @@ function Introduction() {
               <Tab
                 _selected={{
                   borderBottomColor: "primary.default",
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
                 }}
                 _hover={{
-                  svg: {
+                  img: {
                     filter: "grayscale(0%)",
                     opacity: 1,
                   },
@@ -225,7 +246,7 @@ function Introduction() {
                 borderBottomColor="gray.100"
                 flexDirection="column"
                 sx={{
-                  svg: {
+                  img: {
                     filter: "grayscale(100%)",
                     transition: "all 0.2s ease-out",
                     opacity: 0.6,
@@ -236,7 +257,12 @@ function Introduction() {
                   boxShadow: "none !important",
                 }}
               >
-                <CloudGraph width="80px" height="80px" />
+                {/* <CloudGraph width="80px" height="80px" /> */}
+                <Image
+                  src="https://res.cloudinary.com/wild-creative/image/upload/v1672792401/UX_wvd1fo.svg"
+                  w="60px"
+                  h="60px"
+                />
                 <Heading as="h4" fontSize="14px !important" py={2}>
                   Social
                 </Heading>
@@ -244,7 +270,7 @@ function Introduction() {
             </TabList>
 
             <TabPanels>
-              <TabPanel py={24}>
+              <TabPanel py={20}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -271,13 +297,13 @@ function Introduction() {
                     </Button>
                   </VStack>
                   <StaticImage
-                    src="https://res.cloudinary.com/wild-creative/image/upload/v1669012731/VZ_Results_qcstbj.png"
-                    alt="placeholder"
+                    src="https://res.cloudinary.com/wild-creative/image/upload/v1672794467/On_Page_k3xu4f.png"
+                    alt="on-page SEO"
                     style={{ flex: "1" }}
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={24}>
+              <TabPanel py={20}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -311,7 +337,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={24}>
+              <TabPanel py={20}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -346,7 +372,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={24}>
+              <TabPanel py={20}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}
@@ -377,7 +403,7 @@ function Introduction() {
                   />
                 </Stack>
               </TabPanel>
-              <TabPanel py={24}>
+              <TabPanel py={20}>
                 <Stack
                   direction={["column", "column", "row"]}
                   spacing={rowSpacing}

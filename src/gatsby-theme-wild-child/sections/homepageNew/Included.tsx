@@ -331,8 +331,8 @@ function Introduction() {
                     </Button>
                   </VStack>
                   <StaticImage
-                    src="https://res.cloudinary.com/wild-creative/image/upload/v1669012731/VZ_Results_qcstbj.png"
-                    alt="placeholder"
+                    src="https://res.cloudinary.com/wild-creative/image/upload/v1672806252/Links_xwacuq.png"
+                    alt="Backlinks"
                     style={{ flex: "1" }}
                   />
                 </Stack>
@@ -366,8 +366,8 @@ function Introduction() {
                     </Button>
                   </VStack>
                   <StaticImage
-                    src="https://res.cloudinary.com/wild-creative/image/upload/v1669012731/VZ_Results_qcstbj.png"
-                    alt="placeholder"
+                    src="https://res.cloudinary.com/wild-creative/image/upload/v1672806751/User_wysjcb.png"
+                    alt="User Experience"
                     style={{ flex: "1" }}
                   />
                 </Stack>
@@ -397,8 +397,8 @@ function Introduction() {
                     </Button>
                   </VStack>
                   <StaticImage
-                    src="https://res.cloudinary.com/wild-creative/image/upload/v1669012731/VZ_Results_qcstbj.png"
-                    alt="placeholder"
+                    src="https://res.cloudinary.com/wild-creative/image/upload/v1672807080/Perf_lwahuq.png"
+                    alt="Performance"
                     style={{ flex: "1" }}
                   />
                 </Stack>
@@ -428,8 +428,8 @@ function Introduction() {
                     </Button>
                   </VStack>
                   <StaticImage
-                    src="https://res.cloudinary.com/wild-creative/image/upload/v1669012731/VZ_Results_qcstbj.png"
-                    alt="placeholder"
+                    src="https://res.cloudinary.com/wild-creative/image/upload/v1672807314/Social_g222fz.png"
+                    alt="Social"
                     style={{ flex: "1" }}
                   />
                 </Stack>

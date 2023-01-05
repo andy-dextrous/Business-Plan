@@ -1,5 +1,6 @@
 import {
   Button,
+  FormControl,
   Heading,
   HStack,
   Image,
@@ -11,17 +12,53 @@ import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 import Gear from "../../assets/icons/Gear"
 import Pie from "../../assets/icons/Pie"
-// import { gsap } from "gatsby-theme-wild-child/src/gsap"
+import axios from "axios"
 
 function Hero() {
   const pie = React.useRef(null)
+  const formRef = React.useRef(null) as any
+  const referrer = typeof window !== "undefined" ? window.location.href : ""
+  const referrerRef = React.useRef(referrer) as any
+  const [submitting, setSubmitting] = React.useState(false)
+  const [submitted, setSubmitted] = React.useState(false)
+  const [formHeight, setFormHeight] = React.useState(0)
 
-  // React.useEffect(() => {
-  //   gsap.to(pie.current, {
-  //     rotate: 360,
-  //     ease: "none",
-  //   })
-  // }, [])
+  const isValidEmail = (email: string) => {
+    const validEmailTest =
+      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g.test(
+        email
+      )
+    return validEmailTest
+  }
+
+  function submitForm(e: any) {
+    setSubmitting(true)
+    const form = e.target
+    const domain = form.domain.value
+    const email = form.email.value
+
+    // post request to /api/post-to-klaviyo
+    axios
+      .post("/api/post-to-klaviyo", {
+        domain,
+        email,
+      })
+      .then(res => {
+        console.log(res)
+        setSubmitted(true)
+        setSubmitting(false)
+      })
+      .catch(err => {
+        console.log(err)
+        setSubmitting(false)
+      })
+  }
+
+  React.useEffect(() => {
+    if (formRef.current) {
+      setFormHeight(formRef.current.offsetHeight)
+    }
+  }, [])
 
   return (
     <Section
@@ -35,8 +72,8 @@ function Hero() {
       zIndex="2"
       id="hero"
     >
-      <VStack maxW="750px" pt={24} spacing={8} zIndex="1">
-        <Heading as="h1" color="white" textAlign="center">
+      <VStack maxW="870px" pt={24} spacing={8} zIndex="1">
+        <Heading as="h1" color="white" textAlign="center" maxW="650px">
           How much better could your SEO be?
         </Heading>
         <Heading
@@ -51,25 +88,87 @@ function Hero() {
           customers. If you want an action plan to take your website to the
           front page of Google, take advantage of our free Website SEO report.
         </Heading>
-        <Stack
-          direction={["column", "column", "row"]}
-          align="stretch"
-          w="full"
-          spacing={3}
-          pt={4}
-          maxW="600px"
-        >
-          <Input
-            flex="3"
-            placeholder="Enter your domain"
-            h="60px"
-            minH="60px"
-            rounded="md"
-          />
-          <Button flex="1" variant="secondary" h="60px">
-            Get Your Free Report
-          </Button>
-        </Stack>
+        {!submitted ? (
+          <Stack
+            as="form"
+            direction={["column", "column", "row"]}
+            align="stretch"
+            w="full"
+            spacing={3}
+            pt={4}
+            maxW="870px"
+            className="so-widget-form"
+            id="so1672873732"
+            action="https://www.websiteauditserver.com/process-embedded.inc"
+            target="so-iframe"
+            data-behaviour="be_in_touch"
+            data-title="Website Report for "
+            data-touch="Thank you for requesting a report. We'll be in touch shortly!"
+            onSubmit={submitForm}
+            ref={formRef}
+          >
+            <input
+              id="so-typeso1672873732"
+              type="hidden"
+              name="type"
+              value="pdf"
+            />
+            <input type="hidden" name="uid" value="47471" />
+            <input type="hidden" name="behaviour" value="be_in_touch" />
+            <input type="hidden" name="template" value="0" />
+            <input type="hidden" name="referrer" value="0" ref={referrerRef} />
+            <FormControl flex="3">
+              <Input
+                isRequired
+                h="60px"
+                minH="60px"
+                rounded="md"
+                type="text"
+                name="domain"
+                id="so-domainso1672873732"
+                className="so-fieldso1672873732"
+                placeholder="Website URL"
+                data-validation="Please enter a correct Website URL. Only homepages are accepted."
+              />
+            </FormControl>
+            <FormControl isInvalid={!isValidEmail} flex="3">
+              <Input
+                isRequired
+                h="60px"
+                minH="60px"
+                rounded="md"
+                type="text"
+                name="email"
+                id="so-emailso1672873732"
+                className="so-fieldso1672873732"
+                placeholder="Email"
+                data-validation="Please enter a valid email address."
+              />
+            </FormControl>
+            <Button
+              flex="2"
+              variant="secondary"
+              h="60px"
+              type="submit"
+              id="so-submitso1672873732"
+              value="Get your free report"
+              isLoading={submitting}
+            >
+              Get Your Free Report
+            </Button>
+          </Stack>
+        ) : (
+          <VStack
+            h={formHeight + "px"}
+            bg="secondary.default"
+            p={3}
+            justify="center"
+          >
+            <Heading color="white" as="h4">
+              Please check your inbox for your free report.
+            </Heading>
+          </VStack>
+        )}
       </VStack>
       <VStack w="full" spacing={6} zIndex="1" mt={24}>
         <Heading

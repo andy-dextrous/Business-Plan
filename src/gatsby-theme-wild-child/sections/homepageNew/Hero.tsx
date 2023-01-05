@@ -18,7 +18,7 @@ function Hero() {
   const formRef = React.useRef(null) as any
   const referrer = typeof window !== "undefined" ? window.location.href : ""
   const referrerRef = React.useRef(referrer) as any
-  // const [submitting, setSubmitting] = React.useState(false)
+  const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
   const [formHeight, setFormHeight] = React.useState(0)
 
@@ -31,8 +31,12 @@ function Hero() {
   }
 
   function submitForm(e: any) {
+    setSubmitting(true)
+    setTimeout(() => {
+      setSubmitting(false)
+    }, 1000)
     setSubmitted(true)
-    return true
+    e.target.submit()
   }
 
   React.useEffect(() => {
@@ -145,7 +149,7 @@ function Hero() {
               type="submit"
               id="so-submitso1672873732"
               value="Get your free report"
-              // isLoading={submitting}
+              isLoading={submitting}
             >
               Get Your Free Report
             </Button>

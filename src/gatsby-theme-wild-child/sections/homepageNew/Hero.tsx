@@ -17,7 +17,7 @@ function Hero() {
   const pie = React.useRef(null)
   const formRef = React.useRef(null) as any
   const referrer = typeof window !== "undefined" ? window.location.href : ""
-  const referrerRef = React.useRef(referrer) as any
+  const referrerRef = React.useRef() as any
   const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
   const [formHeight, setFormHeight] = React.useState(0)
@@ -114,7 +114,12 @@ function Hero() {
             <input type="hidden" name="uid" value="47471" />
             <input type="hidden" name="behaviour" value="be_in_touch" />
             <input type="hidden" name="template" value="0" />
-            <input type="hidden" name="referrer" value="0" ref={referrerRef} />
+            <input
+              type="hidden"
+              name="referrer"
+              value={referrer}
+              ref={referrerRef}
+            />
             <FormControl flex="4">
               <Input
                 isRequired

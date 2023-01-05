@@ -51,129 +51,153 @@ function Introduction() {
           direction={["column", "column", "column", "row"]}
           align="stretch"
         >
-          <VStack flex="1" bg="red.50" p={6} rounded="xl">
-            <Heading as="h4" mb={12}>
-              Bronze
-            </Heading>
-            <Heading pb={6} color="red.500">
-              $1,500
-            </Heading>
-            <Text pb={2} w="full" fontWeight="700">
-              Monthly basis:
-            </Text>
-            <List
-              w="full"
-              pb={16}
-              sx={{
-                li: { listStyle: "none !important" },
-              }}
-            >
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Keyword research and competitor analysis
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Core Web Vitals management.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                On-page optimisation of up to 4 articles a month provided by the
-                client.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Internal linking and site structure optimisation
-              </ListItem>
-            </List>
+          <VStack
+            flex="1"
+            bg="red.50"
+            p={6}
+            rounded="xl"
+            justifyContent="space-between"
+          >
+            <VStack w="full">
+              <Heading as="h4" mb={12}>
+                Bronze
+              </Heading>
+              <Heading pb={6} color="red.500">
+                $1,500
+              </Heading>
+              <Text pb={2} w="full" fontWeight="700">
+                Monthly basis:
+              </Text>
+              <List
+                w="full"
+                pb={16}
+                sx={{
+                  li: { listStyle: "none !important" },
+                }}
+              >
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Keyword research and competitor analysis
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Core Web Vitals management.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  On-page optimisation of up to 4 articles a month provided by
+                  the client.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Internal linking and site structure optimisation
+                </ListItem>
+              </List>
+            </VStack>
             <Button justifySelf="flex-end" to="#hero">
               Start Now
             </Button>
           </VStack>
-          <VStack flex="1.1" bg="red.50" p={6} rounded="xl">
-            <Heading as="h4" mb={12}>
-              Silver
-            </Heading>
-            <Heading pb={6} color="red.500">
-              $2,500
-            </Heading>
-            <Text pb={2} w="full" fontWeight="700">
-              Monthly basis:
-            </Text>
-            <List
-              w="full"
-              pb={16}
-              sx={{
-                li: { listStyle: "none !important" },
-              }}
-            >
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Keyword research and competitor analysis
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Core Web Vitals management.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />4 expert
-                articles created by our in-house content team. All articles are
-                written for maximum SEO impact using our proprietary SEO content
-                writing process.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Internal linking and site structure optimisation
-              </ListItem>
-            </List>
+          <VStack
+            flex="1.1"
+            bg="red.50"
+            p={6}
+            rounded="xl"
+            justifyContent="space-between"
+          >
+            <VStack w="full">
+              <Heading as="h4" mb={12}>
+                Silver
+              </Heading>
+              <Heading pb={6} color="red.500">
+                $2,500
+              </Heading>
+              <Text pb={2} w="full" fontWeight="700">
+                Monthly basis:
+              </Text>
+              <List
+                w="full"
+                pb={16}
+                sx={{
+                  li: { listStyle: "none !important" },
+                }}
+              >
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Keyword research and competitor analysis
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Core Web Vitals management.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />4 expert
+                  articles created by our in-house content team. All articles
+                  are written for maximum SEO impact using our proprietary SEO
+                  content writing process.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Internal linking and site structure optimisation
+                </ListItem>
+              </List>
+            </VStack>
             <Button justifySelf="flex-end" to="#hero">
               Start Now
             </Button>
           </VStack>
-          <VStack flex="1" bg="red.50" p={6} rounded="xl">
-            <Heading as="h4" mb={12}>
-              Gold
-            </Heading>
-            <Heading pb={6} color="red.500">
-              $4,500
-            </Heading>
-            <Text pb={2} w="full" fontWeight="700">
-              Monthly basis:
-            </Text>
-            <List
-              w="full"
-              pb={16}
-              sx={{
-                li: { listStyle: "none !important" },
-              }}
-            >
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Keyword research and competitor analysis
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Core Web Vitals management.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />8 expert
-                articles created by our in-house content team. All articles are
-                written for maximum SEO impact using our proprietary SEO content
-                writing process.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Internal linking and site structure optimisation
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />4 high-DR
-                backlinks per month.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={MdCheckCircle} color="teal.400" />
-                Monthly Reporting
-              </ListItem>
-            </List>
+          <VStack
+            flex="1"
+            bg="red.50"
+            p={6}
+            rounded="xl"
+            justifyContent="space-between"
+          >
+            <VStack w="full">
+              <Heading as="h4" mb={12}>
+                Gold
+              </Heading>
+              <Heading pb={6} color="red.500">
+                $4,500
+              </Heading>
+              <Text pb={2} w="full" fontWeight="700">
+                Monthly basis:
+              </Text>
+              <List
+                w="full"
+                pb={16}
+                sx={{
+                  li: { listStyle: "none !important" },
+                }}
+              >
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Keyword research and competitor analysis
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Core Web Vitals management.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />8 expert
+                  articles created by our in-house content team. All articles
+                  are written for maximum SEO impact using our proprietary SEO
+                  content writing process.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Internal linking and site structure optimisation
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />4 high-DR
+                  backlinks per month.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="teal.400" />
+                  Monthly Reporting
+                </ListItem>
+              </List>
+            </VStack>
             <Button justifySelf="flex-end" to="#hero">
               Start Now
             </Button>

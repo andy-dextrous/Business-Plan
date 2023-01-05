@@ -12,14 +12,12 @@ import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 import Gear from "../../assets/icons/Gear"
 import Pie from "../../assets/icons/Pie"
-import axios from "axios"
 
 function Hero() {
   const pie = React.useRef(null)
   const formRef = React.useRef(null) as any
   const referrer = typeof window !== "undefined" ? window.location.href : ""
   const referrerRef = React.useRef(referrer) as any
-  const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
   const [formHeight, setFormHeight] = React.useState(0)
 
@@ -32,26 +30,8 @@ function Hero() {
   }
 
   function submitForm(e: any) {
-    setSubmitting(true)
-    const form = e.target
-    const domain = form.domain.value
-    const email = form.email.value
-
-    // post request to /api/post-to-klaviyo
-    axios
-      .post("/api/post-to-klaviyo", {
-        domain,
-        email,
-      })
-      .then(res => {
-        console.log(res)
-        setSubmitted(true)
-        setSubmitting(false)
-      })
-      .catch(err => {
-        console.log(err)
-        setSubmitting(false)
-      })
+    console.log("event", e)
+    setSubmitted(true)
   }
 
   React.useEffect(() => {
@@ -152,7 +132,6 @@ function Hero() {
               type="submit"
               id="so-submitso1672873732"
               value="Get your free report"
-              isLoading={submitting}
             >
               Get Your Free Report
             </Button>

@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export default async function handler(req, res) {
-  const { email, domain } = req.body
+  const { email, website, pdf, ip } = req.body
 
   try {
     const options = {
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         "content-type": "application/json",
       },
       data: {
-        profiles: [{ email: email, domain: domain }],
+        profiles: [{ email: email, domain: website, pdf: pdf, ip: ip }],
       },
     }
 

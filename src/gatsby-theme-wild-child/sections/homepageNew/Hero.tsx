@@ -34,9 +34,9 @@ function Hero() {
     setSubmitting(true)
     setTimeout(() => {
       setSubmitting(false)
+      setSubmitted(true)
+      e.target.submit()
     }, 1000)
-    setSubmitted(true)
-    e.target.submit()
   }
 
   React.useEffect(() => {

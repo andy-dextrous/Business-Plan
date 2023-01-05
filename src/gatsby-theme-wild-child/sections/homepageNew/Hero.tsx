@@ -97,7 +97,8 @@ function Hero() {
             className="so-widget-form"
             id="so1672873732"
             action="https://www.websiteauditserver.com/process-embedded.inc"
-            target="so-iframe"
+            // target="so-iframe"
+            target="_blank"
             data-behaviour="be_in_touch"
             data-title="Website Report for "
             data-touch="Thank you for requesting a report. We'll be in touch shortly!"
@@ -114,7 +115,7 @@ function Hero() {
             <input type="hidden" name="behaviour" value="be_in_touch" />
             <input type="hidden" name="template" value="0" />
             <input type="hidden" name="referrer" value="0" ref={referrerRef} />
-            <FormControl flex="3">
+            <FormControl flex="4">
               <Input
                 isRequired
                 h="60px"
@@ -128,7 +129,7 @@ function Hero() {
                 data-validation="Please enter a correct Website URL. Only homepages are accepted."
               />
             </FormControl>
-            <FormControl isInvalid={!isValidEmail} flex="3">
+            <FormControl isInvalid={!isValidEmail} flex="4">
               <Input
                 isRequired
                 h="60px"
@@ -143,7 +144,7 @@ function Hero() {
               />
             </FormControl>
             <Button
-              flex="2"
+              flex="1.6"
               variant="secondary"
               h="60px"
               type="submit"
@@ -158,8 +159,9 @@ function Hero() {
           <VStack
             h={formHeight + "px"}
             bg="secondary.default"
-            p={3}
+            p={4}
             justify="center"
+            rounded="lg"
           >
             <Heading color="white" as="h4">
               Please check your inbox for your free report.

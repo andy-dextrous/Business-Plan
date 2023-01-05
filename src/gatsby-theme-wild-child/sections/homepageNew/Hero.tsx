@@ -18,6 +18,7 @@ function Hero() {
   const formRef = React.useRef(null) as any
   const referrer = typeof window !== "undefined" ? window.location.href : ""
   const referrerRef = React.useRef(referrer) as any
+  // const [submitting, setSubmitting] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
   const [formHeight, setFormHeight] = React.useState(0)
 
@@ -30,8 +31,8 @@ function Hero() {
   }
 
   function submitForm(e: any) {
-    console.log("event", e)
     setSubmitted(true)
+    return true
   }
 
   React.useEffect(() => {
@@ -52,6 +53,18 @@ function Hero() {
       zIndex="2"
       id="hero"
     >
+      <iframe
+        id="so-iframe"
+        name="so-iframe"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "1px",
+          height: "1px",
+          border: "none",
+        }}
+      />
       <VStack maxW="870px" pt={24} spacing={8} zIndex="1">
         <Heading as="h1" color="white" textAlign="center" maxW="650px">
           How much better could your SEO be?
@@ -132,6 +145,7 @@ function Hero() {
               type="submit"
               id="so-submitso1672873732"
               value="Get your free report"
+              // isLoading={submitting}
             >
               Get Your Free Report
             </Button>

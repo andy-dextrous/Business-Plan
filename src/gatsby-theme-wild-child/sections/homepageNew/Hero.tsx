@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   FormControl,
   Heading,
@@ -12,6 +13,7 @@ import Section from "gatsby-theme-wild-child/src/components/Section"
 import React from "react"
 import Gear from "../../assets/icons/Gear"
 import Pie from "../../assets/icons/Pie"
+import Logo from "../../assets/logos/Logo"
 
 function Hero() {
   const pie = React.useRef(null)
@@ -69,7 +71,30 @@ function Hero() {
           border: "none",
         }}
       />
+
       <VStack maxW="870px" pt={24} spacing={8} zIndex="1">
+        <HStack
+          w="full"
+          justifyContent="center"
+          align="center"
+          gap="40px"
+          maxH="60px"
+          h="60px"
+          mb={12}
+        >
+          <Box
+            height="full"
+            width="auto"
+            pb="10px"
+            display={["none", "none", "block"]}
+          >
+            <Logo height="full" width="full" />
+          </Box>
+          <Image
+            src="https://res.cloudinary.com/wild-creative/image/upload/v1673849636/virtuzone-logo-1_fchemo.svg"
+            h="full"
+          />
+        </HStack>
         <Heading as="h1" color="white" textAlign="center" maxW="650px">
           How much better could your SEO be?
         </Heading>
@@ -240,10 +265,10 @@ function Hero() {
       />
       <Pie
         position="absolute"
-        bottom={["-100px", "-100px", "-250px", "-250px", "-400px", "-400px"]}
+        bottom={["-100px", "-100px", "-250px", "-250px", "-350px", "-350px"]}
         left={["-400px", "-390px", "-400px", "-350px", "-390px", "-300px"]}
         zIndex="0"
-        w={["500px", "500px", "500px", "700px", "700px", "700px"]}
+        w={["500px", "500px", "500px", "650px", "650px", "650px"]}
         color="teal.400"
         id="pie"
         transform="rotate(120deg)"

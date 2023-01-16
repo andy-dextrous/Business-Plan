@@ -1,9 +1,11 @@
+import { CloseIcon } from "@chakra-ui/icons"
 import {
   Box,
   Button,
   FormControl,
   Heading,
   HStack,
+  IconButton,
   Image,
   Input,
   Stack,
@@ -79,8 +81,8 @@ function Hero() {
           align="center"
           gap="40px"
           maxH="60px"
-          h="60px"
-          mb={12}
+          h="50px"
+          mb={8}
         >
           <Box
             height="full"
@@ -90,6 +92,15 @@ function Hero() {
           >
             <Logo height="full" width="full" />
           </Box>
+          {/* Chakra icon buton with cross icon*/}
+          <IconButton
+            display={["none", "none", "block"]}
+            pointerEvents="none"
+            aria-label="Times"
+            fontSize="20px"
+            icon={<CloseIcon />}
+          />
+
           <Image
             src="https://res.cloudinary.com/wild-creative/image/upload/v1673849636/virtuzone-logo-1_fchemo.svg"
             h="full"

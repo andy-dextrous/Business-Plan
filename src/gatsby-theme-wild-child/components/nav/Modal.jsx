@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import { gsap, ScrollTrigger } from "wildGsap"
+import { gsap, ScrollTrigger } from "gatsby-theme-wild-child/src/gsap"
 
 import { MenuContext } from "wildComponents/Layout"
 import { SocialFollows } from "wildComponents/social/SocialFollows"

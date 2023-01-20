@@ -1,0 +1,111 @@
+import React, { useEffect, useRef, useState } from "react"
+import { gsap } from "gatsby-theme-wild-child/src/gsap"
+
+import { useVariable } from "../../../hooks/useVariable"
+import { FormContext } from "./Context"
+import {
+  Box,
+  Heading,
+  HStack,
+  Progress,
+  Tag,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
+
+function Sidebar() {
+  const { currentQuestion, answers } = React.useContext(FormContext)
+  const [progress, setProgress] = useState(0)
+  const { sectionPaddingX } = useVariable()
+  const questionRef = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(
+      questionRef.current,
+      {
+        x: -30,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 0.05,
+        ease: "Power2.in",
+      }
+    )
+  }, [currentQuestion])
+
+  useEffect(() => {
+    console.log(currentQuestion)
+  }, [currentQuestion])
+
+  useEffect(() => {
+    const prevProgress = { x: progress }
+    const newProgress = Math.round(((currentQuestion + 1) / 9) * 100)
+    gsap.to(prevProgress, {
+      x: newProgress,
+      ease: "Power2.in",
+      onUpdate: () => {
+        setProgress(prevProgress.x)
+      },
+    })
+  }, [answers, currentQuestion])
+
+  return (
+    <Box
+      flex={[1, 1, "3"]}
+      bg="brandYellow.default"
+      py={sectionPaddingX}
+      px={[4, 4, "100px"]}
+      position="relative"
+    >
+      <VStack w="full" align="flex-start" spacing={[4, 4, 4, 8]}>
+        <Heading className="jumbo" opacity="0.05" w="full" ref={questionRef}>
+          {`Q${currentQuestion + 1}`}
+        </Heading>
+        <Progress
+          w="full"
+          h="5px"
+          value={progress}
+          sx={{
+            "div[role=progressbar]": {
+              bg: "brandBlue.default",
+            },
+          }}
+        />
+        <Heading
+          as="h3"
+          textTransform="uppercase"
+          display={["none", "none", "block"]}
+        >
+          Cost Calculator
+        </Heading>
+        <Text display={["none", "none", "block"]}>
+          DUQE licences give you the freedom to start and scale your business
+          the way you see fit.
+        </Text>
+        <VStack
+          align="flex-start"
+          spacing={2}
+          display={["none", "none", "block"]}
+        >
+          {answers
+            .filter(answer => {
+              return answer.value !== "" && answer.hideInSideBar !== true
+            })
+            .map(answer => {
+              return answer.value ? (
+                <HStack key={answer.handle}>
+                  <Text fontSize="sm">{answer.handle}</Text>
+                  <Tag bg="brandYellow.300">{answer.value}</Tag>
+                </HStack>
+              ) : (
+                <></>
+              )
+            })}
+        </VStack>
+      </VStack>
+    </Box>
+  )
+}
+
+export default Sidebar

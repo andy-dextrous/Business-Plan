@@ -6,6 +6,11 @@ const SITE_CONFIG = {
   gaTrackingId: null,
   googleTagManagerId: null,
   addSiteMap: false,
+  useWpRedirects: false,
+  createPosts: false,
+  createPages: false,
+  createTags: false,
+  createCategories: false,
 
   /**** THEME OPTIONS ****/
   cssVarPrefix: "wild",

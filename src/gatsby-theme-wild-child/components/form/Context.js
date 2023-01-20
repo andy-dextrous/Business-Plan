@@ -72,6 +72,7 @@ function Context({ children }) {
 
   useEffect(() => {
     setPanels(document.querySelectorAll("#cost-calculator [data-slide-index]"))
+    console.log("success")
   }, [])
 
   return (

@@ -1,15 +1,15 @@
 import { Heading, Image, Text, VStack } from "@chakra-ui/react"
 import React from "react"
-import SectionWrapper from "../../SectionWrapper"
+import Section from "gatsby-theme-wild-child/src/components/Section"
 import { FormContext } from "./Context"
 
 function Cost() {
   const { submitted, finalAmount } = React.useContext(FormContext)
   return submitted ? (
-    <SectionWrapper
+    <Section
       h="100%"
       width="100%"
-      bg="brandYellow.default"
+      bg="primary.default"
       position="absolute"
       left={[0, 0, 0, "-100px"]}
       top="0"
@@ -37,7 +37,7 @@ function Cost() {
         zIndex="-1"
         h={["auto", "auto", "60vh"]}
       />
-    </SectionWrapper>
+    </Section>
   ) : null
 }
 

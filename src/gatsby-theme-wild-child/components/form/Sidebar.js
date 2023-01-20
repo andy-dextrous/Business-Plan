@@ -1,8 +1,3 @@
-import React, { useEffect, useRef, useState } from "react"
-import { gsap } from "gatsby-theme-wild-child/src/gsap"
-
-import { useVariable } from "../../../hooks/useVariable"
-import { FormContext } from "./Context"
 import {
   Box,
   Heading,
@@ -10,13 +5,18 @@ import {
   Progress,
   Tag,
   Text,
+  useTheme,
   VStack,
 } from "@chakra-ui/react"
+import { gsap } from "gatsby-theme-wild-child/src/gsap"
+import React, { useEffect, useRef, useState } from "react"
+import { FormContext } from "./Context"
 
 function Sidebar() {
   const { currentQuestion, answers } = React.useContext(FormContext)
   const [progress, setProgress] = useState(0)
-  const { sectionPaddingX } = useVariable()
+  const { variables } = useTheme()
+  const { sectionPaddingX } = variables
   const questionRef = useRef()
 
   useEffect(() => {
@@ -53,7 +53,7 @@ function Sidebar() {
   return (
     <Box
       flex={[1, 1, "3"]}
-      bg="brandYellow.default"
+      bg="primary.default"
       py={sectionPaddingX}
       px={[4, 4, "100px"]}
       position="relative"
@@ -96,7 +96,7 @@ function Sidebar() {
               return answer.value ? (
                 <HStack key={answer.handle}>
                   <Text fontSize="sm">{answer.handle}</Text>
-                  <Tag bg="brandYellow.300">{answer.value}</Tag>
+                  <Tag bg="primary.300">{answer.value}</Tag>
                 </HStack>
               ) : (
                 <></>

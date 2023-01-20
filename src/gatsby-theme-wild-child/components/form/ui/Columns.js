@@ -1,9 +1,9 @@
 import React from "react"
-import { useVariable } from "../../../../hooks/useVariable"
-import { Stack } from "@chakra-ui/react"
+import { Stack, useTheme } from "@chakra-ui/react"
 
 function Columns({ children }) {
-  const { mobileNavHeight } = useVariable()
+  const { variables } = useTheme()
+  const { mobileNavHeight } = variables
   return (
     <Stack
       direction={["column-reverse", "column-reverse", "column-reverse", "row"]}

@@ -31,7 +31,6 @@ function ControlButtons({ id, finalId }) {
       pt={[12, 12, 40]}
     >
       <Button
-        variant="light"
         leftIcon={<ArrowBackIcon />}
         onClick={handleBackButton}
         isDisabled={isFirstPage}

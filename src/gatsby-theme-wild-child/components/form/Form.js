@@ -21,7 +21,9 @@ function Form() {
   const formRef = useRef()
   const { variables } = useTheme()
   const { sectionPaddingX } = variables
-  const { answers, setFinalAmount, setSubmitted } = useContext(FormContext)
+  const formData = useContext(FormContext)
+
+  const { answers, setFinalAmount, setSubmitted } = formData
 
   // ANIMATION HOOK
   useAnimations(formRef)
@@ -75,8 +77,8 @@ function Form() {
   return (
     <Center
       as="form"
-      name="cost-calculator"
-      id="cost-calculator"
+      name="business-plan-builder"
+      id="business-plan-builder"
       data-form-id="7f720725-6634-462d-a0f3-e52ab901b124"
       data-portal-id="21692856"
       flex={[14, 14, 7]}

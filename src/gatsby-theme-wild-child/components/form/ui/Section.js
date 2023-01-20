@@ -1,28 +1,29 @@
 import React from "react"
-import { useVariable } from "../../../../hooks/useVariable"
-import SectionWrapper from "../../../SectionWrapper"
+import Section from "gatsby-theme-wild-child/src/components/Section"
 import { FormContext } from "../Context"
+import { useTheme } from "@chakra-ui/react"
 
-function Section({ children }) {
-  const { sidebarMenuWidth } = useVariable()
+function FormSection({ children }) {
+  const variables = useTheme()
+  const { sidebarMenuWidth } = variables
   const { submitted } = React.useContext(FormContext)
   return (
-    <SectionWrapper
+    <Section
       h={[
         submitted ? "100vh" : "150vh",
         submitted ? "100vh" : "150vh",
         "130vh",
         "100vh",
       ]}
-      width={["100vw", "100vw", "100vw", "calc(100vw - 100px)"]}
+      width={["100vw", "100vw", "100vw"]}
       className="light"
       withContainer={false}
       ml={[0, 0, 0, sidebarMenuWidth]}
       px="0"
     >
       {children}
-    </SectionWrapper>
+    </Section>
   )
 }
 
-export default Section
+export default FormSection

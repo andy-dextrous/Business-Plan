@@ -4,7 +4,7 @@ import Section from "gatsby-theme-wild-child/src/components/Section"
 import { FormContext } from "./Context"
 
 function Cost() {
-  const { submitted, finalAmount } = React.useContext(FormContext)
+  const { submitted } = React.useContext(FormContext)
   return submitted ? (
     <Section
       h="100%"
@@ -26,7 +26,7 @@ function Cost() {
         <Text>Please check your email for a printable copy of your quote.</Text>
         <Text pt={12}>Total cost</Text>
         <Heading as="h3" color="white" className="jumbo">
-          AED {finalAmount}
+          AED
         </Heading>
       </VStack>
       <Image

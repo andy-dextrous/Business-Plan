@@ -1,25 +1,34 @@
 import React from "react"
 
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
-import { FormContext } from "./Context"
+import { FormContext } from "../Context"
 import { Button, ButtonGroup } from "@chakra-ui/react"
 
-function ControlButtons({ id, finalId }) {
-  const { currentQuestion, setCurrentQuestion, answers, setDirection, panels } =
-    React.useContext(FormContext)
-  const isLastPage = currentQuestion === panels.length - 1
-  const isFirstPage = currentQuestion === 0
-  const allQuestionsAnswered = Object.values(answers).every(answer => {
-    return answer.value !== ""
+function ControlButtons() {
+  const {
+    currentQuestion,
+    setCurrentQuestion,
+    setPreviousQuestion,
+    formState,
+    setDirection,
+    panels,
+  } = React.useContext(FormContext)
+
+  const isLastPanel = currentQuestion === panels.length - 1
+  const isFirstPanel = currentQuestion === 0
+  const formComplete = Object.values(formState).every(field => {
+    return field.value !== ""
   })
 
   function handleBackButton() {
-    setCurrentQuestion(currentQuestion - 1)
+    setPreviousQuestion(currentQuestion)
+    setCurrentQuestion(q => q - 1)
     setDirection("down")
   }
 
   function handleNextButton() {
-    setCurrentQuestion(currentQuestion + 1)
+    setPreviousQuestion(currentQuestion)
+    setCurrentQuestion(q => q + 1)
     setDirection("up")
   }
 
@@ -33,7 +42,8 @@ function ControlButtons({ id, finalId }) {
       <Button
         leftIcon={<ArrowBackIcon />}
         onClick={handleBackButton}
-        isDisabled={isFirstPage}
+        className="control"
+        isDisabled={isFirstPanel}
       >
         Back
       </Button>
@@ -41,17 +51,16 @@ function ControlButtons({ id, finalId }) {
         rightIcon={<ArrowForwardIcon />}
         className="control"
         onClick={handleNextButton}
-        isDisabled={answers[id]?.value === "" || isLastPage}
-        display={isLastPage ? "none" : "flex"}
+        isDisabled={formState[currentQuestion]?.value === "" || isLastPanel}
+        display={isLastPanel ? "none" : "flex"}
       >
         Next
       </Button>
-
       <Button
         type="submit"
         className="control"
-        isDisabled={!isLastPage && !allQuestionsAnswered}
-        display={!isLastPage ? "none" : "flex"}
+        isDisabled={!isLastPanel && !formComplete}
+        display={!isLastPanel ? "none" : "flex"}
       >
         Submit
       </Button>

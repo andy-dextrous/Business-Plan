@@ -4,8 +4,8 @@ import ButtonCheckbox from "./ButtonCheckbox"
 import { Wrap } from "@chakra-ui/react"
 
 function ButtonCheckboxGroup({ id }) {
-  const { handleChange, answers } = React.useContext(FormContext)
-  const [selected, setSelected] = useState([answers[id].value])
+  const { handleChange, formState } = React.useContext(FormContext)
+  const [selected, setSelected] = useState([formState[id].value])
 
   function handleClick(e, option) {
     setSelected(e.target.dataset.value)
@@ -14,14 +14,14 @@ function ButtonCheckboxGroup({ id }) {
 
   return (
     <Wrap>
-      {answers[id]?.options?.map(option => {
+      {formState[id]?.options?.map(option => {
         return (
           <ButtonCheckbox
             key={option.value}
             value={option.value}
             label={option.label}
             selectedOptions={selected}
-            handle={answers[id].handle}
+            handle={formState[id].handle}
             onClick={e => handleClick(e, option.value)}
           />
         )

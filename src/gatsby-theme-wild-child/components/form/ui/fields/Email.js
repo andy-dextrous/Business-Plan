@@ -1,7 +1,7 @@
 import { FormControl, FormErrorMessage, Input } from "@chakra-ui/react"
 import React, { useState } from "react"
-import { data } from "../data.js"
-import { FormContext } from "../Context"
+import { data } from "../../data.js"
+import { FormContext } from "../../Context"
 import { useRef } from "react"
 
 function Email({ id }) {
@@ -28,7 +28,7 @@ function Email({ id }) {
         placeholder={field.placeholder || "Email Address"}
         ref={inputRef}
         size="lg"
-        bg="dark.50"
+        bg="gray.50"
         fontSize={["xs", "sm", "md"]}
         id={field.name}
         name={field.name}

@@ -4,22 +4,22 @@
 
 const CONTACT_INFO = {
   contact: {
-    email: "andrew@wildcreative.com.au",
+    email: "",
     address: {
-      street: "10 Fleetwood Court",
-      city: "Ferny Hills",
-      state: "QLD",
-      zip: "4055",
+      street: "",
+      city: "",
+      state: "",
+      zip: "",
     },
-    phone: "+61424790625",
+    phone: "",
   },
   googleMapsLink: "",
   socialFollowLinks: [
     { name: "dribbble", url: null },
-    { name: "facebook", url: "https://www.facebook.com/andrew.scrivens.77" },
+    { name: "facebook", url: "" },
     { name: "github", url: null },
-    { name: "instagram", url: "https://www.facebook.com/andrew.scrivens.77" },
-    { name: "linkedin", url: "https://www.facebook.com/andrew.scrivens.77" },
+    { name: "instagram", url: "" },
+    { name: "linkedin", url: "" },
     { name: "medium", url: null },
     { name: "pinterest", url: null },
     { name: "reddit", url: null },

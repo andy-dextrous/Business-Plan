@@ -2,9 +2,11 @@ import { Heading } from "@chakra-ui/react"
 import React from "react"
 import { FormContext } from "../Context"
 
-function Title({ id }) {
-  const { answers } = React.useContext(FormContext)
-  return <Heading textTransform="uppercase">{answers[id]?.label}</Heading>
+function Title({ panelId }) {
+  const { formState } = React.useContext(FormContext)
+  const panel = formState[panelId]
+
+  return <Heading textTransform="uppercase">{panel?.title || ""}</Heading>
 }
 
 export default Title

@@ -2,14 +2,14 @@ import axios from "axios"
 import Cookies from "js-cookie"
 import { getParams } from "gatsby-theme-wild-child/src/utils/getParams"
 
-export default function handleSubmit(e, answers, setSubmitted, cost) {
+export default function handleSubmit(e, formState, setSubmitted, cost) {
   e.preventDefault()
   // Collect form context data
   const isBrowser = typeof window != "undefined"
   const hutk = isBrowser ? Cookies.get("hubspotutk") : null
   const pageUri = isBrowser ? window.location.href : null
 
-  const allFields = answers.map(answer => {
+  const allFields = formState.map(answer => {
     return {
       name: answer.name,
       value:

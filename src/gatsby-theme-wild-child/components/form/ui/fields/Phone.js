@@ -1,7 +1,7 @@
 import React from "react"
-import { data } from "../data.js"
+import { data } from "../../data.js"
 import PhoneInput from "react-phone-input-2"
-import { FormContext } from "../Context"
+import { FormContext } from "../../Context"
 import "react-phone-input-2/lib/style.css"
 
 function Phone({ id }) {

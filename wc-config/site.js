@@ -11,6 +11,7 @@ const SITE_CONFIG = {
   createPages: false,
   createTags: false,
   createCategories: false,
+  developLimit: 10,
 
   /**** THEME OPTIONS ****/
   cssVarPrefix: "wild",

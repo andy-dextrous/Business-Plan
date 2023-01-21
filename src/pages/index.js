@@ -5,22 +5,17 @@ import Context from "../gatsby-theme-wild-child/components/form/Context"
 import Sidebar from "../gatsby-theme-wild-child/components/form/Sidebar"
 import Columns from "../gatsby-theme-wild-child/components/form/ui/Columns"
 import Section from "../gatsby-theme-wild-child/components/form/ui/Section"
-import Cost from "../gatsby-theme-wild-child/components/form/Cost"
+import Result from "../gatsby-theme-wild-child/components/form/Result"
 
 function index() {
   return (
-    <Layout
-      mainProps={{
-        maxHeight: "100vh",
-        overflow: "hidden",
-      }}
-    >
+    <Layout>
       <Context>
         <Section>
           <Columns>
             <Form />
             <Sidebar />
-            <Cost />
+            <Result />
           </Columns>
         </Section>
       </Context>
@@ -29,3 +24,5 @@ function index() {
 }
 
 export default index
+
+export const Head = () => <title>AI Business Plan Builder | Virtuzone</title>

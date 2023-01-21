@@ -19,8 +19,8 @@ export const fontSizes = {
 }
 
 export const fonts = {
-  heading: `neue-haas-grotesk-display, sans-serif, ${theme.fonts.heading}`,
-  body: `"neue-haas-grotesk-display, sans-serif", ${theme.fonts.body}`,
+  heading: `Calibri, Helvetica-Neue, ${theme.fonts.heading}`,
+  body: `Calibri, Helvetica-Neue, ${theme.fonts.body}`,
 }
 
 const heading = {
@@ -32,11 +32,9 @@ const heading = {
 export const p = {
   fontFamily: fonts.body,
   fontSize: ["16px", "16px", "18px"],
+  color: "dark.700",
   letterSpacing: "-0.003em",
   lineHeight: 1.6,
-  fontWeight: "400",
-  color: "dark.default",
-  mb: 2,
 }
 
 export const a = {
@@ -50,28 +48,30 @@ export const a = {
 
 export const h1 = {
   ...heading,
-  fontSize: ["3xl", "4xl", "5xl", "6xl", "6xl"],
+  fontSize: ["3xl", "4xl", "7xl", "7xl", "8xl", "9xl", "9xl"],
   lineHeight: ["1.2", "1.1", "1.1", "1", "1", "1", "1"],
-  letterSpacing: "-2px",
+  letterSpacing: "-0.01em",
+  fontWeight: "bold",
+  textTransform: "uppercase",
 }
-
 export const h2 = {
   ...heading,
-  fontSize: ["3xl", "3xl", "4xl"],
+  fontSize: ["3xl", "4xl", "5xl"],
   lineHeight: "1.1",
+  fontWeight: "bold",
   letterSpacing: "-1px",
 }
 
 export const h3 = {
   ...heading,
   letterSpacing: "-1px",
-  fontSize: ["2xl", "2xl", "3xl"],
+  fontSize: ["2xl", "3xl", "3xl"],
 }
 
 export const h4 = {
   ...heading,
-  fontSize: ["xl", "xl", "xl"],
-  lineHeight: "140%",
+  fontSize: ["xl", "2xl", "2xl"],
+  lineHeight: "133%",
 }
 
 export const h5 = {
@@ -79,7 +79,6 @@ export const h5 = {
   fontSize: ["lg", "xl", "2xl"],
   mb: 4,
 }
-
 export const h6 = {
   ...heading,
   fontSize: ["md", "lg", "xl"],
@@ -138,22 +137,17 @@ export const base = {
   h5,
   h6,
   blockquote,
-  li,
-  ul,
-  ol,
-  br,
-  "h1.chakra-heading": {
-    ...h1,
-  },
-  "h2.chakra-heading": {
-    ...h2,
-  },
-  "h3.chakra-heading": {
-    ...h3,
-  },
-  "h4.chakra-heading": {
-    ...h4,
-  },
-
+  "h1.chakra-heading": h1,
+  "h2.chakra-heading": h2,
+  "h3.chakra-heading": h3,
+  "h4.chakra-heading": h4,
+  "h5.chakra-heading": h5,
+  "h6.chakra-heading": h6,
+  "*.jumbo.chakra-heading": h1,
+  "h1.chakra-heading.small-heading": h1,
+  "*.upper-case.chakra-heading": { textTransform: "uppercase" },
+  "a.chakra-link": a,
+  "h1,h2,h3,h4,h5,h6,p": { color: "dark.default" },
+  li: p,
   ...globalTextStyles,
 }

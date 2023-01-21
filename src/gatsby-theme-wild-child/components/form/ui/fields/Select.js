@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import { Select } from "@chakra-ui/react"
-import { data } from "../data"
-import { FormContext } from "../Context"
+import { data } from "../../data"
+import { FormContext } from "../../Context"
 
-function Nationality({ id }) {
+function SelectField({ id }) {
   const { handleChange } = React.useContext(FormContext)
   const field = data[id]
   const [selection, setSelection] = useState("")
 
   return (
     <Select
-      bg="dark.50"
+      bg="gray.50"
       placeholder={field.placeholder || "Nationality"}
       fontSize={["xs", "sm", "md"]}
       color={selection === "" ? "gray.400" : "inherit"}
@@ -36,4 +36,4 @@ function Nationality({ id }) {
   )
 }
 
-export default Nationality
+export default SelectField

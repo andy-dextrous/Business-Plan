@@ -9,8 +9,8 @@ function Context({ children }) {
   const upto = getCurrentPanel()
   const prev = getPreviousPanel()
   const [formState, setFormState] = useState(mergedData) // Build global formState from default data merged with any pre-filled data
-  const [currentQuestion, setCurrentQuestion] = useState(upto)
-  const [previousQuestion, setPreviousQuestion] = useState(prev)
+  const [currentPanel, setCurrentPanel] = useState(upto)
+  const [previousPanel, setPreviousPanel] = useState(prev)
   const [direction, setDirection] = useState("up")
   const [submitted, setSubmitted] = useState(false)
   const [panels, setPanels] = useState([])
@@ -31,7 +31,7 @@ function Context({ children }) {
   useEffect(() => {
     if (submitted) {
       Cookies.remove("business-plan")
-      setCurrentQuestion(0)
+      setCurrentPanel(0)
       setDirection("up")
       setFormState(data)
     }
@@ -44,9 +44,9 @@ function Context({ children }) {
   }, [])
 
   useEffect(() => {
-    Cookies.set("currentQuestion", currentQuestion, { expires: 7 })
-    Cookies.set("previousQuestion", previousQuestion, { expires: 7 })
-  }, [currentQuestion])
+    Cookies.set("currentPanel", currentPanel, { expires: 7 })
+    Cookies.set("previousPanel", previousPanel, { expires: 7 })
+  }, [currentPanel])
 
   function getMergedData() {
     const cookieData = Cookies.get("business-plan")
@@ -70,7 +70,7 @@ function Context({ children }) {
   }
 
   function getCurrentPanel() {
-    const cookieData = Cookies.get("currentQuestion")
+    const cookieData = Cookies.get("currentPanel")
     if (cookieData) {
       return parseInt(cookieData)
     } else {
@@ -79,7 +79,7 @@ function Context({ children }) {
   }
 
   function getPreviousPanel() {
-    const cookieData = Cookies.get("previousQuestion")
+    const cookieData = Cookies.get("previousPanel")
     if (cookieData) {
       return parseInt(cookieData)
     } else {
@@ -91,10 +91,10 @@ function Context({ children }) {
     <FormContext.Provider
       value={{
         formState,
-        currentQuestion,
-        setCurrentQuestion,
-        previousQuestion,
-        setPreviousQuestion,
+        currentPanel,
+        setCurrentPanel,
+        previousPanel,
+        setPreviousPanel,
         direction,
         setDirection,
         handleChange,

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 
 function Sidebar() {
-  const { currentQuestion, formState } = React.useContext(FormContext)
+  const { currentPanel, formState } = React.useContext(FormContext)
   const [progress, setProgress] = useState(0)
   const { variables } = useTheme()
   const { sectionPaddingX } = variables
@@ -31,11 +31,11 @@ function Sidebar() {
         ease: "Power2.in",
       }
     )
-  }, [currentQuestion])
+  }, [currentPanel])
 
   useEffect(() => {
     const prevProgress = { x: progress } // So that we can use gsap to animate a variable
-    const newProgress = Math.round(((currentQuestion + 1) / 9) * 100)
+    const newProgress = Math.round(((currentPanel + 1) / 9) * 100)
     gsap.to(prevProgress, {
       x: newProgress,
       ease: "Power2.in",
@@ -43,7 +43,7 @@ function Sidebar() {
         setProgress(prevProgress.x)
       },
     })
-  }, [formState, currentQuestion])
+  }, [formState, currentPanel])
 
   return (
     <Box
@@ -61,7 +61,7 @@ function Sidebar() {
           ref={questionRef}
           color="gray.100"
         >
-          {`Q${currentQuestion + 1}`}
+          {`Q${currentPanel + 1}`}
         </Heading>
         <Progress
           w="full"

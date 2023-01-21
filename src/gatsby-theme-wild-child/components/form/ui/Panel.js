@@ -10,7 +10,6 @@ function Panel({ children }) {
       spacing={8}
       layerStyle="fillSpaceAbsolute"
       visibility="hidden"
-      h="100%"
     >
       <Box
         maxW="100%"

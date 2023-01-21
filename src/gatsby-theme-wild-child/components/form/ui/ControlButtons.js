@@ -6,29 +6,29 @@ import { Button, ButtonGroup } from "@chakra-ui/react"
 
 function ControlButtons() {
   const {
-    currentQuestion,
-    setCurrentQuestion,
-    setPreviousQuestion,
+    currentPanel,
+    setCurrentPanel,
+    setPreviousPanel,
     formState,
     setDirection,
     panels,
   } = React.useContext(FormContext)
 
-  const isLastPanel = currentQuestion === panels.length - 1
-  const isFirstPanel = currentQuestion === 0
+  const isLastPanel = currentPanel === panels.length - 1
+  const isFirstPanel = currentPanel === 0
   const formComplete = Object.values(formState).every(field => {
     return field.value !== ""
   })
 
   function handleBackButton() {
-    setPreviousQuestion(currentQuestion)
-    setCurrentQuestion(q => q - 1)
+    setPreviousPanel(currentPanel)
+    setCurrentPanel(q => q - 1)
     setDirection("down")
   }
 
   function handleNextButton() {
-    setPreviousQuestion(currentQuestion)
-    setCurrentQuestion(q => q + 1)
+    setPreviousPanel(currentPanel)
+    setCurrentPanel(q => q + 1)
     setDirection("up")
   }
 
@@ -51,7 +51,7 @@ function ControlButtons() {
         rightIcon={<ArrowForwardIcon />}
         className="control"
         onClick={handleNextButton}
-        isDisabled={formState[currentQuestion]?.value === "" || isLastPanel}
+        isDisabled={formState[currentPanel]?.value === "" || isLastPanel}
         display={isLastPanel ? "none" : "flex"}
       >
         Next

@@ -2,7 +2,7 @@ import React from "react"
 import { Input } from "@chakra-ui/react"
 import { FormContext } from "../../Context"
 
-function InputField({ panelId, fieldName }) {
+function InputField({ panelId, fieldName, ...styles }) {
   const { handleChange, formState } = React.useContext(FormContext)
   const panel = formState[panelId]
   const field = panel?.fields?.find(field => field.name === fieldName)
@@ -32,6 +32,7 @@ function InputField({ panelId, fieldName }) {
       }}
       isRequired={field.required}
       _placeholder={{ color: "gray.400" }}
+      {...styles}
     />
   ) : null
 }

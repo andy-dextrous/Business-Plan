@@ -12,6 +12,12 @@ const globalCSS = {
     color: "white",
   },
 
+  html: {
+    sx: {
+      overscrollBehavior: "none",
+    },
+  },
+
   main: {
     h: "100vh",
     w: "100vw",
@@ -73,7 +79,7 @@ const globalCSS = {
     gridColumnEnd: "3",
   },
 
-  "#gatsby-focus-wrapper .currentQuestion": {
+  "#gatsby-focus-wrapper .currentPanel": {
     opacity: "0.05",
   },
 

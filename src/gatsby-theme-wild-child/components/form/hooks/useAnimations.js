@@ -3,7 +3,7 @@ import { gsap } from "gatsby-theme-wild-child/src/gsap"
 import { FormContext } from "../Context"
 
 function useAnimations(ref) {
-  const { currentQuestion, previousQuestion, direction } =
+  const { currentPanel, previousPanel, direction } =
     React.useContext(FormContext)
 
   useLayoutEffect(() => {
@@ -11,7 +11,7 @@ function useAnimations(ref) {
     console.log("change")
     const q = gsap.utils.selector(ref.current) // select elements within the form
     gsap.set(q(`[data-slide-index]`), { autoAlpha: 0 })
-    gsap.set(q(`[data-slide-index="${currentQuestion}"]`), { autoAlpha: 1 })
+    gsap.set(q(`[data-slide-index="${currentPanel}"]`), { autoAlpha: 1 })
   }, [ref])
 
   useEffect(() => {
@@ -20,14 +20,12 @@ function useAnimations(ref) {
     const navigatingBack = direction === "up"
 
     gsap.set(
-      q(
-        `[data-slide-index="${previousQuestion}"] .chakra-button__group.control`
-      ),
+      q(`[data-slide-index="${previousPanel}"] .chakra-button__group.control`),
       {
         autoAlpha: 0,
       }
     )
-    gsap.to(q(`[data-slide-index="${previousQuestion}"]`), {
+    gsap.to(q(`[data-slide-index="${previousPanel}"]`), {
       yPercent: navigatingBack ? -150 : 150,
       autoAlpha: 0,
       ease: navigatingBack ? "sine.in" : "sine.out",
@@ -35,7 +33,7 @@ function useAnimations(ref) {
     })
 
     gsap.fromTo(
-      q(`[data-slide-index="${currentQuestion}"]`),
+      q(`[data-slide-index="${currentPanel}"]`),
       {
         yPercent: navigatingBack ? 150 : -150,
         autoAlpha: 0,
@@ -49,9 +47,7 @@ function useAnimations(ref) {
       }
     )
     gsap.to(
-      q(
-        `[data-slide-index="${currentQuestion}"] .chakra-button__group.control`
-      ),
+      q(`[data-slide-index="${currentPanel}"] .chakra-button__group.control`),
       {
         autoAlpha: 1,
         delay: 0.4,
@@ -59,8 +55,8 @@ function useAnimations(ref) {
         ease: "sine.in",
       }
     )
-    gsap.set(q(`[data-slide-index="${currentQuestion}"]`), { autoAlpha: 1 })
-  }, [currentQuestion, direction, ref])
+    gsap.set(q(`[data-slide-index="${currentPanel}"]`), { autoAlpha: 1 })
+  }, [currentPanel, direction, ref])
 }
 
 export default useAnimations

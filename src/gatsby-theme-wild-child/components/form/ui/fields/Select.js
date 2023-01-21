@@ -1,28 +1,35 @@
-import React, { useState } from "react"
+import React from "react"
 import { Select } from "@chakra-ui/react"
-import { data } from "../../data"
 import { FormContext } from "../../Context"
 
-function SelectField({ id }) {
-  const { handleChange } = React.useContext(FormContext)
-  const field = data[id]
-  const [selection, setSelection] = useState("")
+function SelectField({ panelId, fieldName }) {
+  const { handleChange, formState } = React.useContext(FormContext)
+  const panel = formState[panelId]
+  const field = panel?.fields?.find(field => field.name === fieldName)
 
-  return (
+  if (!panel)
+    throw new Error(`InputField: panel ${panelId} not found in formState`)
+
+  if (!field)
+    throw new Error(
+      `InputField: field ${fieldName} not found in panel ${panelId}`
+    )
+
+  return field ? (
     <Select
-      bg="gray.50"
       placeholder={field.placeholder || "Nationality"}
+      bg="gray.50"
       fontSize={["xs", "sm", "md"]}
-      color={selection === "" ? "gray.400" : "inherit"}
+      color={field.value === "" ? "gray.400" : "inherit"}
       gridColumnStart={[1]}
       gridColumnEnd={[3, 3, 2]}
-      value={selection}
+      value={field.value}
+      border="none"
       size="lg"
       name={field.name}
       id={field.name}
       onChange={e => {
-        setSelection(e.target.value)
-        handleChange(e.target.value, id)
+        handleChange(e.target.value, fieldName, panelId)
       }}
     >
       {field.options.map(option => {
@@ -33,7 +40,7 @@ function SelectField({ id }) {
         )
       })}
     </Select>
-  )
+  ) : null
 }
 
 export default SelectField

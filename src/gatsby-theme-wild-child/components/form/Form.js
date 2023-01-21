@@ -3,7 +3,7 @@ import React, { useContext, useRef, useLayoutEffect } from "react"
 import Cookies from "js-cookie"
 import { FormContext } from "./Context"
 import handleSubmit from "./handleSubmit"
-import useAnimations from "./useAnimations.js"
+import useAnimations from "./hooks/useAnimations.js"
 
 // Components
 import { Center, useTheme } from "@chakra-ui/react"
@@ -38,11 +38,12 @@ function Form() {
       name="business-plan-builder"
       flex={[14, 14, 7]}
       position="relative"
-      maxH={{ base: "unset", "2xl": "70vh", "3xl": "50vh" }}
-      m={sectionPaddingX}
+      h="full"
+      m={0}
       ref={formRef}
       onSubmit={e => submitForm(e, formState)}
     >
+      <BusinessName panelId={0} />
       <BusinessName panelId={0} />
     </Center>
   )

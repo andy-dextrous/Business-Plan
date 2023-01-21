@@ -12,7 +12,11 @@ const globalCSS = {
     color: "white",
   },
 
-  main: { h: "100vh", w: "100vw", overflow: "hidden" },
+  main: {
+    h: "100vh",
+    w: "100vw",
+    overflow: "hidden",
+  },
 
   ".react-tel-input": {
     height: 12,

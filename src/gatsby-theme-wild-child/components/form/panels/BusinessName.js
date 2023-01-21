@@ -6,7 +6,9 @@ import Description from "../ui/Description"
 import Panel from "../ui/Panel"
 import { FormContext } from "../Context"
 import { VStack } from "@chakra-ui/react"
-import InputField from "../ui/fields/Input"
+import Input from "../ui/fields/Input"
+import Select from "../ui/fields/Select"
+import TextArea from "../ui/fields/TextArea"
 
 function BusinessName({ panelId }) {
   const { formState } = React.useContext(FormContext)
@@ -14,10 +16,12 @@ function BusinessName({ panelId }) {
 
   return panel ? (
     <Panel>
-      <VStack align="flex-start" spacing={8}>
+      <VStack align="flex-start" justify="flex-start" spacing={6} w="full">
         <Title panelId={panelId} />
         <Description panelId={panelId} />
-        <InputField fieldName="business_name" panelId={panelId} />
+        <Input fieldName="business_name" panelId={panelId} />
+        <Select fieldName="business_type" panelId={panelId} />
+        <TextArea fieldName="business_summary" panelId={panelId} />
       </VStack>
       <ControlButtons />
     </Panel>

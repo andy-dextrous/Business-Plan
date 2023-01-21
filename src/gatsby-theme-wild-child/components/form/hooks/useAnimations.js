@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect } from "react"
 import { gsap } from "gatsby-theme-wild-child/src/gsap"
-import { FormContext } from "./Context"
+import { FormContext } from "../Context"
 
 function useAnimations(ref) {
   const { currentQuestion, previousQuestion, direction } =

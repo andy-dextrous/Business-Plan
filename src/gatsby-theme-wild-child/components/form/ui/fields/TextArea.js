@@ -1,5 +1,5 @@
 import React from "react"
-import { Input } from "@chakra-ui/react"
+import { Textarea } from "@chakra-ui/react"
 import { FormContext } from "../../Context"
 
 function InputField({ panelId, fieldName }) {
@@ -16,7 +16,7 @@ function InputField({ panelId, fieldName }) {
     )
 
   return field ? (
-    <Input
+    <Textarea
       placeholder={field.placeholder || ""}
       gridColumnStart={1}
       gridColumnEnd={[3, 3, 2]}
@@ -32,6 +32,7 @@ function InputField({ panelId, fieldName }) {
       }}
       isRequired={field.required}
       _placeholder={{ color: "gray.400" }}
+      minH="240px"
     />
   ) : null
 }

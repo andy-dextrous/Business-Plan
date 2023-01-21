@@ -37,7 +37,7 @@ function ControlButtons() {
       className="control"
       w={["full", "full", "unset"]}
       justifyContent={["space-between", "space-between", "flex-start"]}
-      pt={[12, 12, 40]}
+      pt={[12, 12, 20]}
     >
       <Button
         leftIcon={<ArrowBackIcon />}

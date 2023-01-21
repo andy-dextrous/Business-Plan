@@ -9,6 +9,7 @@ function Columns({ children }) {
       direction={["column-reverse", "column-reverse", "column-reverse", "row"]}
       mt={mobileNavHeight}
       w="full"
+      h="full"
       spacing="0"
     >
       {children}
